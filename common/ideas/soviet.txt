@@ -1,77 +1,5 @@
 ideas = {
 	country = {
-			
-		SOV_isolated_economy = {
-			allowed = {
-				always = no
-				}
-			
-			removal_cost = -1
-			
-			picture = generic_production_bonus
-			
-			modifier = {
-				production_speed_buildings_factor = 0.2
-				industrial_capacity_factory = 0.15
-				industrial_capacity_dockyard = 0.15
-				research_time_factor = -0.1	
-				consumer_goods_factor = -0.05
-			}
-		}
-		
-		SOV_cold_acclimatization_army = {
-			allowed = {
-				always = no
-				}
-			
-			removal_cost = -1
-			
-			picture = generic_infantry_bonus
-			
-			modifier = {
-				acclimatization_cold_climate_gain_factor = 0.5
-			}
-		}
-				
-	
-		SOV_war_bonds = {
-			
-			allowed = {
-				always = no # Added via event
-			}
-			
-			removal_cost = -1
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			picture = generic_goods_red_bonus
-			
-			modifier = {
-				consumer_goods_factor = -0.05
-			}
-		}
-	
-		SOV_restructured_government = {
-
-			removal_cost = -1
-
-			allowed = {
-				always = no # Added via focus
-			}
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-
-			picture = generic_communism_drift_bonus
-
-			modifier = {
-				stability_factor = 0.1
-			}
-		}
-		
 		militarized_schools = {
 		
 			removal_cost = -1
@@ -162,7 +90,7 @@ ideas = {
 			
 			modifier = {
 				subversive_activites_upkeep = -0.5
-				land_reinforce_rate = 0.20
+				land_reinforce_rate = 0.05
 			}
 		}
 		
@@ -199,7 +127,7 @@ ideas = {
 			picture = generic_research_bonus
 			
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 			}
 		}
 
@@ -236,7 +164,6 @@ ideas = {
 
 			modifier = {
 				conversion_cost_civ_to_mil_factor= -0.2
-				production_speed_arms_factory_factor = 0.1
 			}
 		}
 
@@ -330,6 +257,7 @@ ideas = {
 			modifier = {
 				army_org_factor = -0.5
 				send_volunteer_factor = -0.8
+				industrial_capacity_factory = -0.2
 				training_time_factor = 0.5
 			}
 		}
@@ -356,6 +284,7 @@ ideas = {
 			modifier = {
 				army_org_factor = -0.45
 				send_volunteer_factor = -0.74
+				industrial_capacity_factory = -0.18
 				training_time_factor = 0.45
 			}
 		}
@@ -381,6 +310,7 @@ ideas = {
 			modifier = {
 				army_org_factor = -0.4
 				send_volunteer_factor = -0.68
+				industrial_capacity_factory = -0.16
 				training_time_factor = 0.4
 			}
 		}
@@ -406,6 +336,7 @@ ideas = {
 			modifier = {
 				army_org_factor = -0.35
 				send_volunteer_factor = -0.62
+				industrial_capacity_factory = -0.14
 				training_time_factor = 0.35
 			}
 		}
@@ -431,6 +362,7 @@ ideas = {
 			modifier = {
 				army_org_factor = -0.30
 				send_volunteer_factor = -0.56
+				industrial_capacity_factory = -0.12
 				training_time_factor = 0.3
 			}
 		}
@@ -456,6 +388,7 @@ ideas = {
 			modifier = {
 				army_org_factor = -0.25
 				send_volunteer_factor = -0.5
+				industrial_capacity_factory = -0.10
 				training_time_factor = 0.25
 			}
 		}
@@ -481,6 +414,7 @@ ideas = {
 			modifier = {
 				army_org_factor = -0.20
 				send_volunteer_factor = -0.44
+				industrial_capacity_factory = -0.08
 				training_time_factor = 0.2
 			}
 		}
@@ -506,6 +440,7 @@ ideas = {
 			modifier = {
 				army_org_factor = -0.15
 				send_volunteer_factor = -0.38
+				industrial_capacity_factory = -0.06
 				training_time_factor = 0.15
 			}
 		}
@@ -531,6 +466,7 @@ ideas = {
 			modifier = {
 				army_org_factor = -0.10
 				send_volunteer_factor = -0.32
+				industrial_capacity_factory = -0.04
 				training_time_factor = 0.1
 			}
 		}
@@ -556,6 +492,7 @@ ideas = {
 			modifier = {
 				army_org_factor = -0.05
 				send_volunteer_factor = -0.26
+				industrial_capacity_factory = -0.02
 				training_time_factor = 0.05
 			}
 		}
@@ -826,6 +763,10 @@ ideas = {
 			{
 				NOT = { has_country_flag = purged_khrushchev }
 				NOT = { has_country_flag = counter_purge }
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
 			}
 			
 
@@ -842,6 +783,63 @@ ideas = {
 				factor = 0
 			}
 		}	
+			
+		alexander_kerensky = {
+			
+			
+			allowed = {
+				original_tag = "SOV"
+			}
+			
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+			
+			traits = { democratic_reformer }
+
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		konstantin_rodzaevsky = {
+			
+			
+			allowed = {
+				original_tag = "SOV"
+			}
+			available = 
+			{
+				NOT = { has_country_flag = counter_purge }
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+			
+
+			
+			traits = { fascist_demagogue }
+	
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
 	}
 		
 	army_chief = {
@@ -898,7 +896,7 @@ ideas = {
 			
 
 			
-			traits = { army_chief_drill_2 }
+			traits = { army_chief_drill_1 }
 			
 			ai_will_do = {
 				factor = 1
@@ -968,7 +966,7 @@ ideas = {
 			traits = { navy_chief_naval_aviation_1 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0.2
 			}
 		}
 		
@@ -990,7 +988,7 @@ ideas = {
 			traits = { navy_chief_commerce_raiding_1 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0.2
 			}
 		}
 		
@@ -1012,7 +1010,7 @@ ideas = {
 			traits = { navy_chief_reform_2 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0.2
 			}
 		}
 		
@@ -1033,7 +1031,7 @@ ideas = {
 			traits = { navy_chief_decisive_battle_2 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0.2
 			}
 		}	
 	}
@@ -1313,7 +1311,7 @@ ideas = {
 			traits = { navy_submarine_2 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0.2
 			}
 		}
 		
@@ -1344,7 +1342,7 @@ ideas = {
 			traits = { navy_capital_ship_2 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0.2
 			}
 		}
 		
@@ -1374,7 +1372,7 @@ ideas = {
 			traits = { navy_amphibious_assault_2 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0.2
 			}
 		}	
 	}
@@ -1422,6 +1420,7 @@ ideas = {
 			
 			modifier = {
 			}
+			cost = 100
 		}
 		
 		astrov_design_bureau = {
@@ -1441,6 +1440,7 @@ ideas = {
 			
 			modifier = {
 			}
+			cost = 100
 		}
 		
 		okmo = {
@@ -1460,6 +1460,7 @@ ideas = {
 			
 			modifier = {
 			}
+			cost = 100
 		}
 	}
 	
@@ -1480,10 +1481,11 @@ ideas = {
 				air_equipment = 0.10
 			}
 			
-			traits = { mig_design_bureau_aircraft_manufacturer }
+			traits = { light_aircraft_manufacturer }
 			
 			modifier = {
 			}
+			cost = 100
 		}
 		
 		ilyushin_design_bureau = {
@@ -1499,10 +1501,11 @@ ideas = {
 				air_equipment = 0.10
 			}
 			
-			traits = { ilyushin_design_bureau_aircraft_manufacturer }
+			traits = { medium_aircraft_manufacturer }
 			
 			modifier = {
 			}
+			cost = 100
 		}
 		
 		tupolev_design_bureau = {
@@ -1518,10 +1521,11 @@ ideas = {
 				air_equipment = 0.10
 			}
 			
-			traits = { tupolev_design_bureau_aircraft_manufacturer }
+			traits = { heavy_aircraft_manufacturer }
 			
 			modifier = {
 			}
+			cost = 100
 		}
 		
 		yakovlev_design_bureau = {
@@ -1541,6 +1545,7 @@ ideas = {
 			
 			modifier = {
 			}
+			cost = 100
 		}
 	}	
 	
@@ -1607,6 +1612,7 @@ ideas = {
 			
 			modifier = {
 			}
+			cost = 100
 		}	
 		
 	
@@ -1628,6 +1634,7 @@ ideas = {
 			
 			modifier = {
 			}
+			cost = 100
 		}
 		
 		gaz = {
@@ -1648,6 +1655,7 @@ ideas = {
 			
 			modifier = {
 			}
+			cost = 100
 		}
 	}
 	
@@ -1672,6 +1680,7 @@ ideas = {
 			
 			modifier = {
 			}
+			cost = 100
 		}
 	}
 	
