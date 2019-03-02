@@ -55,7 +55,7 @@ focus_tree = {
 	focus = {
 		id = USA_continue_the_new_deal
 		icon = GFX_focus_generic_self_management
-		x = 14
+		x = 4
 		y = 0
 		offset = {
 			x = -12
@@ -88,981 +88,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = USA_suspend_the_presecution
-		icon = GFX_focus_generic_diplomatic_treaty
-		x = -7
-		y = 1
-		prerequisite = { focus = USA_continue_the_new_deal }
-		relative_position_id = USA_continue_the_new_deal
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-		allow_branch = {
-			has_dlc = "Man the Guns"
-		}
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_stability = -0.05
-			custom_effect_tooltip = available_political_advisor
-		    show_ideas_tooltip = earl_browder
-		}
-	}
-	focus = {
-		id = USA_desegregate_the_armed_forces
-		icon = GFX_goal_generic_small_arms
-		x = -6
-		y = 1
-		prerequisite = { focus = USA_suspend_the_presecution }
-		relative_position_id = USA_suspend_the_presecution
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			OR = {
-				communism > 0.1
-				has_country_leader = { ruling_only = yes name = "Harry S. Truman" }
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = USA_armed_forces_desegregation
-		}
-	}
-	focus = {
-		id = USA_full_desegregation
-		icon = GFX_focus_generic_support_the_left_right
-		x = -1
-		y = 1
-		prerequisite = { focus = USA_desegregate_the_armed_forces }
-		relative_position_id = USA_desegregate_the_armed_forces
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			communism > 0.2
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = USA_armed_forces_desegregation
-				add_idea = USA_full_desegregation
-			}
-			if = {
-				limit = {
-					not = { has_government = communism }
-				}
-				USA_congress_large_opposition = yes
-			}
-			if = {
-				limit = {
-					has_country_flag = mtg_usa_civil_war_fascists_1
-					not = { has_country_flag = mtg_usa_civil_war_fascists_2 }
-				}
-				country_event = mtg_usa_civil_war_fascists.2
-				custom_effect_tooltip = mtg_usa_civil_war_warning_tt
-			}
-			else_if = {
-				limit = { not = { has_country_flag = mtg_usa_civil_war_fascists_1 } }
-				country_event = mtg_usa_civil_war_fascists.1
-				custom_effect_tooltip = mtg_usa_civil_war_warning_tt
-			}
-		}
-	}
-	focus = {
-		id = USA_democratic_socialism
-		icon = GFX_focus_generic_soviet_politics
-		x = 1
-		y = 1
-		prerequisite = { focus = USA_desegregate_the_armed_forces }
-		relative_position_id = USA_desegregate_the_armed_forces
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			communism > 0.35
-		}
-		
-		bypass = {
-			has_government = communism
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			set_politics = { ruling_party = communism elections_allowed = yes } #good and nice communism has elections
-			add_popularity = { ideology = communism popularity = 0.25 }
-			hidden_effect = {
-				if = {
-					limit = {
-						has_war = no
-						has_country_flag = mtg_usa_civil_war_fascists_2
-						not = {
-							has_country_flag = mucwf4
-						}
-					}
-					country_event = mtg_usa_civil_war_fascists.4
-				}
-			}
-		}
-	}
-	focus = {
-		id = USA_liberty_for_the_philippines
-		icon = GFX_goal_generic_alliance
-		x = 0
-		y = 2
-		prerequisite = { focus = USA_democratic_socialism }
-		prerequisite = { focus = USA_full_desegregation }
-		relative_position_id = USA_desegregate_the_armed_forces
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_government = communism
-			country_exists = "PHI"
-		}
-		
-		bypass = {
-			"PHI" = {
-				not = { is_subject_of = ROOT }
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			if = {
-				limit = {
-					"PHI" = {
-						is_subject_of = ROOT
-					}
-				}
-				set_autonomy = { target = "PHI" autonomy_state = autonomy_free }
-			}
-			if = {
-				limit = {
-					is_faction_leader = yes
-				}
-				add_to_faction = "PHI"
-			}
-		}
-	}
-	focus = {
-		id = USA_pacific_decolonisation
-		icon = GFX_goal_generic_national_unity
-		x = 0
-		y = 3
-		prerequisite = { focus = USA_liberty_for_the_philippines }
-		relative_position_id = USA_desegregate_the_armed_forces
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			if = {
-				limit = {
-					INS = {
-						exists = yes
-						is_subject = yes
-					}
-				}
-				create_wargoal = {
-					target = INS
-					type = puppet_wargoal_focus
-				}
-			}
-			if = {
-				limit = { 
-					523 = {
-						not = {
-							is_owned_by = PNG #already decolonized
-						}	
-					}
-				}
-			}
-			523 = {
-				OWNER = {
-					ROOT = {
-						create_wargoal = {
-							target = PREV
-							type = take_state
-							generator = { 523 }
-						}
-					}
-				}
-			}
-		}
-	}
-	
-#  # #  # ###  ##  #  #     ###  ### ###  ###  ###  ## ### #  # ###  ##  ### ###  ##  #  # 
-#  # ## #  #  #  # ## #     #  # #   #  # #  # #   #   #   ## #  #  #  #  #   #  #  # ## # 
-#  # # ##  #  #  # # ##     ###  ##  ###  ###  ##   #  ##  # ##  #  ####  #   #  #  # # ## 
-#  # #  #  #  #  # #  #     #  # #   #    #  # #     # #   #  #  #  #  #  #   #  #  # #  # 
- ##  #  # ###  ##  #  #     #  # ### #    #  # ### ##  ### #  #  #  #  #  #  ###  ##  #  # 
-
-	
-	focus = {
-		id = USA_union_representation_act
-		icon = GFX_focus_usa_union_representation_act
-		x = -3
-		y = 1
-		prerequisite = { focus = USA_suspend_the_presecution }
-		relative_position_id = USA_suspend_the_presecution
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_high_support_trigger = yes
-			has_idea_with_trait = communist_revolutionary
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			if = {
-				limit = {
-					not = { congress_high_support_trigger = yes }
-				}
-				add_stability = -0.1
-			}
-			USA_return_majority = yes
-			if = {
-				limit = {
-					has_country_flag = mtg_usa_civil_war_fascists_1
-					not = {
-						has_country_flag = mtg_usa_civil_war_fascists_2
-					}
-				}
-				country_event = mtg_usa_civil_war_fascists.2
-				custom_effect_tooltip = mtg_usa_civil_war_warning_tt
-			}
-			else_if = {
-				limit = { not = { has_country_flag = mtg_usa_civil_war_fascists_1 } }
-				country_event = mtg_usa_civil_war_fascists.1
-				custom_effect_tooltip = mtg_usa_civil_war_warning_tt
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_country_flag = mtg_usa_civil_war_fascists_2
-						has_war = no
-						not = { has_country_flag = mucwf4 }
-					}
-					country_event = mtg_usa_civil_war_fascists.4
-				}
-			}
-		}
-	}
-	focus = {
-		id = USA_old_age_pension_act
-		icon = GFX_goal_generic_consumer_goods
-		x = 0
-		y = 1
-		prerequisite = { focus = USA_union_representation_act }
-		relative_position_id = USA_union_representation_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_medium_support_trigger = yes
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_stability = 0.1
-			USA_congress_small_opposition = yes
-		}
-	}
-	focus = {
-		id = USA_accumulated_wealth_tax_act
-		icon = GFX_focus_rom_parties_end
-		x = 2
-		y = 1
-		prerequisite = { focus = USA_union_representation_act }
-		relative_position_id = USA_union_representation_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_high_support_trigger = yes
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = USA_accumulated_wealth_tax_act
-			USA_congress_small_opposition = yes
-			USA_great_depression_level_down = yes
-		}
-	}
-	focus = {
-		id = USA_guarantee_the_american_dream
-		icon = GFX_focus_usa_guarantee_the_american_dream
-		x = 0
-		y = 2
-		#prerequisite = { focus = USA_democratic_socialism }
-		prerequisite = { focus = USA_old_age_pension_act }
-		prerequisite = { focus = USA_accumulated_wealth_tax_act }
-		relative_position_id = USA_union_representation_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_war_support = 0.1
-		}
-	}
-	focus = {
-		id = USA_worker_management_act
-		icon = GFX_goal_generic_production
-		x = 0
-		y = 1
-		prerequisite = { focus = USA_guarantee_the_american_dream }
-		relative_position_id = USA_guarantee_the_american_dream
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_high_support_trigger = yes
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = USA_worker_management_act
-			USA_congress_small_opposition = yes
-			USA_great_depression_level_down = yes
-		}
-	}
-	focus = {
-		id = USA_militia_organization_act
-		icon = GFX_focus_secret_rearmament
-		x = 2
-		y = 1
-		prerequisite = { focus = USA_guarantee_the_american_dream }
-		relative_position_id = USA_guarantee_the_american_dream
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_high_support_trigger = yes
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = USA_militia_organization_act
-			USA_congress_small_opposition = yes
-		}
-	}
-	focus = {
-		id = USA_communal_property_act
-		icon = GFX_goal_generic_construct_civ_factory
-		x = 0
-		y = 2
-		prerequisite = { focus = USA_worker_management_act }
-		prerequisite = { focus = USA_militia_organization_act }
-		relative_position_id = USA_guarantee_the_american_dream
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_high_support_trigger = yes
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			USA_congress_small_opposition = yes
-			USA_great_depression_level_down = yes
-			unlock_decision_tooltip = { decision = USA_communal_domain show_effect_tooltip = yes }
-
-		}
-	}
-	focus = {
-		id = USA_reintegration
-		icon = GFX_goal_generic_intelligence_exchange
-		x = 0
-		y = 3
-		prerequisite = { focus = USA_communal_property_act }
-		relative_position_id = USA_guarantee_the_american_dream
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			OR = {
-				has_war_with = CSA
-				has_global_flag = USA_civil_war_fired
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			unlock_decision_tooltip = { decision = USA_readmit_state show_effect_tooltip = yes }
-		}
-	}
-	
-#   #  ##  ###  ###      ##  ###   ##  #  # ###  
-#   # #  # #  # #       #    #  # #  # #  # #  # 
-# # # #### ###  ##      # ## ###  #  # #  # ###  
-# # # #  # #  # #       #  # #  # #  # #  # #    
- # #  #  # #  # ###      ##  #  #  ##   ##  #    
-
-	
-	focus = {
-		id = USA_reach_out_to_the_ware_group
-		icon = GFX_goal_generic_propaganda
-		x = 0
-		y = 3
-		prerequisite = { focus = USA_suspend_the_presecution }
-		prerequisite = { focus = USA_agricultural_adjustment_act }
-		relative_position_id = USA_suspend_the_presecution
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			not = {
-				has_government = communism
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = harry_white
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = victor_perlo
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = whittaker_chambers
-		}
-	}
-	focus = {
-		id = USA_us_ussr_economic_cooperation
-		icon = GFX_goal_generic_soviet_construction
-		x = 0
-		y = 5
-		prerequisite = { focus = USA_reach_out_to_the_ware_group }
-		relative_position_id = USA_suspend_the_presecution
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			not = {
-				has_war_with = SOV
-			}
-		}
-		
-		bypass = {
-			SOV = {
-				OR = {
-					exists = no
-					has_war_with = USA
-					is_subject = yes
-				}
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			SOV = { add_to_tech_sharing_group = USA_SOV_tech_group }
-			add_to_tech_sharing_group = USA_SOV_tech_group
-		}	
-	}
-
-	focus = {
-		id = USA_unholy_alliance
-		icon = GFX_focus_chi_mission_to_the_soviet_union
-		prerequisite = { focus = USA_us_ussr_economic_cooperation }
-		mutually_exclusive = { focus = USA_secure_china }
-		available = {
-			not = {
-				has_war_with = SOV
-			}
-			SOV = {
-				is_faction_leader = yes
-			}
-			is_in_faction = no
-		}
-
-		x = 0
-		y = 3
-		relative_position_id = USA_reach_out_to_the_ware_group
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			SOV = {
-				country_event = generic.2
-			}
-		}
-	}
-	focus = {
-		id = USA_secure_china
-		icon = GFX_focus_chi_cooperation_with_the_communists
-		x = 2
-		y = 3
-		prerequisite = { focus = USA_reach_out_to_the_ware_group }
-		mutually_exclusive = { focus = USA_unholy_alliance }
-		relative_position_id = USA_reach_out_to_the_ware_group
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			not = {
-				has_war_with = event_target:WTT_communist_china
-			}
-			OR = {
-				is_faction_leader = yes
-				event_target:WTT_communist_china = {
-					is_faction_leader = yes
-				}
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			if = {
-				limit = {
-					event_target:WTT_communist_china = {
-						is_faction_leader = yes
-					}
-				}
-				event_target:WTT_communist_china = {
-					country_event = generic.2
-				}
-			}
-			else_if = {
-				limit = {
-					is_faction_leader = yes
-				}
-				event_target:WTT_communist_china = {
-					country_event = generic.5
-				}
-			}
-		}
-	}
-	focus = {
-		id = USA_end_monarchism
-		icon = GFX_focus_rom_abdicate
-		x = 4
-		y = 1
-		prerequisite = { focus = USA_reach_out_to_the_ware_group }
-		relative_position_id = USA_reach_out_to_the_ware_group
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			if = {
-				limit = {
-					ENG = {
-						not = { has_government = communism }
-					}
-				}
-				create_wargoal = {
-					target = ENG
-					type = topple_government
-				}
-			}
-			if = {
-				limit = {
-					GER = {
-						OR = {
-							has_completed_focus = GER_return_of_the_kaiser
-							has_completed_focus = GER_the_monarchy_compromise
-						}
-					}
-				}
-				create_wargoal = {
-					target = GER
-					type = topple_government
-				}
-			}
-			if = {
-				limit = {
-					HUN = {
-						has_cosmetic_tag = HUN_EMPIRE
-					}
-				}
-				create_wargoal = {
-					target = HUN
-					type = topple_government
-				}
-			}
-			if = {
-				limit = {
-					JAP = {
-						not = { has_government = communism }
-						not = { has_government = democratic }
-					}
-				}
-				create_wargoal = {
-					target = JAP
-					type = topple_government
-				}
-			}
-			if = {
-				limit = {
-					MAN = {
-						has_completed_focus = MAN_imperial_divinity
-					}
-				}
-				create_wargoal = {
-					target = MAN
-					type = topple_government
-				}
-			}
-		}
-	}
-	focus = {
-		id = USA_shatter_the_empires
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		x = 4
-		y = 2
-		prerequisite = { focus = USA_end_monarchism }
-		relative_position_id = USA_reach_out_to_the_ware_group
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			OR = {
-				ENG = {
-					exists = yes
-					not = { has_war_with = ROOT }
-					not = { has_completed_focus = ENG_decolonization }
-				}
-				ITA = {
-					exists = yes
-					not = { has_war_with = ROOT }
-					any_state = {
-						is_controlled_by = ITA
-						not = { is_core_of = ITA }
-					}
-				}
-				FRA = {
-					exists = yes
-					not = { has_war_with = ROOT }
-					any_state = {
-						is_controlled_by = FRA
-						not = { is_core_of = FRA }
-					}
-				}
-				GER = {
-					exists = yes
-					not = { has_war_with = ROOT }
-					any_state = {
-						is_controlled_by = GER
-						not = { is_core_of = GER }
-					}
-				}
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			if = {
-				limit = {
-					ENG = {
-						exists = yes
-						not = { has_war_with = ROOT }
-						not = { has_completed_focus = ENG_decolonization }
-					}
-				}
-				every_country = {
-					limit = {
-						OR = {
-							original_tag = ENG
-							is_subject_of = ENG
-						}
-					}
-					ROOT = {
-						create_wargoal = {
-							target = PREV
-							type = puppet_wargoal_focus
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-					ITA = {
-						exists = yes
-						not = { has_war_with = ROOT }
-						any_state = {
-							is_controlled_by = ITA
-							not = { is_core_of = ITA }
-						}
-					}
-				}
-				every_country = {
-					limit = {
-						OR = {
-							original_tag = ITA
-							is_subject_of = ITA
-						}
-					}
-					ROOT = {
-						create_wargoal = {
-							target = PREV
-							type = puppet_wargoal_focus
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-					FRA = {
-						exists = yes
-						not = { has_war_with = ROOT }
-						any_state = {
-							is_controlled_by = FRA
-							not = { is_core_of = FRA }
-						}
-					}
-				}
-				every_country = {
-					limit = {
-						OR = {
-							original_tag = FRA
-							is_subject_of = FRA
-						}
-					}
-					ROOT = {
-						create_wargoal = {
-							target = PREV
-							type = puppet_wargoal_focus
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-					GER = {
-						exists = yes
-						not = { has_war_with = ROOT }
-						any_state = {
-							is_controlled_by = GER
-							not = { is_core_of = GER }
-						}
-					}
-				}
-				every_country = {
-					limit = {
-						OR = {
-							original_tag = GER
-							is_subject_of = GER
-						}
-					}
-					ROOT = {
-						create_wargoal = {
-							target = PREV
-							type = puppet_wargoal_focus
-						}
-					}
-				}
-			}
-		}
-	}
 #	#   # ## #  
 #   # #  # #  # 
 # # # ###  #### 
@@ -1127,149 +152,7 @@ focus_tree = {
 			unlock_decision_tooltip = { decision = USA_pay_farm_subsidies show_effect_tooltip = yes }
 		}
 	}
-	focus = {
-		id = USA_fair_labour_standards_act
-		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		x = 0
-		y = 2
-		prerequisite = { focus = USA_agricultural_adjustment_act }
-		relative_position_id = USA_wpa
-		cost = 10
 
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_medium_support_trigger = yes
-			has_government = democratic
-			not = { has_country_flag = USA_great_depression_cooldown }
-		}
-		
-		bypass = {
-			not = {
-				OR = {
-					has_idea = great_depression
-					has_idea = great_depression_2
-					has_idea = great_depression_3
-				}
-			}
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			USA_great_depression_level_down = yes
-			set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 230 }
-			custom_effect_tooltip = USA_great_depression_cooldown_tt
-			USA_congress_medium_opposition = yes
-		}
-	}
-	focus = {
-		id = USA_federal_housing_act
-		icon = GFX_goal_generic_construct_civilian
-		x = 0
-		y = 3
-		prerequisite = { focus = USA_fair_labour_standards_act }
-		relative_position_id = USA_wpa
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_medium_support_trigger = yes
-			has_government = democratic
-			not = { has_country_flag = USA_great_depression_cooldown }
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-		complete_tooltip = {
-			every_owned_state = {
-				limit = {
-					has_state_flag = USA_federal_housing_act
-				}
-				add_extra_state_shared_building_slots = 1
-			}
-		}
-		completion_reward = {
-			USA_great_depression_level_down = yes
-			USA_congress_medium_opposition = yes
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 1
-				set_state_flag = USA_federal_housing_act
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					is_core_of = ROOT
-					not = { has_state_flag = USA_federal_housing_act }
-				}
-				add_extra_state_shared_building_slots = 1
-				set_state_flag = USA_federal_housing_act
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					is_core_of = ROOT
-					not = { has_state_flag = USA_federal_housing_act }
-				}
-				add_extra_state_shared_building_slots = 1
-				set_state_flag = USA_federal_housing_act
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					is_core_of = ROOT
-					not = { has_state_flag = USA_federal_housing_act }
-				}
-				add_extra_state_shared_building_slots = 1
-				set_state_flag = USA_federal_housing_act
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					is_core_of = ROOT
-					not = { has_state_flag = USA_federal_housing_act }
-				}
-				add_extra_state_shared_building_slots = 1
-				set_state_flag = USA_federal_housing_act
-			}
-		}
-	}
 	focus = {
 		id = USA_office_of_scientific_research_and_development
 		icon = GFX_focus_research
@@ -1336,6 +219,7 @@ focus_tree = {
 		id = USA_limited_intervention
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = USA_continue_the_new_deal }
+		mutually_exclusive = { focus = USA_neutrality_act }
 		continue_if_invalid = yes
 		x = 0
 		y = 1
@@ -2351,7 +1235,7 @@ focus_tree = {
 	focus = {
 		id = USA_war_department
 		icon = GFX_goal_generic_army_doctrines
-		x = 28
+		x = 18
 		y = 0
 		offset = {
 			x = -26
@@ -3260,7 +2144,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = USA_bureau_of_ships
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3284,7 +2168,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = USA_battleship_primacy
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3307,7 +2191,7 @@ focus_tree = {
 		y = 2
 		prerequisite = { focus = USA_advanced_mahanian_doctrine }
 		relative_position_id = USA_battleship_primacy
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3362,7 +2246,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = USA_bureau_of_ships
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3386,7 +2270,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = USA_carrier_primacy
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3410,7 +2294,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_bureau_of_aeronautics }
 		relative_position_id = USA_bureau_of_aeronautics
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3446,7 +2330,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = USA_bureau_of_ships
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3466,7 +2350,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = USA_escort_effort
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3490,7 +2374,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_bureau_of_ships }
 		relative_position_id = USA_bureau_of_ships
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3531,7 +2415,7 @@ focus_tree = {
 		y = 2
 		prerequisite = { focus = USA_fleet_submarines }
 		relative_position_id = USA_bureau_of_ships
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3560,7 +2444,7 @@ focus_tree = {
 		x = 7
 		y = 1
 		relative_position_id = USA_two_ocean_navy_act
-		cost = 10
+		cost = 5
 		prerequisite = { focus = USA_two_ocean_navy_act }
 		ai_will_do = {
 			factor = 1
@@ -3585,7 +2469,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = USA_fund_the_navy
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3610,7 +2494,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = USA_expand_the_USMC
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
