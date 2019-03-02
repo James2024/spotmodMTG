@@ -1,12 +1,12 @@
-﻿capital = 313
+﻿capital = 305
 
-oob = "GUA_1936"
+oob = "ECU_1936"
 
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
-	gw_artillery = 1
 	early_fighter = 1
+	fuel_silos = 1
 }
 set_country_flag = monroe_doctrine
 set_war_support = 0.1
@@ -31,18 +31,19 @@ add_ideas = {
 	complete_national_focus = construction_effort
 	complete_national_focus = production_effort
 	
-	oob = "GUA_1939"
+	oob = "ECU_1939"
 	set_technology = {
+		gw_artillery = 1
 		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
 
 		#doctrines
 		air_superiority = 1
-		mass_assault = 1
-		pocket_defence = 1
-		defence_in_depth = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
 		fleet_in_being = 1
 		battlefleet_concentration = 1
-		convoy_sailing = 1
 
 		#electronics
 		electronic_mechanical_engineering = 1
@@ -54,7 +55,6 @@ add_ideas = {
 		basic_machine_tools = 1
 		improved_machine_tools = 1
 		advanced_machine_tools = 1
-		fuel_silos = 1
 		construction1 = 1
 		construction2 = 1
 		dispersed_industry = 1
@@ -66,39 +66,33 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 10
+			popularity = 100
 		}
 
 		fascism = {
 			popularity = 0
-			banned = yes
 		}
 		
 		communism = {
 			popularity = 0
-			banned = yes
 			#banned = no #default is no
-		}
-
-		neutrality = {
-			popularity = 90
 		}
 	}
 	
-	ruling_party = neutrality
-	last_election = "1931.2.8"
-	election_frequency = 48
-	elections_allowed = no
+	ruling_party = democratic
+	last_election = "1933.12.15"
+	election_frequency = 84
+	elections_allowed = yes
 }
 
 create_country_leader = {
-	name = "Jorge Ubico"
-	desc = "POLITICS_JORGE_UBICO_DESC"
-	picture = "GFX_portrait_guatemala_jorge_ubico"
+	name = "Federico Páez"
+	desc = "POLITICS_FEDERICO_PAEZ_DESC"
+	picture = "GFX_Portrait_ecuador_federico_paez"
 	expire = "1965.1.1"
-	ideology = despotism
+	ideology = socialism
 	traits = {
-		centralamerica
+		#
 	}
 }
 
@@ -107,7 +101,7 @@ create_country_leader = {
 
 		parties = {
 			democratic = { 
-				popularity = 30
+				popularity = 100
 			}
 
 			fascism = {
@@ -118,15 +112,22 @@ create_country_leader = {
 				popularity = 0
 				#banned = no #default is no
 			}
-
-			neutrality = {
-				popularity = 70
-			}
 		}
 		
-		ruling_party = neutrality
-		last_election = "1931.2.8"
-		election_frequency = 48
-		elections_allowed = no
+		ruling_party = democratic
+		last_election = "1933.12.15"
+		election_frequency = 84
+		elections_allowed = yes
+	}
+
+	create_country_leader = {
+		name = "Aurelio Mosquera"
+		desc = "POLITICS_AURELIO_MOSQUERA_DESC"
+		picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
+		expire = "1965.1.1"
+		ideology = liberalism
+		traits = {
+			#
+		}
 	}
 }
