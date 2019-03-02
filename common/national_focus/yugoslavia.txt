@@ -354,10 +354,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_state_claim = 48
-			add_state_claim = 211
-			add_state_claim = 212
-			news_event = { id = news.325 }
 		}
 	}
 
@@ -494,18 +490,11 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				GER = {
-					NOT = { has_war_with = ROOT }
-					has_government = fascism
-					has_capitulated = no
-					is_faction_leader = yes
-				}
-				any_other_country = {
-					is_major = yes
-					has_government = fascism
-					is_faction_leader = yes
-				}
+			GER = {
+				NOT = { has_war_with = ROOT }
+				has_government = fascism
+				has_capitulated = no
+				is_faction_leader = yes
 			}
 			NOT = {
 				any_other_country = {
@@ -523,6 +512,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+
+		}
+
 		completion_reward = {
 			if = {
 				limit = {
@@ -530,23 +523,7 @@ focus_tree = {
 				}
 				country_event = DOD_yugoslavia.1
 			}
-			if = {
-				limit = {
-					GER = {
-						exists = yes
-						has_capitulated = no
-						has_government = fascism
-						is_faction_leader = yes
-					}
-				}
-				GER = { country_event = generic.2 }
-			}
-			else = {
-				get_best_alliance_match_fascism_effect = yes
-				var:best_leader = {
-					country_event = generic.2
-				}
-			}
+			GER = { country_event = generic.2 }
 		}
 	}
 
@@ -565,6 +542,8 @@ focus_tree = {
 		}
 
 		available = {
+		
+		date < 1947.1.1
 			
 		}
 
@@ -575,6 +554,10 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
 
 		completion_reward = {
 			if = {
@@ -618,6 +601,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+
+		}
+
 		completion_reward = {
 			add_to_tech_sharing_group = YUG_naval_research_group
 			ITA = {
@@ -658,6 +645,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+
+		}
+
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = YUG_idea_slovene_nationalism
@@ -693,6 +684,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+
+		}
+
 		completion_reward = {
 			add_ideas = YUG_idea_religious_freedoms_guaranteed
 		}
@@ -724,6 +719,9 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+
+		}
 
 		completion_reward = {
 			add_ideas = YUG_idea_local_militias
@@ -761,6 +759,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+
+		}
+
 		completion_reward = {
 			remove_ideas = YUG_idea_macedonian_opposition
 		}
@@ -793,6 +795,10 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
 
 		completion_reward = {
 			remove_ideas = YUG_idea_croatian_opposition
@@ -831,6 +837,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+
+		}
+
 		completion_reward = {
 				swap_ideas = { remove_idea = YUG_idea_serbian_general_staff add_idea = YUG_idea_yugoslavian_general_staff }
 		}
@@ -848,24 +858,14 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50
-			modifier = {
-				ENG = {
-					has_capitulated = yes
-					is_faction_leader = yes
-				}
-				factor = 0
-			}
 		}
 
 		available = {
-			
-			any_other_country = {
+			ENG = {
 				NOT = { has_war_with = ROOT }
+				has_capitulated = no
 				is_faction_leader = yes
-				is_major = yes
-				has_government = democratic
 			}
-			
 			NOT = {
 				any_other_country = {
 					is_in_faction_with = ENG
@@ -875,40 +875,19 @@ focus_tree = {
 		}
 
 		bypass = {
-			OR = {
-				is_in_faction_with = ENG
-				AND = {
-					is_in_faction = yes
-					any_other_country = {
-						is_faction_leader = yes
-						is_in_faction_with = ROOT
-						has_government = democratic
-					}
-				}
-			}
+			is_in_faction_with = ENG
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+
+		}
+
 		completion_reward = {
-			if = {
-				limit = { 
-					ENG = {
-						is_faction_leader = yes
-						has_government = democratic
-						not = { has_war_with = ROOT }
-					}
-				}
-				ENG = { country_event = generic.2 }
-			}
-			else = {
-				get_best_alliance_match_democratic_effect = yes
-				var:best_leader = {
-					country_event = generic.2
-				}
-			}
+			ENG = { country_event = generic.2 }
 			if = {
 				limit = {
 					has_idea = YUG_idea_croatian_opposition
@@ -934,6 +913,7 @@ focus_tree = {
 
 		available = {
 			has_war_with = ITA
+			date < 1947.1.1
 		}
 
 		bypass = {
@@ -944,6 +924,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+
+		}
+
 		completion_reward = {
 			add_state_core = 736
 			if = {
@@ -952,7 +936,7 @@ focus_tree = {
 				}
 				add_state_core = 163
 			}
-			hidden_effect = { news_event = { id = news.328 } }
+			news_event = { id = news.328 }
 		}
 	}
 
@@ -981,6 +965,10 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
 
 		completion_reward = {
 			add_to_tech_sharing_group = YUG_air_research_group
@@ -1024,6 +1012,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+
+		}
+
 		completion_reward = {
 			SOV = {
 				add_opinion_modifier = { 
@@ -1031,7 +1023,7 @@ focus_tree = {
 					modifier = medium_increase
 				}
 			}
-			hidden_effect = { news_event = { id = news.329 days = 3 random = 6 } }
+			news_event = { id = news.329 }
 		}
 	}
 
@@ -1061,8 +1053,12 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+
+		}
+
 		completion_reward = {
-			add_timed_idea = { idea = YUG_idea_peasant_councils days = 730 }
+			add_ideas = YUG_idea_peasant_councils
 		}
 	}
 
@@ -1096,17 +1092,16 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+
+		}
+
 		completion_reward = {
 			add_timed_idea = { idea = YUG_idea_economic_aid days = 720 }
 			SOV = {
 				add_timed_idea = { idea = YUG_idea_economic_aid days = 365 }
 				add_ai_strategy = {
 					type = protect
-					id = "YUG"
-					value = 100
-				}
-				add_ai_strategy = {
-					type = support
 					id = "YUG"
 					value = 100
 				}
@@ -1141,6 +1136,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+
+		}
+
 		completion_reward = {
 			swap_ideas = { remove_idea = YUG_idea_peasant_councils add_idea = YUG_idea_empowered_peasant_councils }
 		}
@@ -1163,17 +1162,10 @@ focus_tree = {
 
 		available = {
 			is_in_faction = no
-			OR = {
-				SOV = {
-					NOT = { has_war_with = ROOT }
-					exists = yes
-					has_capitulated = no
-				}
-				any_other_country = {
-					is_major = yes
-					has_government = communism
-					is_faction_leader = yes
-				}
+			SOV = {
+				NOT = { has_war_with = ROOT }
+				exists = yes
+				has_capitulated = no
 			}
 			NOT = {
 				any_other_country = {
@@ -1191,24 +1183,13 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+
+		}
+
 		completion_reward = {
-			if = {
-				limit = {
-					SOV = {
-						exists = yes
-						has_government = communism
-						is_faction_leader = yes
-					}
-				}
-				SOV = {
-					country_event = generic.2
-				}
-			}
-			else = {
-				get_best_alliance_match_communism_effect = yes
-				var:best_leader = {
-					country_event = generic.2
-				}
+			SOV = {
+				country_event = generic.2
 			}
 		}
 	}
@@ -1239,6 +1220,10 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
 
 		completion_reward = {
 			swap_ideas = { remove_idea = YUG_idea_empowered_peasant_councils add_idea = YUG_idea_very_empowered_peasant_councils }
@@ -1271,6 +1256,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+
+		}
+
 		completion_reward = {
 			remove_ideas = YUG_idea_croatian_opposition
 			remove_ideas = YUG_idea_macedonian_opposition
@@ -1293,7 +1282,7 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
+
 		}
 
 		bypass = {
@@ -1304,10 +1293,14 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
+		complete_tooltip = {
+
+		}
+
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
 			create_faction = panslavic_workers_congress
-			hidden_effect = { news_event = { id = news.330 } }
+			news_event = { id = news.330 }
 		}
 	}
 
@@ -1516,7 +1509,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				bonus = 1.0
+				bonus = 1
 				uses = 2
 				category = industry
 			}
@@ -2384,7 +2377,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = air_doc_bonus
-				bonus = 1.0
+				bonus = 1
 				uses = 1
 				category = air_doctrine
 			}
@@ -2602,8 +2595,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_the_ik_3
-				bonus = 3.0
-				ahead_reduction = 2
+				bonus = 3
+				ahead_reduction = 0.75
 				uses = 1
 				category = light_fighter
 			}
@@ -2643,7 +2636,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_heavy_fighter_project
-				bonus = 1.0
+				bonus = 1
 				uses = 1
 				category = cat_heavy_fighter
 			}
@@ -2683,7 +2676,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_bomber_project
-				bonus = 1.0
+				bonus = 1
 				uses = 1
 				category = tactical_bomber
 			}
@@ -2728,15 +2721,14 @@ focus_tree = {
 						has_war_with = GER
 					}
 				}
-				GER = { country_event = DOD_yugoslavia.20 }
-			}
-			if = {
+			GER = { country_event = DOD_yugoslavia.20 }
+			}if = {
 				limit = {
 					NOT = {
 						has_war_with = ITA
 					}
 				}
-				ITA = { country_event = DOD_yugoslavia.20 }
+			ITA = { country_event = DOD_yugoslavia.20 }
 			}
 			if = {
 				limit = {
@@ -2744,7 +2736,7 @@ focus_tree = {
 						has_war_with = ENG
 					}
 				}
-				ENG = { country_event = DOD_yugoslavia.20 }
+			ENG = { country_event = DOD_yugoslavia.20 }
 			}
 			if = {
 				limit = {
@@ -2752,7 +2744,7 @@ focus_tree = {
 						has_war_with = FRA
 					}
 				}
-				FRA = { country_event = DOD_yugoslavia.20 }
+			FRA = { country_event = DOD_yugoslavia.20 }
 			}
 		}
 	}
@@ -3044,7 +3036,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_motorize_the_cavalry
-				bonus = 3.0
+				bonus = 3
 				technology = motorised_infantry
 			}
 		}
@@ -3087,7 +3079,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_motorized_logistics
-				bonus = 1.0
+				bonus = 1
 				uses = 2
 				category = hospital_tech
 				category = logistics_tech
@@ -3132,7 +3124,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_armored_cavalry
-				bonus = 1.0
+				bonus = 1
 				uses = 1
 				category = cat_mechanized_equipment
 			}
@@ -3217,7 +3209,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_modern_tanks
-				bonus = 1.0
+				bonus = 1
 				uses = 1
 				category = armor
 			}
@@ -3296,7 +3288,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_small_arms
-				bonus = 1.00
+				bonus = 10
 				uses = 1
 				category = infantry_weapons
 			}
@@ -3336,7 +3328,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_domestic_artillery_production
-				bonus = 1.00
+				bonus = 10
 				uses = 1
 				category = artillery
 			}
@@ -3376,7 +3368,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_anti_tank_defenses
-				bonus = 3.0
+				bonus = 3
 				uses = 1
 				category = cat_anti_tank
 			}
@@ -3416,7 +3408,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_mountain_brigades
-				bonus = 3.0
+				bonus = 3
 				uses = 1
 				category = mountaineers_tech
 			}
@@ -3456,7 +3448,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_independent_engineer_regiments
-				bonus = 3.0
+				bonus = 3
 				uses = 1
 				category = engineers_tech
 			}
@@ -3496,7 +3488,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_motorized_recon_companies
-				bonus = 3.0
+				bonus = 3
 				uses = 1
 				category = recon_tech
 			}
@@ -3536,7 +3528,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_form_parachute_battalions
-				bonus = 3.0
+				bonus = 3
 				uses = 1
 				category = para_tech
 			}
@@ -3576,7 +3568,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_army_maneuvers
-				bonus = 1.0
+				bonus = 1
 				uses = 1
 				category = land_doctrine
 			}
@@ -3617,7 +3609,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_supremacy_of_offense
-				bonus = 1.0
+				bonus = 1
 				uses = 2
 				category = cat_mobile_warfare
 				category = cat_superior_firepower
@@ -3659,7 +3651,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_supremacy_of_defense
-				bonus = 1.0
+				bonus = 1
 				uses = 2
 				category = cat_grand_battle_plan
 				category = cat_mass_assault
@@ -3782,7 +3774,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_contest_the_adriatic
-				bonus = 1.0
+				bonus = 1
 				uses = 2
 				category = naval_doctrine
 			}
@@ -3824,7 +3816,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_replace_the_dalmacija
-				bonus = 1.0
+				bonus = 1
 				uses = 1
 				category = cl_tech
 			}
@@ -3866,7 +3858,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_naval_bombers
-				bonus = 1.0
+				bonus = 1
 				uses = 1
 				category = naval_bomber
 			}
@@ -3908,7 +3900,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_heavy_cruiser_project
-				bonus = 1.0
+				bonus = 1
 				uses = 1
 				category = ca_tech
 			}
@@ -3950,7 +3942,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_modern_destroyers
-				bonus = 1.0
+				bonus = 1
 				uses = 1
 				category = dd_tech
 			}
@@ -4127,7 +4119,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = YUG_expand_the_submarine_fleet
-				bonus = 1.0
+				bonus = 1
 				uses = 1
 				category = ss_tech
 			}

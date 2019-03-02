@@ -316,6 +316,9 @@ country_event = {
 			set_state_controller = 17
 		}
 		if = {
+			set_state_controller = 785
+		}
+		if = {
 			limit = { 27 = { owner = { original_tag = FRA } } }
 			set_state_controller = 27
 		}
