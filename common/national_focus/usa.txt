@@ -235,7 +235,10 @@ focus_tree = {
 		available = {
 			congress_high_support_trigger = yes 
 			has_government = democratic
+			OR = {
 			date > 1939.1.1
+			threat > 0.4 
+			}
 		}
 		bypass = {
 			

@@ -1220,7 +1220,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = general_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1320,7 +1320,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = naval_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1362,7 +1362,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = naval_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1387,7 +1387,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = naval_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1411,7 +1411,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = uk_destroyer_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1440,7 +1440,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = uk_destroyer_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1466,7 +1466,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = uk_convoy_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1491,7 +1491,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = naval_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1515,7 +1515,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = uk_waves_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 0.25
 		}
@@ -1541,7 +1541,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = uk_waves_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1565,7 +1565,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = naval_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1595,7 +1595,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = uk_battleship_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1648,7 +1648,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = uk_battleship_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
