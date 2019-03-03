@@ -1,6 +1,7 @@
 state={
 	id=768
 	name="STATE_768" # Rwanda
+	owner = ENG
 	
 	state_category = pastoral
 
