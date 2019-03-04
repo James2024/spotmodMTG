@@ -222,14 +222,14 @@ guiTypes = {
 		checkboxType = {
 			name = "localgames_tab"
 			position = { x = 105  y = 84 }
-			quadTextureSprite ="GFX_save_game_btn"	
+			quadTextureSprite ="GFX_generic_box"	
 			Orientation = "UPPER_LEFT"
 		}
 
 		checkboxType = {
 			name = "remotegames_tab"
 			position = { x = 262 y = 84 }
-			quadTextureSprite ="GFX_save_game_btn"	
+			quadTextureSprite ="GFX_generic_box"	
 			Orientation = "UPPER_LEFT"
 		}
 
@@ -338,15 +338,15 @@ guiTypes = {
 		
 		checkboxType = {
 			name = "localgames_tab"
-			position = { x = 105  y = 84 }
-			quadTextureSprite ="GFX_save_game_btn"	
+			position = { x = 115  y = 90 }
+			quadTextureSprite ="GFX_generic_box"	
 			Orientation = "UPPER_LEFT"
 		}
 
 		checkboxType = {
 			name = "remotegames_tab"
-			position = { x = 262 y = 84 }
-			quadTextureSprite ="GFX_save_game_btn"	
+			position = { x = 265 y = 90 }
+			quadTextureSprite ="GFX_generic_box"	
 			Orientation = "UPPER_LEFT"
 		}
 
