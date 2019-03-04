@@ -33,7 +33,7 @@ ai_historical_focus_list_CHI = {
 		CHI_forced_conscription #January 10 1942
 		CHI_the_hump #March 20 1942
 		CHI_chinese_expeditionary_force #May 30 1942
-		CHI_sino_american_cooperative_organisation #August 10 1942
+		#CHI_sino_american_cooperative_organisation #August 10 1942
 		CHI_price_controls #October 20 1942
 		CHI_ledo_road #December 30 1942
 		CHI_the_chu_x_po #March 10 1943

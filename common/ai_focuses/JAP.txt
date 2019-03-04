@@ -1,8 +1,8 @@
 
 ai_historical_focus_list_JAP = {
 	ai_national_focuses = {
-		army_primancy_focus
-		navy_primancy_focus
+		army_primacy_focus
+		navy_primacy_focus
 		naval_expansion_focus
 		advanced_torpedoes_focus
 		shbb_focus
