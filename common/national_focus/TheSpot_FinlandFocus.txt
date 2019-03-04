@@ -391,7 +391,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = jet_rocket_bonus
-				ahead_reduction = 1
+				ahead_reduction = 2
 				uses = 1
 				category = rocketry
 			}
@@ -464,7 +464,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = cr_bonus
 				bonus = 1
-				ahead_reduction = 1
+				ahead_reduction = 2
 				uses = 1
 				technology = improved_light_cruiser
 				technology = improved_heavy_cruiser
