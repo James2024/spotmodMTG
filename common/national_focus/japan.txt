@@ -2697,7 +2697,7 @@ focus_tree = {
 			add_ideas = JAP_first_air_fleet
 			add_tech_bonus = {
 				name = USA_carrier_primacy
-				bonus = 1.5
+				bonus = 2
 				uses = 1
 				category = cv_tech
 			}
@@ -2778,7 +2778,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_supremacy_of_the_battlefleet
-				bonus = 1
+				bonus = 1.0
 				uses = 1
 				category = bb_tech
 			}
