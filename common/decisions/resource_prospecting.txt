@@ -3967,7 +3967,7 @@ prospect_for_resources = {
 			state = 291
 		}
 		available = {
-			has_tech = excavation4
+			has_tech = excavation2
 			num_of_civilian_factories_available_for_projects > 6
 			controls_state = 291
 		}
@@ -4015,7 +4015,7 @@ prospect_for_resources = {
 			state = 291
 		}
 		available = {
-			has_tech = excavation4
+			has_tech = excavation3
 			num_of_civilian_factories_available_for_projects > 7
 			controls_state = 291
 		}
