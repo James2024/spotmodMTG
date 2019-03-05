@@ -2,7 +2,7 @@
 
 oob = "JAP_1936"
 
-set_stability = 0.2 #baseline, THE EMPEROR PROTECTS
+set_stability = 0.35 #baseline, THE EMPEROR PROTECTS
 set_war_support = 0.8
 
 set_research_slots = 4
@@ -14,7 +14,6 @@ add_ideas = {
 	partial_economic_mobilisation
 
 	JAP_zaibatsus
-	JAP_duplicate_research_efforts
 	JAP_militarism
 }
 
@@ -365,10 +364,10 @@ create_corps_commander = {
 	name = "Tomoyuki Yamashita"
 		picture = "Portrait_Japan_Tomoyuki_Yamashita.dds"
 	traits = {
-		trickster trait_engineer brilliant_strategist politically_connected
+		trickster trait_engineer brilliant_strategist politically_connected infantry_leader naval_invader skilled_staffer
 	}
-	skill = 5
-	attack_skill = 4
+	skill = 6
+	attack_skill = 6
 	defense_skill = 5
 	planning_skill = 3
 	logistics_skill = 4
@@ -392,9 +391,9 @@ create_field_marshal = {
 create_field_marshal = {
 	name = "Shunroku Hata"
 		picture = "Portrait_Japan_Shunroku_Hata.dds"
-	traits = { offensive_doctrine JAP_samurai_lineage }
+	traits = { offensive_doctrine JAP_samurai_lineage organizer infantry_leader }
 	skill = 4
-	attack_skill = 3
+	attack_skill = 4
 	defense_skill = 4
 	planning_skill = 2
 	logistics_skill = 4
@@ -425,7 +424,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Shizuichi Tanaka"
 		picture = "Portrait_Japan_Shizuichi_Tanaka.dds"
-	traits = { trickster career_officer infantry_officer }
+	traits = { trickster career_officer infantry_officer infantry_leader hill_fighter }
 	skill = 4
 	attack_skill = 4
 	defense_skill = 3
@@ -447,10 +446,10 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Toshizo Nishio" #Toshizo
 		picture = "Portrait_Japan_Toshizo_Nishio.dds"
-	traits = { brilliant_strategist infantry_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
+	traits = { brilliant_strategist infantry_officer infantry_leader commando }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
 	planning_skill = 3
 	logistics_skill = 2
 }
@@ -643,7 +642,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Hitoshi Imamura"
 		picture = "Portrait_Japan_Hitoshi_Imamura.dds"
-	traits = {  commando career_officer infantry_officer }
+	traits = {  commando career_officer infantry_officer naval_invader jungle_rat }
 	skill = 3
 	attack_skill = 3
 	defense_skill = 1

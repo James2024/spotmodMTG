@@ -33,6 +33,7 @@ NDefines.NCountry.NUM_DAYS_TO_FULLY_DELETE_STOCKPILED_EQUIPMENT = 999
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 70
 NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.10
 NDefines.NCountry.AIR_SUPPLY_CONVERSION_SCALE = 0.39 -- air supply? 0.05 original but range is lower
+NDefines.NCountry.BASE_MOBILIZATION_SPEED = 0.04
 
 -- production and recruitment
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 500000

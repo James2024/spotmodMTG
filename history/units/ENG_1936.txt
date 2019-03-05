@@ -413,8 +413,8 @@ units = {
 		force_equipment_variants = { infantry_equipment_0 = { owner = "ENG" } }
 		start_experience_factor = 0.1
 
-	}
-	
+	}			
+}
 
 
 air_wings = {

@@ -398,7 +398,7 @@ create_field_marshal = {
 create_field_marshal = {
 	name = "Günther von Kluge"
 	picture = "Portrait_Germany_Gunther_von_Kluge.dds"
-	traits = {  offensive_doctrine armor_officer }
+	traits = {  offensive_doctrine infantry_officer infantry_leader organizer }
 	skill = 3
 	id = 2
 	attack_skill = 3
@@ -422,22 +422,22 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Erwin Rommel"
 	picture = "Portrait_Germany_Erwin_Rommel.dds"
-	traits = { trickster trait_reckless war_hero armor_officer media_personality }
+	traits = { trait_reckless war_hero armor_officer brilliant_strategist media_personality panzer_leader desert_fox trait_engineer }
 	skill = 4
 	id = 4
-	attack_skill = 4
+	attack_skill = 5
 	defense_skill = 4
 	planning_skill = 2
-	logistics_skill = 3
+	logistics_skill = 2
 }
 
-create_corps_commander = {
+create_field_marshal = {
 	name = "Erich von Manstein"
 	picture = "Portrait_Germany_Erich_von_Manstein.dds"
-	traits = { trickster armor_officer brilliant_strategist trait_engineer }
+	traits = { trickster armor_officer brilliant_strategist trait_engineer organizer }
 	skill = 4
 	id = 5
-	attack_skill = 2
+	attack_skill = 4
 	defense_skill = 4
 	planning_skill = 3
 	logistics_skill = 4
@@ -446,13 +446,13 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Heinz Guderian"
 	picture = "Portrait_Germany_Heinz_Guderian.dds"
-	traits = { trickster brilliant_strategist panzer_leader armor_officer career_officer }
-	skill = 4
+	traits = { trickster brilliant_strategist panzer_leader armor_officer career_officer ranger trait_engineer }
+	skill = 6
 	id = 6
-	attack_skill = 2
+	attack_skill = 5
 	defense_skill = 4
 	planning_skill = 4
-	logistics_skill = 3
+	logistics_skill = 6
 }
 
 create_corps_commander = {
@@ -483,7 +483,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Fedor von Bock"
 	picture = "Portrait_Germany_Fedor_von_Bock.dds"
-	traits = { harsh_leader trait_cautious }
+	traits = { harsh_leader trait_cautious infantry_leader }
 	skill = 4
 	id = 9
 	attack_skill = 4
@@ -555,7 +555,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Kurt Student"
 	picture = "Portrait_Germany_Kurt_Student.dds"
-	traits = { commando trait_reckless }
+	traits = { commando trait_reckless infantry_leader }
 	skill = 4
 	id = 16
 	attack_skill = 4
@@ -567,7 +567,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Erwin von Witzleben"
 	picture = "Portrait_Germany_Erwin_von_Witzleben.dds"
-	traits = { infantry_officer career_officer }
+	traits = { infantry_officer career_officer infantry_leader }
 	skill = 4
 	id = 17
 	attack_skill = 4
@@ -719,78 +719,6 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 3
 	logistics_skill = 2
-}
-
-create_navy_leader = {
-	name = "Karl Dönitz"
-	picture = "Portrait_Germany_Karl_Donitz.dds"
-	traits = { navy_career_officer seawolf }
-	skill = 5
-	id = 26
-	attack_skill = 5
-	defense_skill = 3
-	maneuvering_skill = 3
-	coordination_skill = 5
-}
-
-create_navy_leader = {
-	name = "Erich Raeder"
-		picture = "Portrait_Germany_Erich_Raeder.dds"
-	traits = { naval_lineage battleship_adherent }
-	skill = 4
-	id = 27
-	attack_skill = 3
-	defense_skill = 4
-	maneuvering_skill = 3
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "Alfred Saalwächter"
-		picture = "Portrait_Germany_Alfred_Saalwachter.dds"
-	traits = { old_guard_navy bold}
-	skill = 4
-	id = 28
-	attack_skill = 4
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 4
-}
-
-create_navy_leader = {
-	name = "Hermann Boehm"
-		picture = "Portrait_Germany_Hermann_Boehm.dds"
-	traits = { craven superior_tactician }
-	skill = 4
-	id = 29
-	attack_skill = 3
-	defense_skill = 4
-	maneuvering_skill = 4
-	coordination_skill = 2
-}
-
-create_navy_leader = {
-	name = "Wilhelm Marschall"
-		picture = "Portrait_Germany_Wilhelm_Marschall.dds"
-	traits = { old_guard_navy bold}
-	skill = 4
-	id = 30
-	attack_skill = 4
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 4
-}
-
-create_navy_leader = {
-	name = "Günther Lütjens"
-		picture = "Portrait_Germany_Gunter_Lutjens.dds"
-	traits = { gentlemanly navy_career_officer superior_tactician }
-	skill = 3
-	id = 31
-	attack_skill = 4
-	defense_skill = 1
-	maneuvering_skill = 1
-	coordination_skill = 4
 }
 
 if = {

@@ -2,6 +2,14 @@
 
 oob = "SOV_1936"
 
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "SOV_1936_naval_mtg"
+	else = {
+		set_naval_oob = "SOV_1936_naval_legacy"
+	}
+}
+
 set_research_slots = 3
 set_stability = 0.5
 set_war_support = 0.8
@@ -28,16 +36,42 @@ set_technology = {
 	early_bomber = 1
 	strategic_bomber1 = 1
 	naval_bomber1 = 1
-	early_submarine = 1
-	basic_submarine = 1
-	early_destroyer = 1
-	early_light_cruiser = 1
-	early_heavy_cruiser = 1
-	early_battleship = 1
-	early_battlecruiser = 1
 	transport = 1
 	mass_assault = 1
 	fleet_in_being = 1
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		mtg_transport = 1
+	}
 }
 
 add_ideas = {
@@ -164,14 +198,10 @@ SOV_cold_acclimatization_army
 		tactical_bomber1 = 1
 		interwar_artillery = 1
 		interwar_antitank = 1
-		interwar_antiair = 1
 		infantry_weapons2 = 1
 		support_weapons = 1
 		support_weapons2 = 1
 		paratroopers = 1
-		basic_submarine = 1
-		basic_destroyer = 1
-		basic_heavy_cruiser = 1
 
 		#doctrines
 		pocket_defence = 1
@@ -199,13 +229,29 @@ SOV_cold_acclimatization_army
 		advanced_machine_tools = 1
 		synth_oil_experiments = 1
 		oil_processing = 1
-		improved_oil_processing = 1
+		fuel_refining2 = 1
 		construction1 = 1
 		construction2 = 1
 		construction3 = 1
 		concentrated_industry = 1
 		concentrated_industry2 = 1
 		concentrated_industry3 = 1
+	}
+	if = {
+		limit = { not = { has_dlc = "Man the Guns" } }
+		set_technology = {
+			basic_submarine = 1
+			basic_destroyer = 1
+			basic_heavy_cruiser = 1
+		}
+	}
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+		set_technology = {
+			improved_ship_hull_light = 1
+			improved_ship_hull_submarine = 1
+			basic_ship_hull_cruiser = 1
+		}
 	}
 }
 

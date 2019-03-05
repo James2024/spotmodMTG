@@ -39,6 +39,7 @@ set_technology = {
 	naval_bomber1 = 1
 	early_bomber = 1
 	CAS1 = 1
+	fighter1 = 1
 	
 	trench_warfare = 1
 
@@ -430,8 +431,7 @@ create_country_leader = {
 #}
 
 create_field_marshal = {
-	name = "Alan Brooke" # Aristocrat
-	id = 997
+	name = "Alan Brooke"
 	picture = "Portrait_Britain_Alan_Brooke.dds"
 	traits = { defensive_doctrine trait_cautious career_officer }
 	skill = 5
@@ -442,12 +442,11 @@ create_field_marshal = {
 }
 
 create_field_marshal = {
-	name = "Bernard Montgomery" # Aristocrat
-	id = 996
+	name = "Bernard Montgomery"
 	picture = "Portrait_Britain_Bernard_Montgomery.dds"
 	traits = { logistics_wizard offensive_doctrine media_personality trait_cautious inflexible_strategist organizer }
 	skill = 4 
-	attack_skill = 2
+	attack_skill = 3
 	defense_skill = 4
 	planning_skill = 3
 	logistics_skill = 4
@@ -467,7 +466,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Neil Ritchie"
 	picture = "Portrait_Britain_Neil_Ritchie.dds"
-	traits = { inflexible_strategist armor_officer politically_connected  }
+	traits = { inflexible_strategist armor_officer politically_connected panzer_leader }
 	skill = 4
 	attack_skill = 3
 	defense_skill = 4
@@ -499,7 +498,6 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Richard O'Connor"
-	id = 999
 	picture = "Portrait_Britain_Richard_OConnor.dds"
 	traits = {  }
 	skill = 4
@@ -532,8 +530,7 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Harold Alexander" # Aristocrat
-	id = 995
+	name = "Harold Alexander"
 	picture = "Portrait_Britain_Harold_Alexander.dds"
 	traits = { politically_connected }
 	skill = 5
@@ -599,8 +596,7 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "John Vereker Lord Gort" # Aristocrat
-	id = 994
+	name = "John Vereker Lord Gort"
 	picture = "Portrait_Britain_John_Vereker.dds"
 	traits = { politically_connected trait_cautious }
 	skill = 4
@@ -644,8 +640,7 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Oliver Leese" # Aristocrat
-	id = 993
+	name = "Oliver Leese"
 	picture = "Portrait_Britain_Oliver_Leese.dds"
 	traits = {  armor_officer harsh_leader politically_connected }
 	skill = 4
@@ -658,8 +653,8 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Miles Dempsey"
 	picture = "Portrait_Britain_Miles_Dempsey.dds"
-	traits = { brilliant_strategist infantry_officer career_officer }
-	skill = 4
+	traits = { brilliant_strategist infantry_officer infantry_leader career_officer }
+	skill = 5
 	attack_skill = 3
 	defense_skill = 4
 	planning_skill = 4
@@ -679,8 +674,7 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Archibald Wavell" # Aristocrat
-	id = 998
+	name = "Archibald Wavell"
 	picture = "Portrait_Britain_Archibald_Wavell.dds"
 	traits = { career_officer }
 	skill = 4
