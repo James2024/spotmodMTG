@@ -1,3 +1,4 @@
+
 ideas = {
 
 	country = {
@@ -80,6 +81,8 @@ ideas = {
 				stability_factor = 0.05
 				drift_defence_factor = 0.5
 			}
+			
+
 		}
 
 		ENG_george_vi = {
@@ -109,6 +112,7 @@ ideas = {
 			
 			traits = { popular_figurehead }
 			
+
 		}
 
 		ENG_the_war_to_end_all_wars = {
@@ -212,6 +216,10 @@ ideas = {
 				fighter_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}
+				cv_fighter_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
 			}
 		}
 		
@@ -234,6 +242,9 @@ ideas = {
 			equipment_bonus = {
 				infantry_equipment = {
 					build_cost_ic = -0.1 instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.05 instant = yes
 				}
 			}
 		}
@@ -300,7 +311,7 @@ ideas = {
 			removal_cost = -1			
 			
 		}
-
+		
 		ENG_special_air_service_idea = {
 
 			name = ENG_special_air_service
@@ -1727,61 +1738,18 @@ ideas = {
 				repair_speed_factor = 0.1
 			}
 		}
-
 	}
 	
 	
 	political_advisor = {
-		
-		harry_pollitt = {
-			allowed = {
-				original_tag = ENG
-			}
 
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_government = communism
-				}
-				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}
-			}
-			
-			traits = { communist_revolutionary }
-	
-			do_effect = {
-				NOT = {
-					has_government = communism
-				}
-			}
-			
-			ai_will_do = {
-				factor = 0
-			}
-		}	
-			
 		clement_attlee = {
-
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = { has_completed_focus = ENG_a_change_in_course }
-				}
-				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}
-			}
 			
 			allowed = {
 				original_tag = ENG
 			}
+			
+
 			
 			traits = { democratic_reformer }
 	
@@ -1796,49 +1764,9 @@ ideas = {
 			}
 		}
 		
-		john_beckett = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_government = fascism
-				}
-				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}
-			}
-			
-			traits = { fascist_demagogue }
-	
-			do_effect = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-			
-			ai_will_do = {
-				factor = 0
-			}
-		}
-
 		ENG_philip_kerr = {
-
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = { has_completed_focus = ENG_no_further_appeasement }
-					has_government = democratic
-				}
-			}
+			
+			picture = generic_political_advisor_europe_3
 			
 			allowed = {
 				original_tag = ENG
@@ -1849,14 +1777,21 @@ ideas = {
 
 		ENG_nevile_henderson = {
 			
+			picture = generic_political_advisor_europe_5
+			
 			allowed = {
 				original_tag = ENG
 			}
+			available = {
+				has_completed_focus = tizard_mission_focus
+			}
 			
-			traits = { backroom_backstabber }
+			traits = { captain_of_industry }
 		}
 
 		ENG_maxwell_aitken = {
+			
+			picture = generic_political_advisor_europe_1
 			
 			allowed = {
 				original_tag = ENG
@@ -1871,6 +1806,8 @@ ideas = {
 
 		ENG_leslie_hore_belisha = {
 			
+			picture = generic_political_advisor_europe_2
+			
 			allowed = {
 				original_tag = ENG
 			}
@@ -1879,6 +1816,8 @@ ideas = {
 		}
 
 		ENG_ernest_bevin = {
+			
+			picture = generic_political_advisor_europe_6
 			
 			allowed = {
 				original_tag = ENG
@@ -1890,8 +1829,8 @@ ideas = {
 				factor = 1
 			}
 		}
-
-		ENG_mary_sophia_allen = {
+		
+ENG_mary_sophia_allen = {
 			
 			#picture = generic_political_advisor_europe_2
 
@@ -2308,11 +2247,7 @@ ideas = {
 				original_tag = ENG
 			}
 			
-			available = {
-				NOT = {
-					has_completed_focus = ENG_eliminate_the_upper_class
-				}
-			}
+
 			
 			traits = { army_chief_offensive_2 }
 			
@@ -2342,11 +2277,7 @@ ideas = {
 				original_tag = ENG
 			}
 			
-			available = {
-				NOT = {
-					has_completed_focus = ENG_eliminate_the_upper_class
-				}
-			}
+
 			
 			traits = { army_chief_maneuver_3 }
 			
@@ -2453,6 +2384,23 @@ ideas = {
 	}
 	
 	high_command = {
+	
+		ENG_david_stirling = {
+
+			available = {
+				has_completed_focus = ENG_special_air_service
+			}
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+			traits = { army_commando_3 }
+			
+			ai_will_do = {
+				factor = 0.2
+			}
+		}
 
 		archibald_wavell = {
 			
@@ -2460,11 +2408,7 @@ ideas = {
 				original_tag = ENG
 			}
 			
-			available = {
-				NOT = {
-					has_completed_focus = ENG_eliminate_the_upper_class
-				}
-			}
+
 			
 			traits = { army_regrouping_2 }
 			
@@ -2526,7 +2470,7 @@ ideas = {
 			
 
 			
-			traits = { air_bomber_interception_2 }
+			traits = { air_close_air_support_2 }
 			
 			ai_will_do = {
 				factor = 1
@@ -2554,11 +2498,7 @@ ideas = {
 				original_tag = ENG
 			}
 			
-			available = {
-				NOT = {
-					has_completed_focus = ENG_eliminate_the_upper_class
-				}
-			}
+
 			
 			traits = { navy_amphibious_assault_3 }
 			
@@ -2596,23 +2536,6 @@ ideas = {
 				factor = 0.2
 			}
 		}		
-
-		ENG_david_stirling = {
-
-			available = {
-				has_completed_focus = ENG_special_air_service
-			}
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-			traits = { army_commando_3 }
-			
-			ai_will_do = {
-				factor = 0.2
-			}
-		}	
 	}
 	
 	
@@ -2630,8 +2553,7 @@ ideas = {
 				naval_equipment = 0.10
 			}
 			
-			traits = { convoy_escort_naval_manufacturer }
-			cost = 100
+			traits = { yarrow_design }
 
 		}
 		
@@ -2648,7 +2570,6 @@ ideas = {
 			}
 			
 			traits = { pacific_fleet_naval_manufacturer }
-			cost = 100
 		}
 		
 		cammell_laird = {
@@ -2667,7 +2588,6 @@ ideas = {
 			
 			modifier = {
 			}
-			cost = 100
 		}
 		
 		john_brown_company = {
@@ -2682,8 +2602,7 @@ ideas = {
 				naval_equipment = 0.10
 			}
 			
-			traits = { coastal_defence_naval_manufacturer }
-			cost = 100
+			traits = { med_fleet_naval_manufacturer }
 		}	
 	}
 	
@@ -2707,7 +2626,6 @@ ideas = {
 			
 			modifier = {
 			}
-			cost = 100
 		}
 		
 		hawker = {
@@ -2726,7 +2644,6 @@ ideas = {
 			
 			modifier = {
 			}
-			cost = 100
 		}	
 		de_havilland = {
 			
@@ -2744,7 +2661,6 @@ ideas = {
 			
 			modifier = {
 			}
-			cost = 100
 		}
 		
 		avro = {
@@ -2763,7 +2679,6 @@ ideas = {
 			
 			modifier = {
 			}
-			cost = 100
 		}
 		
 		fairey_aviation = {
@@ -2782,7 +2697,6 @@ ideas = {
 			
 			modifier = {
 			}
-			cost = 100
 		}			
 	}
 	
@@ -2806,7 +2720,6 @@ ideas = {
 			
 			modifier = {
 			}
-			cost = 100
 		}
 		
 		vauxhall = {
@@ -2825,7 +2738,6 @@ ideas = {
 			
 			modifier = {
 			}
-			cost = 100
 		}
 		
 		royal_arsenal = {
@@ -2844,7 +2756,6 @@ ideas = {
 			
 			modifier = {
 			}
-			cost = 100
 		}
 	}
 	industrial_concern = {
@@ -2915,12 +2826,6 @@ ideas = {
 			allowed = {
 				original_tag = ENG
 			}
-
-			available = {
-				NOT = {
-					has_completed_focus = ENG_eliminate_the_upper_class
-				}
-			}
 			
 			cost = 250
 			
@@ -2937,35 +2842,8 @@ ideas = {
 				original_tag = ENG
 			}
 			
-			available = {
-				NOT = {
-					has_completed_focus = ENG_eliminate_the_upper_class
-				}
-			}
+
 			
-			research_bonus = {
-				land_doctrine = 0.07
-			}
-			
-			traits = { military_theorist }
-		}
-
-		ENG_raymond_briggs = {
-
-			picture = generic_army_europe_2
-
-			visible = {
-				has_completed_focus = ENG_eliminate_the_upper_class
-			}
-
-			available = {
-				has_completed_focus = ENG_eliminate_the_upper_class
-			}
-			
-			allowed = {
-				original_tag = ENG
-			}
-
 			research_bonus = {
 				land_doctrine = 0.07
 			}
@@ -2977,12 +2855,6 @@ ideas = {
 			
 			allowed = {
 				original_tag = ENG
-			}
-
-			available = {
-				NOT = {
-					has_completed_focus = ENG_eliminate_the_upper_class
-				}
 			}
 			
 			cost = 250
@@ -3067,65 +2939,6 @@ ideas = {
 			}
 			
 			traits = { rocket_scientist }
-		}
-
-		ENG_jfc_fuller = {
-			
-			picture = generic_army_europe_1
-
-			available = {
-				has_government = fascism
-			}
-			
-			allowed = {
-				original_tag = ENG
-				has_dlc = "Man the Guns"
-			}
-			
-			traits = { blitzkrieg_theorist }
-
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		# Crap communist ministers, intentionally without loc so they are 'randomized'
-
-		ENG_random_communist_minister_14 = {
-
-			picture = generic_army_europe_5
-
-			visible = {
-				has_country_flag = ENG_trade_unions_demand_minister_appointment_14
-			}
-			
-			allowed = {
-				original_tag = ENG
-			}
-
-			research_bonus = {
-				rocketry = 0.05
-			}
-			
-			traits = { little_rocket_man }
-		}
-		ENG_random_communist_minister_15 = {
-
-			picture = generic_army_europe_6
-
-			visible = {
-				has_country_flag = ENG_trade_unions_demand_minister_appointment_15
-			}
-			
-			allowed = {
-				original_tag = ENG
-			}
-
-			research_bonus = {
-				nuclear = 0.05
-			}
-			
-			traits = { nuclear_enthusiast }
 		}
 	}
 

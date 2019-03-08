@@ -1399,7 +1399,7 @@ focus_tree = {
 			effect_tooltip = {
 				add_tech_bonus = {
 					name = synth_bonus
-					bonus = 2
+					bonus = 3
 					uses = 1
 					category = synth_resources
 				}

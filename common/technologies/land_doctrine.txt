@@ -3302,7 +3302,7 @@ technologies = {
 	
 	human_wave_offensive = {
 
-		conscription = 0.05
+		conscription = 0.03
 		xp_research_type = army
 		xp_research_cost = 100
 		xp_research_bonus = 1.00

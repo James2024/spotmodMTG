@@ -3098,7 +3098,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = uk_colonial_focus
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -4299,7 +4299,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = ENG_steady_as_she_goes
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -4390,13 +4390,14 @@ focus_tree = {
 			}
 		}
 		relative_position_id = ENG_home_defence
-		cost = 10
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}	
 		completion_reward = {
 			add_war_support = 0.05
 			add_stability = 0.1
+			add_political_power = 150
 		}
 	}
 
@@ -4416,11 +4417,12 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_issue_gasmasks
-		cost = 10
+		cost = 6
 		ai_will_do = {
 			factor = 1
 		}	
 		completion_reward = {
+			add_political_power = 150
 			remove_ideas = ENG_the_war_to_end_all_wars
 			set_rule = { can_send_volunteers = yes }
 		}
