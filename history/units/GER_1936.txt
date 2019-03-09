@@ -444,7 +444,7 @@ units = {
 ### Air oob
 air_wings = {
 	### I. Luftkreiskommando -- Konigsberg ###
-	5 = { 
+	763 = { 
 		# Jagdgeschwader 232 	
 		fighter_equipment_1 =  {		# He 51
 			owner = "GER" 
@@ -482,7 +482,7 @@ air_wings = {
 		# TODO: REMOVE THIS LATER ???
 		transport_plane_equipment_1 = {
 			owner = "GER" 
-			amount = 50
+			amount = 4
 		}
 	}
 
@@ -497,7 +497,7 @@ air_wings = {
 		# Sturzkampfgeschwader 162		
 		CAS_equipment_1 =  {			# Hs 123
 			owner = "GER" 
-			amount = 200
+			amount = 100
 		}
 		name = "Sturzkampfgeschwader 162"	
 	}
@@ -507,7 +507,7 @@ air_wings = {
 		# Jagdgeschwader 134 'Horst Wessel'		
 		fighter_equipment_1 =  {		# He 51 # Ar 68
 			owner = "GER" 
-			amount = 200
+			amount = 100
 		}
 		name = "Jagdgeschwader 134"
 		# Kampfgeschwader 152 'Hindenburg'	
@@ -516,7 +516,12 @@ air_wings = {
 			amount = 100
 		}
 		name = "Kampfgeschwader 152"
-		
+		# Kampfgeschwader 155	
+		tac_bomber_equipment_1 = {		# He 45 or Do 23 ? (light bomber)
+			owner = "GER" 
+			amount = 100
+		}
+		name = "Kampfgeschwader 155"
 	}
 
 	### V. Luftkreiskommando -- Munich ###
@@ -540,7 +545,7 @@ air_wings = {
 		# Küstenfliegergruppe 106		
 		nav_bomber_equipment_1 =  {		# He 59, Do 18
 			owner = "GER" 
-			amount = 100
+			amount = 72
 		}
 		name = "Küstenfliegergruppe 106"
 		# Küstenfliegergruppe 206
