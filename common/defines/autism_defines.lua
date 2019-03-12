@@ -45,6 +45,10 @@ NDefines.NProduction.ANNEX_FIELD_EQUIPMENT_RATIO = 1.0
 NDefines.NProduction.MIN_NAVAL_EQUIPMENT_CONVERSION_IC_COST_FACTOR = 0.4		-- Minimum fraction of an equipment type's base industry capacity cost to use when converting a naval equipment, such as through ship refitting.
 NDefines.NProduction.MIN_NAVAL_EQUIPMENT_CONVERSION_RESOURCE_COST_FACTOR = 0.4	-- Minimum fraction of an equipment type's base strategic resource cost to use when converting a naval equipment, such as through ship refitting.
 
+--- Navy
+NDefines.NNavy.ANTI_AIR_TARGETTING_TO_CHANCE = 0.05
+NDefines.NNavy.ANTI_AIR_ATTACK_TO_AMOUNT = 0.001
+
 ---Military
 NDefines.NMilitary.RECON_SKILL_IMPACT = 8
 NDefines.NMilitary.ZERO_ORG_MOVEMENT_MODIFIER = -0.6

@@ -20,7 +20,7 @@ sub_units = {
 			category_army
 		}
 
-
+		recon = 0.2
 		combat_width = 2
 
 		need = {
