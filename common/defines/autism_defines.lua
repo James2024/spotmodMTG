@@ -46,17 +46,16 @@ NDefines.NProduction.ANNEX_FIELD_EQUIPMENT_RATIO = 1.0
 --- Navy
 NDefines.NNavy.ANTI_AIR_TARGETTING_TO_CHANCE = 0.05 --- THIS IS FOR LAND CAS CAUSE PARADOX BUGGGGZ
 NDefines.NNavy.ANTI_AIR_ATTACK_TO_AMOUNT = 0.001 --- THIS IS FOR LAND CAS CAUSE PARADOX BUGGGGZ
-NDefines.NAir.DISRUPTION_FACTOR = 7.0  --- (4 -> 7)
 NDefines.NNavy.ANTI_AIR_POW_ON_INCOMING_AIR_DAMAGE = 0.8 --- (0.2 -> 0.8)
 NDefines.NNavy.SHIP_TO_FLEET_ANTI_AIR_RATIO = 0.01 --- (0.2 -> 0.01)
 NDefines.NNavy.ANTI_AIR_POW_ON_INCOMING_AIR_DAMAGE = 0.8 --- (0.2 -> 0.8)
 NDefines.NNavy.ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE = 0.04 --- (0.15 -> 0.04)
 NDefines.NNavy.MAX_ANTI_AIR_REDUCTION_EFFECT_ON_INCOMING_AIR_DAMAGE = 0.8 --- (0.5 -> 0.8)
-NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR    = 0.5 -- (0.25 -> 0.5)
-NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- doubled the cooldown of guns to make battles last longer and give ships time to escape
-        2.0,    -- big guns
-        8.0,    -- torpedos
-        2.0,    -- small guns
+NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR    = 0.5 --- (0.25 -> 0.5)
+NDefines.NNavy.BASE_GUN_COOLDOWNS = { --- doubled the cooldown of guns to make battles last longer and give ships time to escape
+        2.0,    --- big guns
+        8.0,    --- torpedos
+        2.0,    --- small guns
 }
 
 
@@ -120,6 +119,8 @@ NDefines.NAir.AA_INDUSTRY_AIR_DAMAGE_FACTOR = -0.12 -- -0.12	5x levels = 60% def
 NDefines.NAir.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_TACTICAL_BOMBER =	0.1	-- base 0.192 How much efficiency to regain per day. Gain applied hourly.
 NDefines.NAir.AIR_COMBAT_FINAL_DAMAGE_SCALE = 0.4 -- 0.015	 % how many max disrupted only planes are allowed to die in a single combat
 NDefines.NAir.ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.9 -- .75 Maximum damage reduction factor applied to incoming air attacks against units with AA.
+NDefines.NAir.ESCORT_FACTOR = 3.0, --- (2 -> 3)
+NDefines.NAir.DISRUPTION_FACTOR = 7.0  --- (4 -> 7)
 
 
 ---AI
