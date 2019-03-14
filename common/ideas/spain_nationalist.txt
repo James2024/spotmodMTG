@@ -9,7 +9,7 @@ ideas = {
 			}
 			
 			modifier {
-				enemy_justify_war_goal_time = -0.6
+				enemy_justify_war_goal_time = -0.45
 			}
 		}
 		

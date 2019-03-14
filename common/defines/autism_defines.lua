@@ -42,12 +42,23 @@ NDefines.NProduction.CAPITULATE_STOCKPILES_RATIO = 0.75
 NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 4
 NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 5
 NDefines.NProduction.ANNEX_FIELD_EQUIPMENT_RATIO = 1.0
-NDefines.NProduction.MIN_NAVAL_EQUIPMENT_CONVERSION_IC_COST_FACTOR = 0.4		-- Minimum fraction of an equipment type's base industry capacity cost to use when converting a naval equipment, such as through ship refitting.
-NDefines.NProduction.MIN_NAVAL_EQUIPMENT_CONVERSION_RESOURCE_COST_FACTOR = 0.4	-- Minimum fraction of an equipment type's base strategic resource cost to use when converting a naval equipment, such as through ship refitting.
 
 --- Navy
-NDefines.NNavy.ANTI_AIR_TARGETTING_TO_CHANCE = 0.05
-NDefines.NNavy.ANTI_AIR_ATTACK_TO_AMOUNT = 0.001
+NDefines.NNavy.ANTI_AIR_TARGETTING_TO_CHANCE = 0.05 --- THIS IS FOR LAND CAS CAUSE PARADOX BUGGGGZ
+NDefines.NNavy.ANTI_AIR_ATTACK_TO_AMOUNT = 0.001 --- THIS IS FOR LAND CAS CAUSE PARADOX BUGGGGZ
+NDefines.NAir.DISRUPTION_FACTOR = 7.0  --- (4 -> 7)
+NDefines.NNavy.ANTI_AIR_POW_ON_INCOMING_AIR_DAMAGE = 0.8 --- (0.2 -> 0.8)
+NDefines.NNavy.SHIP_TO_FLEET_ANTI_AIR_RATIO = 0.01 --- (0.2 -> 0.01)
+NDefines.NNavy.ANTI_AIR_POW_ON_INCOMING_AIR_DAMAGE = 0.8 --- (0.2 -> 0.8)
+NDefines.NNavy.ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE = 0.04 --- (0.15 -> 0.04)
+NDefines.NNavy.MAX_ANTI_AIR_REDUCTION_EFFECT_ON_INCOMING_AIR_DAMAGE = 0.8 --- (0.5 -> 0.8)
+NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR    = 0.5 -- (0.25 -> 0.5)
+NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- doubled the cooldown of guns to make battles last longer and give ships time to escape
+        2.0,    -- big guns
+        8.0,    -- torpedos
+        2.0,    -- small guns
+}
+
 
 ---Military
 NDefines.NMilitary.RECON_SKILL_IMPACT = 8
@@ -92,7 +103,7 @@ NDefines.NMilitary.XP_GAIN_FOR_SHATTERING = 0.0
 
 ---Building
 NDefines.NBuildings.MAX_SHARED_SLOTS = 40 --amount of potential max building slots in a state
-NDefines.NBuildings.NAVALBASE_REPAIR_MULT = 0.05		-- Each level of navalbase building repairs X strength and can repair as many ships as its level
+NDefines.NBuildings.INFRA_TO_SUPPLY = 2.5
 
 ---Air
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 1							-- Days to deploy one air wing
