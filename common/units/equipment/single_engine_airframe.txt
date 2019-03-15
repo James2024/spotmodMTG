@@ -32,7 +32,7 @@ equipments = {
 		naval_strike_targetting = 10
 
 		#Space taken in convoy
-		lend_lease_cost = 0
+		lend_lease_cost = 4
 		
 		build_cost_ic = 33
 		resources = {
@@ -79,7 +79,7 @@ equipments = {
 		naval_strike_targetting = 10
 
 		#Space taken in convoy
-		lend_lease_cost = 0
+		lend_lease_cost = 4
 		
 		build_cost_ic = 33
 		resources = {
