@@ -255,7 +255,7 @@ equipments = {
 		reliability = 0.8
 
 		# Air vs Navy - high damage / medium hit chance / easy to hurt
-		naval_strike_attack = 45
+		naval_strike_attack = 15
 		naval_strike_targetting = 10
 		
 		build_cost_ic = 39

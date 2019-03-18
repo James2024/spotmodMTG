@@ -32,6 +32,7 @@ FRA_vichy_france = {
 			set_state_controller = 460
 			set_state_controller = 458
 			set_state_controller = 665
+			set_state_controller = 514
 		}
 	}
 
