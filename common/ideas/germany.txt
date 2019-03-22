@@ -1845,6 +1845,26 @@ ideas = {
 		
 		designer = yes
 		
+		Krupp = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { quality_tank_manufacturer }
+
+			ai_will_do = {
+				factor = 10
+			}
+			cost = 100
+
+		}
+		
 		porsche = {
 
 			

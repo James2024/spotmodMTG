@@ -2,6 +2,7 @@ NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 100
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 60
 NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 15
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 36
+NDefines.NCountry.EVENT_PROCESS_OFFSET = 25 -- Performance enhancer. --TW/WTT
 ---Diplomacy
 NDefines.NDiplomacy.BASE_STAGE_COUP_DAILY_PP = 999
 NDefines.NDiplomacy.BASE_STAGE_COUP_TOTAL_COST = 0
@@ -23,7 +24,7 @@ NDefines.NDiplomacy.FRONT_IS_DANGEROUS = 0
 NDefines.NPolitics.DEFAULT_OCCUPATION_POLICY = 3
 
 ---Country
-NDefines.NCountry.VP_TO_SUPPLY_BASE = 2
+NDefines.NCountry.VP_TO_SUPPLY_BASE = 1.5
 NDefines.NCountry.SUPPLY_PATH_MAX_DISTANCE = 15
 NDefines.NCountry.REINFORCEMENT_MANPOWER_CHUNK = 0.05
 NDefines.NCountry.MIN_MANPOWER_RATIO = 0.25
@@ -63,6 +64,7 @@ NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- doubled the cooldown of guns to make ba
 
 ---Military
 NDefines.NMilitary.RECON_SKILL_IMPACT = 8
+NDefines.NMilitary.FUEL_CAPACITY_DEFAULT_HOURS = 160 ---Vanilla 90 makes tanks store more fuel?
 NDefines.NMilitary.ZERO_ORG_MOVEMENT_MODIFIER = -0.6
 NDefines.NMilitary.LEADER_SKILL_FACTOR = 0.25
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999
@@ -75,6 +77,7 @@ NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.40
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.30
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_COMBAT_HOUR = 0.00015
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0.0002
+NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.15
 NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.2, 0.3, 0.4, 0.6 }
 NDefines.NMilitary.SLOWEST_SPEED = 3
 NDefines.NMilitary.EXPERIENCE_LOSS_FACTOR = 0.01
@@ -85,6 +88,14 @@ NDefines.NMilitary.PLAYER_ORDER_PLANNING_DECAY = 0.01
 NDefines.NMilitary.STRATEGIC_SPEED_BASE = 6.0
 NDefines.NMilitary.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_STRATEGIC_BOMBER = 0.018
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.1
+
+---No air Russia balances
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.5 --- -0.35
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.25 --- -0.3
+NDefines.NMilitary.FUEL_CAPACITY_DEFAULT_HOURS = 160   --- 90 This is to make it so tanks have more fuel stored in them
+NDefines.NMilitary.AIR_SUPPORT_BASE = 0.35 --- 0.25 CAS IS GOLD
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE = 0.75	       -- more AA attack will approach this amount of help (diminishing returns)
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE_STEEPNESS = 112 --- Still vanilla value might want to fiddle around with the number though
 
 ---XP for leaders
 NDefines.NMilitary.FIELD_MARSHAL_XP_RATIO = 0
@@ -117,10 +128,11 @@ NDefines.NAir.STRATEGIC_BOMBER_NUKE_AIR_SUPERIORITY = 0.90
 NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_STR = 1.0
 NDefines.NAir.NAVAL_KAMIKAZE_DAMAGE_MULT = 5.0  -- vanilla is like 20
 NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 1.0
-NDefines.NAir.AA_INDUSTRY_AIR_DAMAGE_FACTOR = -0.12 -- -0.12	5x levels = 60% defense from bombing
+NDefines.NAir.AA_INDUSTRY_AIR_DAMAGE_FACTOR = -0.13 -- -0.12	5x levels = 60% defense from bombing
 NDefines.NAir.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_TACTICAL_BOMBER =	0.1	-- base 0.192 How much efficiency to regain per day. Gain applied hourly.
 NDefines.NAir.AIR_COMBAT_FINAL_DAMAGE_SCALE = 0.4 -- 0.015	 % how many max disrupted only planes are allowed to die in a single combat
-NDefines.NAir.ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.9 -- .75 Maximum damage reduction factor applied to incoming air attacks against units with AA.
+NDefines.NAir.ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.8 -- .75 Maximum damage reduction factor applied to incoming air attacks against units with AA.
+NDefines.NAir.AIR_MORE_GROUND_CREWS_COST = 500.0 -- Disables ground crews. They're cancerous. --- Definietly are cancerous
 
 
 ---AI

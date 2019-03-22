@@ -25,14 +25,14 @@ FRA_vichy_france = {
 		fire_only_once = no
 		
 		remove_effect = {
-			set_state_controller = 461
-			set_state_controller = 462
-			set_state_controller = 459
-			set_state_controller = 513
-			set_state_controller = 460
-			set_state_controller = 458
-			set_state_controller = 665
-			set_state_controller = 514
+			set_state_owner  = 461
+			set_state_owner  = 462
+			set_state_owner  = 459
+			set_state_owner  = 513
+			set_state_owner  = 460
+			set_state_owner  = 458
+			set_state_owner  = 665
+			set_state_owner  = 514
 		}
 	}
 
