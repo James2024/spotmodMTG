@@ -24,8 +24,6 @@ focus_tree = {
 		available = { has_completed_focus = GER_rhineland }
 		completion_reward = {
 			add_ideas = hjalmar_schacht
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = hjalmar_schacht
 			add_tech_bonus = {
 				name = GER_four_year_plan
 				bonus = 1

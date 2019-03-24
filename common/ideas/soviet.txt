@@ -11,7 +11,7 @@ ideas = {
 			picture = generic_production_bonus
 			
 			modifier = {
-				production_speed_buildings_factor = 0.2
+				production_speed_buildings_factor = 0.15
 				industrial_capacity_factory = 0.15
 				industrial_capacity_dockyard = 0.15
 				research_speed_factor = 0.10
@@ -456,9 +456,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = -0.05
-				naval_doctrine = -0.05
-				air_doctrine = -0.05
+				land_doctrine = -0.06
+				naval_doctrine = -0.06
+				air_doctrine = -0.06
 			}
 		}
 		officers_purged_9 = {
@@ -475,9 +475,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = -0.04
-				naval_doctrine = -0.04
-				air_doctrine = -0.04
+				land_doctrine = -0.05
+				naval_doctrine = -0.05
+				air_doctrine = -0.05
 			}
 		}
 		officers_purged_10 = {
@@ -494,9 +494,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = -0.03
-				naval_doctrine = -0.03
-				air_doctrine = -0.03
+				land_doctrine = -0.04
+				naval_doctrine = -0.04
+				air_doctrine = -0.04
 			}
 		}
 

@@ -136,6 +136,8 @@ GER_annex_vichy = {
 	
 	icon = generic_political_discourse
 	
+	fire_only_once = yes
+	
 	cost = 5
 	
 	allowed = {

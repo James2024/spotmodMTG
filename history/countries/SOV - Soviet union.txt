@@ -371,11 +371,11 @@ create_corps_commander = {
 	name = "Aleksandr Vasilevsky"
 	id = 407
 		picture = "Portrait_Soviet_Aleksandr_Vasilevsky.dds"
-	traits = { armor_officer politically_connected }
+	traits = { armor_officer politically_connected panzer_leader }
 	skill = 4
 
 	
-	attack_skill = 3
+	attack_skill = 4
 	defense_skill = 4
 	planning_skill = 3
 	logistics_skill = 2
