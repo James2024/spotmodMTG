@@ -154,7 +154,7 @@ GER_annex_vichy = {
 	complete_effect = {
 		annex_country = {
 			target = EFR
-			transfer_troops = yes
+			transfer_troops = no
 			}
 		}
 	}
