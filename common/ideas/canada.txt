@@ -521,9 +521,11 @@ ideas = {
 
 			equipment_bonus = {
 				ship_hull_light = {
+					instant = yes
 					sub_detection = 0.1
 				}
 				ship_hull_cruiser = {
+					instant = yes
 					sub_detection = 0.1
 				}
 			}
@@ -759,7 +761,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -788,7 +790,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -1042,11 +1044,11 @@ ideas = {
 			}
 			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			traits = { medium_tank_manufacturer }
-			cost = 100
+			
 			# quite the useless tanks the vickers 6-ton
 		}
 	}
@@ -1067,7 +1069,7 @@ ideas = {
 
 			
 			research_bonus = {
-				electronics = 0.10
+				electronics = 0.15
 			}
 			
 			traits = { electronics_concern }
@@ -1115,7 +1117,6 @@ ideas = {
 			}
 			
 			traits = { support_equipment_manufacturer }
-			cost = 100
 			
 			
 		}	
@@ -1132,12 +1133,13 @@ ideas = {
 
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.15
 			}
 			
 			traits = { infantry_equipment_manufacturer }
-			cost = 100
-			}		
+			
+					}
+		
 	}
 	
 	naval_manufacturer = { 
@@ -1153,7 +1155,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			equipment_bonus = {
@@ -1161,7 +1163,6 @@ ideas = {
 			}
 			
 			traits = { pacific_fleet_naval_manufacturer }
-			cost = 100
 		}
 
 		halifax_shipyard_limited = {
@@ -1173,7 +1174,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			equipment_bonus = {
@@ -1181,7 +1182,6 @@ ideas = {
 			}
 			
 			traits = { convoy_escort_naval_manufacturer }
-			cost = 100
 		}
 	}
 	
@@ -1198,7 +1198,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { medium_aircraft_manufacturer }
@@ -1208,7 +1208,6 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
-			cost = 100
 		}
 
 		canadian_car_foundry = {
@@ -1220,7 +1219,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { light_aircraft_manufacturer }
@@ -1230,7 +1229,6 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
-			cost = 100
 		}
 
 		CAN_fairchild_aircraft_ltd = {
@@ -1248,7 +1246,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { naval_aircraft_manufacturer }
@@ -1275,7 +1273,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { heavy_aircraft_manufacturer }

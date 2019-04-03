@@ -677,7 +677,7 @@ theorist = {
 		}
 		
 		research_bonus = {
-			naval_doctrine = 0.07
+			naval_doctrine = 0.1
 		}
 		
 		traits = { naval_theorist }
@@ -692,7 +692,7 @@ theorist = {
 		}
 		
 		research_bonus = {
-			air_doctrine = 0.07
+			air_doctrine = 0.1
 		}
 		
 		traits = { air_warfare_theorist }
@@ -928,7 +928,7 @@ high_command = {
 
 			
 			research_bonus = {
-				industry = 0.10
+				industry = 0.15
 			}
 			
 			traits = { industrial_concern }
@@ -947,7 +947,7 @@ high_command = {
 			}
 			
 			research_bonus = {
-				electronics = 0.075
+				electronics = 0.125
 			}
 
 			cost = 75
@@ -971,7 +971,7 @@ high_command = {
 
 			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			traits = { fast_tank_manufacturer }
@@ -996,7 +996,7 @@ high_command = {
 			}
 						
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { convoy_escort_naval_manufacturer }
@@ -1016,7 +1016,7 @@ high_command = {
 
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { pacific_fleet_naval_manufacturer }
@@ -1042,7 +1042,7 @@ high_command = {
 
 			
 			research_bonus = {
-				support_tech = 0.10
+				support_tech = 0.15
 			}
 			
 			traits = { support_equipment_manufacturer }
@@ -1063,7 +1063,7 @@ high_command = {
 
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.15
 			}
 			
 			traits = { infantry_equipment_manufacturer }
@@ -1094,7 +1094,7 @@ high_command = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}			
 			
 			equipment_bonus = {

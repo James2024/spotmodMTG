@@ -4254,7 +4254,7 @@ focus_tree = {
 
 		icon = GFX_goal_support_democracy
 
-		x = 45
+		x = 43
 		y = 0
 		offset = {
 			x = -7
