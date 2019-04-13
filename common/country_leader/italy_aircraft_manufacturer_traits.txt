@@ -89,6 +89,31 @@ leader_traits = {
 			screen_ship = {
 				anti_air_attack = 0.10 attack = 0.10 naval_range = 0.3 naval_speed = 0.15 sub_detection = 0.10 build_cost_ic = -0.15
 			}
+			capital_ship = {
+				armor_value = 0.2 attack = 0.1 naval_speed = 0.1
+			}
+		}
+	}
+	
+	ITA_atlantic_fleet_naval_manufacturer = {
+		random = no
+		equipment_bonus = {
+			carrier = {
+				carrier_size = 0.25 naval_speed = 0.1
+			}
+			capital_ship = {
+				armor_value = -0.1 attack = -0.1 naval_speed = 0.1 
+			}
+			screen_ship = {
+				naval_speed = 0.2
+			}
+			submarine = {
+				naval_speed = 0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	

@@ -583,6 +583,7 @@ focus_tree = {
 	focus = {
 		id = ITA_army_primacy
 		icon = GFX_goal_generic_axis_build_infantry
+		mutually_exclusive = { focus = ITA_mare_nostrum }
 		x = 4
 		y = 0
 		cost = 10
@@ -595,18 +596,18 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 5
 			2 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
 			2 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -623,10 +624,10 @@ focus_tree = {
 	focus = {
 		id = ITA_modernized_artillery
 		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = ITA_army_primacy }
+		prerequisite = { focus = ITA_army_primacy focus = ITA_mare_nostrum }
 		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -650,7 +651,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_industrial_effort }
 		x = 3
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -735,6 +736,7 @@ focus_tree = {
 
 	focus = {
 		id = ITA_mare_nostrum
+		mutually_exclusive = { focus = ITA_army_primacy }
 		icon = GFX_goal_generic_build_navy
 		x = 8
 		y = 0
@@ -748,18 +750,18 @@ focus_tree = {
 		completion_reward = {
 			navy_experience = 55
 			156 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
 			156 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -780,7 +782,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_army_primacy focus = ITA_mare_nostrum }
 		x = 5
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -809,11 +811,11 @@ focus_tree = {
 	focus = {
 		id = ITA_carrier_effort
 		icon = GFX_goal_generic_navy_carrier
-		prerequisite = { focus = ITA_mare_nostrum }
+		prerequisite = { focus = ITA_mare_nostrum focus = ITA_army_primacy }
 		x = -1
 		y = 1
 		relative_position_id = ITA_mare_nostrum
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -833,7 +835,7 @@ focus_tree = {
 	focus = {
 		id = ITA_capital_ships
 		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = ITA_mare_nostrum }
+		prerequisite = { focus = ITA_mare_nostrum focus = ITA_army_primacy }
 		x = 9
 		y = 1
 		cost = 5
@@ -865,11 +867,10 @@ focus_tree = {
 	focus = {
 		id = ITA_bomber_effort
 		icon = GFX_goal_generic_air_bomber
-		prerequisite = { focus = ITA_army_primacy }
 		prerequisite = { focus = ITA_air_innovation }
 		x = 4
 		y = 3
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -898,10 +899,9 @@ focus_tree = {
 		icon = GFX_goal_generic_air_naval_bomber
 		text = naval_air_effort
 		prerequisite = { focus = ITA_air_innovation }
-		prerequisite = { focus = ITA_carrier_effort }
 		x = 6
 		y = 3
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -937,18 +937,7 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 25
-			add_tech_bonus = {
-				name = ITA_atlantic_fleet
-				bonus = 1.0
-				uses = 1
-				category = cv_tech
-			}
-			add_tech_bonus = {
-				name = ITA_atlantic_fleet
-				bonus = 1.0
-				uses = 1
-				category = bb_tech
-			}
+			add_ideas = ITA_atlantic_fleet
 		}
 	}
 
@@ -1202,6 +1191,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_popularity = { ideology = fascism popularity = 0.1 }
 			add_state_claim = 102
 			add_state_claim = 103
 			create_wargoal = { type = take_claimed_state target = YUG }
@@ -1306,6 +1296,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_popularity = { ideology = fascism popularity = 0.05 }
 			ALB = { country_event = { id = italy.3 } }
 		}
 	}
@@ -1348,6 +1339,7 @@ focus_tree = {
 			is_in_faction_with = GER
 		}
 		completion_reward = {
+			add_popularity = { ideology = fascism popularity = 0.05 }
 			GER = {
 				add_opinion_modifier = { target = ITA modifier = pact_of_steel_opinion }
 			}

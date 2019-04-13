@@ -1,5 +1,22 @@
 ideas = {
 	country = {
+		
+		ITA_atlantic_fleet = {
+		
+			picture = GFX_goal_generic_navy_doctrines_tactics
+			
+			allowed = {
+				original_TAG  = "ITA"
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				refit_speed = 0.15
+				repair_speed_factor = 0.15
+				}
+			}
+	
 		victor_emmanuel = {
 			
 			
@@ -754,7 +771,7 @@ ideas = {
 				naval_equipment = 0.15
 			}
 			
-			traits = { med_fleet_naval_manufacturer }
+			traits = { ITA_atlantic_fleet_naval_manufacturer }
 		}
 		
 		Gio_Ansaldo_and_C = {
