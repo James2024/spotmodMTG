@@ -1,0 +1,35 @@
+focus_tree = {
+	id = unused_focus
+
+	country = {
+		factor = 0
+	}
+
+	default = no
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	}
