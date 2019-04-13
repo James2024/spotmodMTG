@@ -809,7 +809,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ITA_carrier_effort
+		id = ITA_mediterranean_focus
 		icon = GFX_goal_generic_navy_carrier
 		prerequisite = { focus = ITA_mare_nostrum focus = ITA_army_primacy }
 		x = -1
@@ -823,6 +823,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = crda
 			add_tech_bonus = {
 				name = cv_bonus
 				bonus = 1.0
@@ -833,7 +834,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ITA_capital_ships
+		id = ITA_atlantic_focus
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = ITA_mare_nostrum focus = ITA_army_primacy }
 		x = 9
@@ -846,6 +847,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = Gio_Ansaldo_and_C
 			navy_experience = 25
 			add_tech_bonus = {
 				name = bb_bonus
@@ -922,10 +924,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ITA_atlantic_fleet
+		id = ITA_improved_dockyards
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = ITA_carrier_effort }
-		prerequisite = { focus = ITA_capital_ships }
+		prerequisite = { focus = ITA_atlantic_focus }
+		prerequisite = { focus = ITA_mediterranean_focus }
 		x = 8
 		y = 2
 		cost = 5
@@ -944,7 +946,7 @@ focus_tree = {
 	focus = {
 		id = ITA_marines_and_landing_craft
 		icon = GFX_goal_generic_amphibious_assault
-		prerequisite = { focus = ITA_atlantic_fleet }
+		prerequisite = { focus = ITA_improved_dockyards }
 		x = 8
 		y = 3
 		cost = 5
