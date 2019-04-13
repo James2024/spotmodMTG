@@ -324,7 +324,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_dockyard_factor = 0.1	
+				production_speed_dockyard_factor = 0.4	
 			}
 		}
 		USA_us_air_force = {
@@ -467,6 +467,9 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.05
 				stability_factor = 0.1
+				local_resources_factor = 0.05
+				min_export = -0.05
+
 			}
 		}
 		USA_magic = {	
@@ -707,7 +710,7 @@ ideas = {
 
 				submarine = {
 					surface_detection = 0.1 instant = yes
-					sub_visibility = -0.1 instant = yes
+					#sub_visibility = -0.1 instant = yes
 				}
 			}
 		}
