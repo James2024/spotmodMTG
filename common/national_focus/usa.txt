@@ -491,11 +491,7 @@ focus_tree = {
 		available = {
 			congress_high_support_trigger = yes 
 			has_government = democratic
-			OR = {
-			#date > 1939.1.1
-			#threat > 0.4 
-			}
-		}
+		}`
 		bypass = {
 			
 		}
@@ -588,10 +584,7 @@ focus_tree = {
 		prerequisite = { focus = USA_war_propaganda }
 		
 		available = {
-			OR = {
-				has_war = yes
-				has_war_support > 0.3
-			}
+			threat > 0.10
 		}
 
 		continue_if_invalid = yes
@@ -816,11 +809,9 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = USA_military_construction }
 		available = {
-			OR = {
-				has_war_support > 0.3
-				has_war = yes
-			}
+			threat > 0.30
 		}
+		
 
 		continue_if_invalid = yes
 		
@@ -1034,14 +1025,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = USA_scientist_haven }
 		available = {
-			OR = { 
-				threat > 0.4 
-				has_war = yes 
-			AND = { 
-				threat > 0.3 
-				date > 1939.6.1 
-				} 
-			}
+				date > 1939.1.1 
 		}
 		continue_if_invalid = yes
 		x = 0
@@ -1054,32 +1038,14 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			has_idea = USA_homeland_defense
-		}
 
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_idea = undisturbed_isolation }
-					NOT = { has_idea = isolation }
-					NOT = { has_country_flag = USA_the_giant_wakes_added_civ_eco }
-				}
-				add_political_power = 100
-			}
-			if = {
-				limit = {
-					OR = {
-						has_idea = isolation 
-						has_idea = undisturbed_isolation 
-						has_country_flag = USA_the_giant_wakes_added_civ_eco
-					}
-				}
-				add_ideas = civilian_economy
+				remove_ideas = USA_gold_standard
+				add_ideas = USA_gold_standard2
 				set_country_flag = USA_the_giant_wakes_added_civ_eco
 			}
-		}
 	}
+	
 
 	focus = {
 		id = USA_lend_lease_act
@@ -1095,6 +1061,10 @@ focus_tree = {
 		}
 
 		available = {
+			GER = {
+				has_war = yes
+			}
+
 			if = {
 				limit = {
 					has_war_support > 0.4
@@ -1104,7 +1074,6 @@ focus_tree = {
 			else = {
 				congress_high_support_trigger = yes
 			}
-			democratic > 0.95
 			custom_trigger_tooltip = {
 				tooltip = USA_lend_lease_act_neutrality_tt
 			}
@@ -1130,6 +1099,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+
+		add_ideas = civilian_economy
+
 			every_other_country = {
 				limit = {
 					is_major = yes
@@ -1196,36 +1168,12 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = USA_lend_lease_act
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		available = {
-			democratic > 0.95
-		}
-		bypass = {
-			AND = {
-				custom_trigger_tooltip =  {
-					tooltip = production_effort_tt
-					all_owned_state = {
-						free_building_slots = {
-							building = industrial_complex
-							size < 3
-							include_locked = yes
-						}
-					}
-				}
-				custom_trigger_tooltip =  {
-					tooltip = naval_effort_tt
-					all_owned_state = {
-						free_building_slots = {
-							building = dockyard
-							size < 3
-							include_locked = yes
-						}
-					}
-				}			
-			}
+				has_war = yes
 		}
 		complete_tooltip = {
 			air_experience = 50
@@ -1245,6 +1193,7 @@ focus_tree = {
 			navy_experience = 50
 			army_experience = 50
 			air_experience = 50
+			add_ideas = tot_economic_mobilisation 
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT

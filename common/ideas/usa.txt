@@ -473,6 +473,26 @@ ideas = {
 
 			}
 		}
+		USA_gold_standard2 = {
+			
+			picture = generic_goods_red_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				local_resources_factor = 0.05
+				min_export = -0.05
+
+			}
+		}
 		USA_magic = {	
 			picture = usa_magic
 			allowed = {
