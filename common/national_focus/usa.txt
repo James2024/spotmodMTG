@@ -1517,7 +1517,7 @@ focus_tree = {
 				name = "Douglas MacArthur"
 				id = 57
 				picture = "Portrait_USA_Douglas_MacArthur.dds"
-				traits = {  brilliant_strategist career_officer media_personality politically_connected jungle_rat }
+				traits = {  brilliant_strategist career_officer media_personality infantry_leader politically_connected jungle_rat }
 				skill = 4
 
 				attack_skill = 3

@@ -12,7 +12,7 @@ ideas = {
                 political_power_cost = 2
                 conscription_factor = -1
 
-                research_time_factor = 1000
+                research_speed_factor = 1000
                 enemy_justify_war_goal_time = 500
 
                 join_faction_tension = 2

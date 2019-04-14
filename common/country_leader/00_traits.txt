@@ -918,6 +918,18 @@ leader_traits = {
 			factor = 0
 		}
 	}
+
+	USA_democratic_reformer = {
+		random = no
+		# Boosts Democracy
+		sprite = 13
+		democratic_drift = 0.1
+		stability_factor = 0.05
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	
 	fascist_demagogue = {
 		random = no
@@ -1693,6 +1705,7 @@ leader_traits = {
 		equipment_bonus = {
 			heavy_fighter_equipment = {
 				reliability = 0.2
+				air_range = 0.1
 			}
 			tac_bomber_equipment = {
 				reliability = 0.2
