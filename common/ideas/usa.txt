@@ -983,6 +983,42 @@ ideas = {
 			}
 		}
 
+		USA_legislation = {
+			picture = GFX_focus_eng_concessions_to_the_trade_unions
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+
+		USA_two_ocean_navy_act = {
+			picture = GFX_focus_generic_navy_battleship2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				navy_refit_speed= 0.1
+				repair_speed_factor = 0.1
+			}
+		}
+
 		# idea for the protect Amercians focus - USA democratic
 		american_influence_defence_democratic = {
 			allowed = { always = no	}

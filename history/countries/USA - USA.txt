@@ -356,17 +356,17 @@ create_country_leader = {
 	}
 }
 
-create_corps_commander = {
-	name = "George S. Patton"
-	picture = "Portrait_USA_George_S_Patton.dds"
-	traits = {  trickster armor_officer panzer_leader war_hero trait_reckless organizer }
-	skill = 5
-
-	attack_skill = 5 
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 4
-}
+#create_corps_commander = {
+#	name = "George S. Patton"
+#	picture = "Portrait_USA_George_S_Patton.dds"
+#	traits = {  trickster armor_officer panzer_leader war_hero trait_reckless organizer }
+#	skill = 5
+#
+#	attack_skill = 5 
+#	defense_skill = 3
+#	planning_skill = 2
+#	logistics_skill = 4
+#}
 
 create_corps_commander = {
 	name = "Omar Bradley"
@@ -428,18 +428,18 @@ create_corps_commander = {
 	logistics_skill = 3
 }
 
-create_field_marshal = {
-	name = "Douglas MacArthur"
-	id = 57
-	picture = "Portrait_USA_Douglas_MacArthur.dds"
-	traits = {  offensive_doctrine brilliant_strategist career_officer media_personality politically_connected }
-	skill = 4
-
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 2
-}
+#create_field_marshal = {
+#	name = "Douglas MacArthur"
+#	id = 57
+#	picture = "Portrait_USA_Douglas_MacArthur.dds"
+#	traits = {  offensive_doctrine brilliant_strategist career_officer media_personality politically_connected }
+#	skill = 4
+#
+#	attack_skill = 4
+#	defense_skill = 3
+#	planning_skill = 4
+#	logistics_skill = 2
+#}
 
 create_corps_commander = {
 	name = "Walter Krueger"

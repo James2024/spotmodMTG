@@ -151,6 +151,7 @@ focus_tree = {
 			set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 230 }
 			USA_congress_medium_opposition = yes
 			custom_effect_tooltip = USA_great_depression_cooldown_tt
+			add_timed_idea = { idea = USA_legislation days = 230 }
 			unlock_decision_tooltip = { decision = USA_pay_farm_subsidies show_effect_tooltip = yes }
 		}
 	}
@@ -192,6 +193,7 @@ focus_tree = {
 			USA_great_depression_level_down = yes
 			set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 230 }
 			custom_effect_tooltip = USA_great_depression_cooldown_tt
+			add_timed_idea = { idea = USA_legislation days = 230 }
 			USA_congress_medium_opposition = yes
 		}
 	}
@@ -491,12 +493,13 @@ focus_tree = {
 		available = {
 			congress_high_support_trigger = yes 
 			has_government = democratic
-		}`
+		}
 		bypass = {
 			
 		}
 
 		completion_reward = {
+			add_political_power = 100
 			every_other_country = {
 				limit = {
 					is_major = yes
@@ -1372,37 +1375,13 @@ focus_tree = {
 		available = {
 			has_government = democratic
 		}
-		
-		bypass = {
-			OR = {
-				has_war_with = GER
-				has_war_with = ENG
-				has_war_with = FRA
-			}
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
-			unlock_decision_category_tooltip = USA_intervention_mandate
-			every_other_country = {
-				limit = {
-					is_major = yes
-					capital_scope = {
-						is_on_continent = europe
-					}
-					not = { has_government = ROOT }
-				}
-				ROOT = {
-					add_ai_strategy = {
-						type = contain
-						id = PREV
-						value = 200
-					}
-				}
-			}
+			add_war_support = 0.10
 		}
 	}
 
@@ -1432,8 +1411,17 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			unlock_decision_tooltip = USA_raise_the_free_corps 
-			custom_effect_tooltip = USA_raise_the_free_corps_tt
+			create_corps_commander = {
+				name = "George S. Patton"
+				picture = "Portrait_USA_George_S_Patton.dds"
+				traits = {  trickster armor_officer panzer_leader war_hero trait_reckless organizer desert_fox infantry_leader naval_invader }
+				skill = 6
+
+				attack_skill = 5
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 5
+			}
 		}
 	}
 
@@ -1488,12 +1476,6 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = {
-				OR = {
-					has_war_with = JAP
-					has_war_with = CHI
-				}
-			}
 		}
 		
 		bypass = {
@@ -1505,7 +1487,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			unlock_decision_category_tooltip = USA_intervention_mandate
+			add_war_support = 0.10
 		}
 	}
 
@@ -1523,25 +1505,6 @@ focus_tree = {
 		}
 
 		available = {
-			country_exists = AST
-			country_exists = NZL
-		}
-		
-		bypass = {
-			OR = {
-				AND = {
-					AST = { is_subject_of = ROOT }
-					NZL = { is_subject_of = ROOT }
-				}
-				AND = {
-					AST = { exists = no }
-					NZL = { exists = no }	
-				}
-				AND = {
-					AST = { has_war_with = ROOT }
-					NZL = { has_war_with = ROOT }
-				}
-			}
 		}
 
 		cancel_if_invalid = yes
@@ -1549,65 +1512,20 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			if = {
-				limit = {
-					AST = {
-						is_subject = yes
-						OVERLORD = {
-							not = { tag = NZL }
-							not = { tag = ROOT }
-						}
-					}
-					NZL = {
-						is_subject = no
-					}
-				}
-				AST = { OVERLORD = { country_event = mtg_usa_pacific_pacification.1 } }
-				NZL = { country_event = mtg_usa_pacific_pacification.1 }
+
+			create_corps_commander = {
+				name = "Douglas MacArthur"
+				id = 57
+				picture = "Portrait_USA_Douglas_MacArthur.dds"
+				traits = {  brilliant_strategist career_officer media_personality politically_connected jungle_rat }
+				skill = 4
+
+				attack_skill = 3
+				defense_skill = 6
+				planning_skill = 4
+				logistics_skill = 4
 			}
-			else_if = {
-				limit = {
-					AST = {
-						is_subject = no
-					}
-					NZL = {
-						is_subject = yes
-						OVERLORD = {
-							not = { tag = AST }
-							not = { tag = ROOT }
-						}
-					}
-				}
-				NZL = { OVERLORD = { country_event = mtg_usa_pacific_pacification.1 } }
-				AST = { country_event = mtg_usa_pacific_pacification.1 }
-			}
-			else_if = {
-				limit = {
-					AST = {
-						is_subject = yes
-						OVERLORD = {
-							not = { tag = ROOT }
-						}
-					}
-					NZL = {
-						is_subject = yes
-						OVERLORD = {
-							not = { tag = ROOT }
-						}
-					}
-				}
-				AST = { OVERLORD = { country_event = mtg_usa_pacific_pacification.1 } }
-				if = {
-					limit = {
-						AST = { OVERLORD = { NZL = { OVERLORD = { not = { tag = PREV.PREV } } } } } #NZL and AST both subjects but of different people
-					}
-					NZL = { OVERLORD = { country_event = mtg_usa_pacific_pacification.1 } }
-				}
-			}
-			else = {
-				AST = { country_event = mtg_usa_pacific_pacification.1 }
-				NZL = { country_event = mtg_usa_pacific_pacification.1 }
-			}	
+
 		}
 	}
 
@@ -2386,6 +2304,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_ideas = USA_two_ocean_navy_act
 			if = {
 				limit = {
 					 has_war_support < 0.4 
