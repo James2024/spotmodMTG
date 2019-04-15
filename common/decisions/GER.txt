@@ -1,7 +1,56 @@
 #Category only allowed for GER
+land_measures = {
+	
+	GER_take_tunisia = {
+		
+		icon = generic_political_discourse
+		
+		available = {
+			NOT = { ITA = { has_full_control_of_state = 450 } }
+			NOT = { ITA = { has_full_control_of_state = 451 } }
+			NOT = { ITA = { has_full_control_of_state = 663 } }
+		}
+		
+		visible = {
+			original_tag = GER
+			has_war = yes
+		}
+		
+		complete_effect = {
+			transfer_state = 665
+			transfer_state = 458
+		}
+	}	
+	GER_annex_vichy = {
+	
+		icon = generic_political_discourse
+	
+		fire_only_once = yes
+		
+		cost = 5
+	
+		allowed = {
+			original_tag = GER
+			}
+		visible = {
+			original_tag = GER
+			has_war = yes
+			}
+		available = {
+			date > 1941.1.1
+			}
+		
+		complete_effect = {
+			annex_country = {
+				target = EFR
+				transfer_troops = no
+			}
+		}
+	}
+}
 
 war_measures = {
-
+	
     GER_war_bonds = {
 
     	icon = generic_industry
@@ -130,35 +179,10 @@ war_measures = {
 			}
 		}
     }
-
-
-GER_annex_vichy = {
-	
-	icon = generic_political_discourse
-	
-	fire_only_once = yes
-	
-	cost = 5
-	
-	allowed = {
-		original_tag = GER
-		}
-	visible = {
-		original_tag = GER
-		has_war = yes
-		}
-	available = {
-		date > 1941.1.1
-		}
-	
-	complete_effect = {
-		annex_country = {
-			target = EFR
-			transfer_troops = no
-			}
-		}
-	}
 }
+
+
+
 
 GER_mefo_bills_category = {
 

@@ -190,7 +190,7 @@ focus_tree = {
 		id = GER_autarky
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = GER_four_year_plan }
-		x = 4
+		x = 3
 		y = 1
 		relative_position_id = GER_four_year_plan
 		cost = 10
@@ -619,7 +619,7 @@ focus_tree = {
 		id = GER_air_innovation
 		text = air_innovation
 		icon = GFX_goal_generic_build_airforce
-		x = 13
+		x = 11
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -633,7 +633,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = air_sup_bonus
 				bonus = 3
-				uses = 1
+				uses = 3
 				category = air_doctrine
 			}
 			every_state = {
@@ -663,7 +663,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = air_sup_bonus
 				bonus = 3
-				uses = 1
+				uses = 3
 				category = air_doctrine
 			}
 
@@ -754,7 +754,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = op_dest_bonus
 				bonus = 3
-				uses = 1
+				uses = 3
 				category = air_doctrine
 			}
 			add_tech_bonus = {
@@ -832,12 +832,11 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			# Balance research bonus for 2 techs in battlefield_support_tree
 			add_tech_bonus = {
 				name = strat_dest_bonus
-				bonus = 1
-				uses = 2
-				category = battlefield_support_tree
+				bonus = 3
+				uses = 3
+				category = air_doctrine
 			}
 			add_tech_bonus = {
 				name = bomber_bonus
@@ -851,7 +850,7 @@ focus_tree = {
 	focus = {
 		id = GER_army_innovation
 		icon = GFX_goal_generic_axis_build_infantry
-		x = 16
+		x = 14
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -927,7 +926,7 @@ focus_tree = {
 				# Balance research bonus to 2 techs in armor, also in event
 				add_tech_bonus = {
 					name = armor_bonus
-					bonus = 1
+					bonus = 2
 					uses = 2
 					category = armor
 				}
@@ -1079,7 +1078,7 @@ focus_tree = {
 	focus = {
 		id = GER_rhineland
 		icon = GFX_goal_generic_military_sphere
-		x = 20
+		x = 18
 		y = 0
 		cost = 10
 		available = { is_puppet = no }
@@ -2245,7 +2244,7 @@ focus_tree = {
 	focus = {
 		id = GER_naval_rearmament
 		icon = GFX_goal_generic_build_navy
-		x = 25
+		x = 23
 		y = 0
 		cost = 5
 		ai_will_do = {
