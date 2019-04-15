@@ -18,7 +18,7 @@ country_event = {
 		create_corps_commander = {
 			name = "Infantry Leader"
 			picture = ""
-			traits = { infantry_leader }
+			traits = { infantry_leader}
 			skill = 4
 			attack_skill = 4
 			defense_skill = 3
@@ -32,9 +32,9 @@ country_event = {
 		name = spot_commander_event.1.b
 		
 		create_corps_commander = {
-			name = "Panzer Leader"
+			name = "Panzer Leader "
 			picture = ""
-			traits = { panzer_leader }
+			traits = { panzer_leader trickster }
 			skill = 4
 			attack_skill = 4
 			defense_skill = 3
@@ -58,3 +58,4 @@ country_event = {
 		}
 	}
 }
+	

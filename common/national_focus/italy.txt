@@ -926,8 +926,7 @@ focus_tree = {
 	focus = {
 		id = ITA_improved_dockyards
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = ITA_atlantic_focus }
-		prerequisite = { focus = ITA_mediterranean_focus }
+		prerequisite = { focus = ITA_atlantic_focus focus = ITA_mediterranean_focus }
 		x = 8
 		y = 2
 		cost = 5
@@ -1451,6 +1450,27 @@ focus_tree = {
 				uses = 2
 				category = electronics
 				category = rocketry
+			}
+		}
+	}
+	
+	focus = {
+		id = ITA_weapons
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = ITA_modernized_artillery }
+		x = 2
+		y = 1
+		
+		cost = 5
+		
+		relative_position_id = ITA_modernized_artillery
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = weapon_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
 			}
 		}
 	}

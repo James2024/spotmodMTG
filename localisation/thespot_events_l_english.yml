@@ -31,4 +31,7 @@
  spain_spot_mod.1.t:0 "Franco Becomes General"
  spain_spot_mod.1.d:0 "Our countriy's leader is a skilled general, and now we can use that in action to help us win this civil war. He is ready to join the fight, leading our armies, while managing Spain's politics."
  spain_spot_mod.1.a:0 "Employ Franco as our armies general"
+ spot.5:0 "Fascism has Taken Over"
+ spot.5.desc:0 "With the demand of Danzig or War made to Poland it is clear that in Germany there is only 1 party that leads the country and all other political opposition has been removed from their country."
+ spot.5.a:0 "Hail the Fuhrer"
  

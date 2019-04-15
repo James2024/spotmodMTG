@@ -11,7 +11,8 @@ FRA_vichy_france = {
 			NOT = { ITA = { has_full_control_of_state = 662 } }
 			NOT = { ITA = { has_full_control_of_state = 450 } }
 			NOT = { ITA = { has_full_control_of_state = 663 } }
-			NOT = { ITA = { has_full_control_of_state = 448 } }
+			NOT = { GER = { has_full_control_of_state = 665 } }
+			NOT = { GER = { has_full_control_of_state = 458 } }
 		}
 			
 		visible = {

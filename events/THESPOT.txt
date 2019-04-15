@@ -71,3 +71,18 @@ country_event = { #Soft border is established between Ireland and NI
 		name = spot.4.a
 	}
 }
+
+country_event = { #poland gives facsim to germany
+	id = spot.5
+	title = spot.5
+	desc = spot.5.desc
+	picture = GFX_news_event_generic_rally_3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = spot.5.a
+		
+		add_popularity = { ideology = fascism popularity = 0.4 }
+	}
+}
