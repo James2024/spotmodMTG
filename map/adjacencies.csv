@@ -249,27 +249,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 4210;10863;impassable;-1;-1;-1;-1;-1;;burma
 4210;7976;impassable;-1;-1;-1;-1;-1;;burma
 4210;5009;impassable;-1;-1;-1;-1;-1;;burma
-4210;10413;impassable;-1;-1;-1;-1;-1;;burma
-7400;10413;impassable;-1;-1;-1;-1;-1;;burma
-7909;10413;impassable;-1;-1;-1;-1;-1;;burma
-7909;10776;impassable;-1;-1;-1;-1;-1;;burma
-4568;10776;impassable;-1;-1;-1;-1;-1;;burma
-12433;10776;impassable;-1;-1;-1;-1;-1;;burma
-12392;10776;impassable;-1;-1;-1;-1;-1;;burma
-12392;1522;impassable;-1;-1;-1;-1;-1;;burma
-12319;1522;impassable;-1;-1;-1;-1;-1;;burma
-12319;1114;impassable;-1;-1;-1;-1;-1;;burma
-12008;1196;impassable;-1;-1;-1;-1;-1;;burma
-12008;1114;impassable;-1;-1;-1;-1;-1;;burma
-7518;1196;impassable;-1;-1;-1;-1;-1;;burma
-7518;1172;impassable;-1;-1;-1;-1;-1;;burma
-7518;4656;impassable;-1;-1;-1;-1;-1;;burma
-12065;4656;impassable;-1;-1;-1;-1;-1;;burma
-12065;1469;impassable;-1;-1;-1;-1;-1;;burma
-12065;4121;impassable;-1;-1;-1;-1;-1;;burma
-9948;4121;impassable;-1;-1;-1;-1;-1;;burma
-7093;4121;impassable;-1;-1;-1;-1;-1;;burma
-7093;10004;impassable;-1;-1;-1;-1;-1;;burma
 12860;2098;impassable;-1;-1;-1;-1;-1;;bhutan
 12860;2014;impassable;-1;-1;-1;-1;-1;;bhutan
 8010;2014;impassable;-1;-1;-1;-1;-1;;bhutan
@@ -301,9 +280,4 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 4755;4660;impassable;-1;-1;-1;-1;-1;;SovietIran mountains
 4825;4660;impassable;-1;-1;-1;-1;-1;;SovietIran mountains
 4825;9715;impassable;-1;-1;-1;-1;-1;;SovietIran mountains
-10454;9715;impassable;-1;-1;-1;-1;-1;;SovietIran mountains
-10454;11704;impassable;-1;-1;-1;-1;-1;;SovietIran mountains
-10454;12434;impassable;-1;-1;-1;-1;-1;;SovietIran mountains
-10454;4473;impassable;-1;-1;-1;-1;-1;;SovietIran mountains
-4901;4473;impassable;-1;-1;-1;-1;-1;;SovietIran mountains
 -1;-1;;-1;-1;-1;-1;-1;-1
