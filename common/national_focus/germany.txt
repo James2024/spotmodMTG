@@ -1540,6 +1540,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			set_country_flag = GER_SPOT
+			country_event = { id = spot.5 }
 			add_named_threat = { threat = 5 name = GER_danzig_or_war }
 			if = {
 				limit = {
@@ -1651,6 +1653,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+		
+			NOR = { country_event = { id = spot.6 } }
 
 			if = {
 				limit = {

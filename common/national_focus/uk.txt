@@ -900,6 +900,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_tech_bonus = {
+				name = air_sup_bonus
+				bonus = 3
+				uses = 3
+				category = air_doctrine
+			}
 			air_experience = 25
 			random_owned_controlled_state = {
 				limit = {
@@ -1112,6 +1118,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_tech_bonus = {
+				name = air_sup_bonus
+				bonus = 3
+				uses = 3
+				category = air_doctrine
+			}
 			air_experience = 25
 			add_tech_bonus = {
 				name = fighter_command_focus
@@ -1138,6 +1150,12 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 25
+			add_tech_bonus = {
+				name = air_sup_bonus
+				bonus = 3
+				uses = 3
+				category = air_doctrine
+			}
 			add_tech_bonus = {
 				name = bomber_command_focus
 				bonus = 1.0

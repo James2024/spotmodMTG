@@ -16,10 +16,7 @@ ideas = {
 
 			modifier = {
 				conscription = 0.01
-				training_time_factor = -0.05
-				industrial_capacity_factory = 0.05
-				production_speed_buildings_factor = 0.05
-				#research_speed_factor = -0.02
+				training_time_factor = -0.1
 
 			}
 
@@ -52,9 +49,6 @@ ideas = {
 			modifier = {
 				conscription = 0.02
 				training_time_factor = -0.05
-				industrial_capacity_factory = 0.03
-				#research_speed_factor = -0.01
-				production_speed_buildings_factor = 0.05
 			}
 
 			default = yes

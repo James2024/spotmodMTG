@@ -120,6 +120,7 @@ NDefines.NMilitary.XP_GAIN_FOR_SHATTERING = 0.0
 ---Building
 NDefines.NBuildings.MAX_SHARED_SLOTS = 40 --amount of potential max building slots in a state
 NDefines.NBuildings.INFRA_TO_SUPPLY = 2.5
+NDefines.NBuildings.AIRBASE_CAPACITY_MULT
 
 ---Air
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 1							-- Days to deploy one air wing
