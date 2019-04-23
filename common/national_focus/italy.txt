@@ -583,17 +583,27 @@ focus_tree = {
 	focus = {
 		id = ITA_army_primacy
 		icon = GFX_goal_generic_axis_build_infantry
-		mutually_exclusive = { focus = ITA_mare_nostrum }
 		x = 4
 		y = 0
 		cost = 10
 		ai_will_do = {
 			factor = 0.25
 		}
-
+			
+		available = {
+			OR = {
+				NOT = { has_country_flag = check_mare_nostrum }
+				AND = {
+					has_country_flag = check_mare_nostrum
+					date > 1938.1.1
+				}
+			}				
+		}
+			
 		available_if_capitulated = yes
 
 		completion_reward = {
+			set_country_flag = check_army_primacy
 			army_experience = 5
 			2 = {
 				add_extra_state_shared_building_slots = 3
@@ -622,35 +632,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ITA_modernized_artillery
-		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = ITA_army_primacy focus = ITA_mare_nostrum }
-		x = 3
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = arty_bonus
-				bonus = 1
-				uses = 2
-				category = artillery
-			}
-		}
-	}
-
-	focus = {
 		id = ITA_modernized_army
 		icon = GFX_goal_generic_small_arms
+		relative_position_id = ITA_modernized_artillery
 		prerequisite = { focus = ITA_modernized_artillery }
-		prerequisite = { focus = ITA_industrial_effort }
-		x = 3
-		y = 2
+		x = 0
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -678,43 +665,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ITA_special_forces
-		icon = GFX_goal_generic_special_forces
-		text = special_forces
-		prerequisite = { focus = ITA_modernized_army }
-		x = 3
-		y = 4
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			army_experience = 5
-			add_tech_bonus = {
-				name = special_bonus
-				bonus = 1
-				uses = 1
-				technology = paratroopers
-				technology = paratroopers2
-			}
-			add_tech_bonus = {
-				name = special_bonus
-				ahead_reduction = 2
-				uses = 1
-				technology = tech_mountaineers2
-			}
-		}
-	}
-
-	focus = {
 		id = ITA_armored_effort
 		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = ITA_special_forces }
+		prerequisite = { focus = ITA_infantry_reduction }
 		x = 3
-		y = 5
+		y = 4
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -736,18 +691,28 @@ focus_tree = {
 
 	focus = {
 		id = ITA_mare_nostrum
-		mutually_exclusive = { focus = ITA_army_primacy }
 		icon = GFX_goal_generic_build_navy
-		x = 8
+		x = 13
 		y = 0
 		cost = 10
 		ai_will_do = {
 			factor = 5
 		}
+		
+		available = {
+			OR = {
+				NOT = { has_country_flag = check_army_primacy }
+				AND = {
+					has_country_flag = check_army_primacy
+					date > 1938.1.1
+				}
+			}				
+		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+			set_country_flag = check_mare_nostrum
 			navy_experience = 55
 			156 = {
 				add_extra_state_shared_building_slots = 4
@@ -812,7 +777,7 @@ focus_tree = {
 		id = ITA_mediterranean_focus
 		icon = GFX_goal_generic_navy_carrier
 		prerequisite = { focus = ITA_mare_nostrum focus = ITA_army_primacy }
-		x = -1
+		x = -3
 		y = 1
 		relative_position_id = ITA_mare_nostrum
 		cost = 5
@@ -836,8 +801,9 @@ focus_tree = {
 	focus = {
 		id = ITA_atlantic_focus
 		icon = GFX_goal_generic_navy_battleship
+		relative_position_id = ITA_mare_nostrum
 		prerequisite = { focus = ITA_mare_nostrum focus = ITA_army_primacy }
-		x = 9
+		x = -1
 		y = 1
 		cost = 5
 		ai_will_do = {
@@ -926,9 +892,10 @@ focus_tree = {
 	focus = {
 		id = ITA_improved_dockyards
 		icon = GFX_goal_generic_navy_doctrines_tactics
+		relative_position_id = ITA_atlantic_focus
 		prerequisite = { focus = ITA_atlantic_focus focus = ITA_mediterranean_focus }
-		x = 8
-		y = 2
+		x = -1
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -945,9 +912,10 @@ focus_tree = {
 	focus = {
 		id = ITA_marines_and_landing_craft
 		icon = GFX_goal_generic_amphibious_assault
+		relative_position_id = ITA_improved_dockyards
 		prerequisite = { focus = ITA_improved_dockyards }
-		x = 8
-		y = 3
+		x = 0
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -1026,7 +994,7 @@ focus_tree = {
 	focus = {
 		id = ITA_light_ship_effort
 		icon = GFX_goal_generic_navy_cruiser
-		x = 10
+		x = 15
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -1056,8 +1024,9 @@ focus_tree = {
 	focus = {
 		id = ITA_escort_effort
 		icon = GFX_goal_generic_navy_anti_submarine
+		relative_position_id = ITA_light_ship_effort
 		prerequisite = { focus = ITA_light_ship_effort }
-		x = 11
+		x = 1
 		y = 1
 		cost = 5
 		ai_will_do = {
@@ -1088,8 +1057,9 @@ focus_tree = {
 		id = ITA_submarine_effort
 		icon = GFX_goal_generic_navy_submarine
 		text = submarine_effort
+		relative_position_id = ITA_light_ship_effort
 		prerequisite = { focus = ITA_light_ship_effort }
-		x = 10
+		x = 0
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -1121,9 +1091,10 @@ focus_tree = {
 		id = ITA_sea_wolves
 		icon = GFX_goal_generic_wolf_pack
 		prerequisite = { focus = ITA_submarine_effort }
+		relative_position_id = ITA_submarine_effort
 		prerequisite = { focus = ITA_german_millitary_cooperation }
-		x = 9
-		y = 5
+		x = -1
+		y = 3
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -1161,7 +1132,7 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		x = 13
+		x = 18
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -1176,12 +1147,13 @@ focus_tree = {
 	focus = {
 		id = ITA_slovenia_dalmatia_claims
 		icon = GFX_goal_generic_demand_territory
+		relative_position_id = ITA_albania_war_goal
 		prerequisite = { focus = ITA_albania_war_goal }
 		available = {
 			#date > 1939.1.1
 		}
-		x = 14
-		y = 2
+		x = 2
+		y = 1
 		cost = 4.3
 		ai_will_do = {
 			factor = 1
@@ -1240,9 +1212,10 @@ focus_tree = {
 	focus = {
 		id = ITA_bulgaria_friend
 		icon = GFX_goal_generic_improve_relations
+		relative_position_id = ITA_albania_war_goal
 		prerequisite = { focus = ITA_albania_war_goal }
-		x = 12
-		y = 2
+		x = 0
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1279,9 +1252,10 @@ focus_tree = {
 	focus = {
 		id = ITA_albania_war_goal
 		icon = GFX_goal_generic_more_territorial_claims
+		relative_position_id = ITA_victoryinETH
 		prerequisite = { focus = ITA_victoryinETH }
 		will_lead_to_war_with = ALB
-		x = 13
+		x = 0
 		y = 1
 
 		available = {
@@ -1305,6 +1279,7 @@ focus_tree = {
 	focus = {
 		id = ITA_pact_of_steel
 		icon = GFX_goal_generic_major_alliance
+		relative_position_id = ITA_bulgaria_friend
 		prerequisite = { focus = ITA_bulgaria_friend }
 		available = {
 			has_government = fascism
@@ -1314,8 +1289,8 @@ focus_tree = {
 				country_exists = GER
 			}
 		}
-		x = 12
-		y = 3
+		x = 0 
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -1352,6 +1327,7 @@ focus_tree = {
 	focus = {
 		id = ITA_greece_war_goal
 		icon = GFX_goal_generic_occupy_states_ongoing_war
+		relative_position_id = ITA_pact_of_steel
 		prerequisite = { focus = ITA_pact_of_steel }
 		available = {
 			date > 1939.4.1
@@ -1359,8 +1335,8 @@ focus_tree = {
 			country_exists = GRE
 		}
 		will_lead_to_war_with = GRE
-		x = 14
-		y = 4
+		x = 2
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -1381,14 +1357,15 @@ focus_tree = {
 	focus = {
 		id = ITA_german_millitary_cooperation
 		icon = GFX_goal_generic_military_deal
+		relative_position_id = ITA_pact_of_steel
 		prerequisite = { focus = ITA_pact_of_steel }
 
 		available = {
 			NOT = { has_war_with = GER }
 		}
 
-		x = 10
-		y = 4
+		x = -2
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -1401,10 +1378,11 @@ focus_tree = {
 	focus = {
 		id = ITA_german_rd_treaty
 		icon = GFX_goal_generic_scientific_exchange
+		relative_position_id = ITA_pact_of_steel
 		prerequisite = { focus = ITA_pact_of_steel }
 		cancel = { has_war_with = GER }
-		x = 12
-		y = 4
+		x = 0
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1433,9 +1411,10 @@ focus_tree = {
 		id = ITA_secret_weapons
 		icon = GFX_goal_generic_secret_weapon
 		text = secret_weapons
+		relative_position_id = ITA_german_millitary_cooperation
 		prerequisite = { focus = ITA_german_millitary_cooperation }
-		x = 11
-		y = 5
+		x = 0
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1457,13 +1436,13 @@ focus_tree = {
 	focus = {
 		id = ITA_weapons
 		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = ITA_modernized_artillery }
-		x = 2
+		prerequisite = { focus = ITA_modernized_army }
+		x = 0
 		y = 1
 		
 		cost = 5
 		
-		relative_position_id = ITA_modernized_artillery
+		relative_position_id = ITA_modernized_army
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -1475,4 +1454,105 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = ITA_modernized_artillery
+		icon = GFX_goal_generic_army_artillery2
+		relative_position_id = ITA_army_primacy
+		prerequisite = { focus = ITA_army_primacy focus = ITA_mare_nostrum }
+		x = 4
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = arty_bonus
+				bonus = 1
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	
+	focus =	{
+		id = ITA_antitank 
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = ITA_army_primacy
+		prerequisite = { focus = ITA_army_primacy }
+		x = -1
+		y = 1
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = ITA_antitank_idea
+		}
+	}
+
+	focus =	 {
+		id = ITA_infantry_reduction
+		icon = GFX_goal_generic_army_artillery2
+		relative_position_id = ITA_antitank
+		prerequisite = { focus = ITA_antitank }
+		x = 0
+		y = 1
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = ITA_infantry_idea
+		}
+	}
+
+	###armored effort
+
+	focus =	 {
+		id = ITA_destroyer
+		icon = GFX_focus_generic_destroyer
+		relative_position_id = ITA_mare_nostrum
+		prerequisite = { focus = ITA_mare_nostrum }
+		x = 0
+		y = 2
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = ITA_destroyer_idea
+			
+		}
+	}
+
+	focus =	 {
+		id = ITA_capital
+		icon = GFX_focus_generic_navy_battleship2
+		relative_position_id = ITA_destroyer
+		prerequisite = { focus = ITA_destroyer }
+		x = 0
+		y = 1
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = ITA_capital_idea
+		}
+	}
+
+	focus =	 {
+		id = ITA_doctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		relative_position_id = ITA_capital
+		prerequisite = { focus = ITA_capital }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 3
+				uses = 4
+				category = naval_doctrine
+			}
+		}
+	}
 }

@@ -1,5 +1,73 @@
 ideas = {
 	country = {
+	
+		ITA_antitank_idea = {
+			
+			picture = GFX_focus_generic_combined_arms
+			
+			allowed = {
+				original_TAG = ITA
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				anti_tank_equipment = {
+					build_cost_ic = -0.2 instant = yes
+				}
+			}
+		}
+		
+		ITA_infantry_idea = {
+		
+			picture = generic_infantry_bonus
+			
+			allowed = {
+				original_TAG = ITA
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.2 instant = yes
+				}
+			}
+		}
+		
+		ITA_destroyer_idea = {
+			
+			picture = GFX_focus_generic_destroyer
+			
+			allowed = {
+				original_TAG = ITA
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				screen_ship = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		
+		ITA_capital_idea = {
+			
+			picture = GFX_focus_generic_navy_battleship2
+			
+			allowed = {
+				original_TAG = ITA
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				capital_ship = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
 		
 		ITA_atlantic_fleet = {
 		
