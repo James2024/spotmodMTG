@@ -1,14 +1,14 @@
 strategic_region={
-	id=127
-	name="STRATEGICREGION_127"
+	id=217
+	name="STRATEGICREGION_217"
 	provinces={
-		1043 1057  1095 1115 1140 1897 1901 1956 1958 1962 1994 2049 2068 4191 4902 4903 4913 4962 5004 5034 5035 5077 5095 5136 7041 7939 7943 7985 7992 8028 8035 8058 8061 8077 8088 8128 10104 10725 10731 10749 10754 10758 10771 10779 10780 10785 10805 10814 10838 10868 10884 10893 10917  12022 12082 12711 12842 12849 12866 2064 7216 10127 10869 10907 12099 12733 12816 7987 8103 10900
+		1977 2003 2046 2088 4963 7925 7989 8105 10743 10745 10784 10902 12725 12796 12806 12826 12862 12881 4138 12836 4961 1080 4068 4910 5069 7156 9957 10126 12002 12889 1028 1064 1151 1206 7030 7073 7144 10028 10097 10844 11974 11999 12044 12071 12771
 	}
 	weather={
 		period={
 			between={ 0.0 30.0 }
-			temperature={ 20.0 35.0 }
-			temperature_day_night={ -35.0 2.0 }
+			temperature={ 13.0 24.0 }
+			temperature_day_night={ 5.0 -12.0 }
 			no_phenomenon=0.600
 			rain_light=0.000
 			rain_heavy=0.000
@@ -21,8 +21,8 @@ strategic_region={
 		}
 		period={
 			between={ 0.1 27.1 }
-			temperature={ 20.0 35.0 }
-			temperature_day_night={ -35.0 2.0 }
+			temperature={ 13.0 28.0 }
+			temperature_day_night={ 5.0 -10.0 }
 			no_phenomenon=0.600
 			rain_light=0.000
 			rain_heavy=0.000
@@ -35,8 +35,8 @@ strategic_region={
 		}
 		period={
 			between={ 0.2 30.2 }
-			temperature={ 20.0 35.0 }
-			temperature_day_night={ -35.0 2.0 }
+			temperature={ 17.0 30.0 }
+			temperature_day_night={ 4.0 -10.0 }
 			no_phenomenon=0.600
 			rain_light=0.000
 			rain_heavy=0.000
@@ -49,8 +49,8 @@ strategic_region={
 		}
 		period={
 			between={ 0.3 29.3 }
-			temperature={ 20.0 35.0 }
-			temperature_day_night={ -35.0 2.0 }
+			temperature={ 21.0 36.0 }
+			temperature_day_night={ 5.0 -12.0 }
 			no_phenomenon=0.600
 			rain_light=0.000
 			rain_heavy=0.000
@@ -63,8 +63,8 @@ strategic_region={
 		}
 		period={
 			between={ 0.4 30.4 }
-			temperature={ 20.0 35.0 }
-			temperature_day_night={ -35.0 2.0 }
+			temperature={ 25.0 40.0 }
+			temperature_day_night={ 5.0 -12.0 }
 			no_phenomenon=0.600
 			rain_light=0.000
 			rain_heavy=0.000
@@ -77,8 +77,8 @@ strategic_region={
 		}
 		period={
 			between={ 0.5 29.5 }
-			temperature={ 20.0 35.0 }
-			temperature_day_night={ -35.0 2.0 }
+			temperature={ 27.0 40.0 }
+			temperature_day_night={ 5.0 -10.0 }
 			no_phenomenon=0.600
 			rain_light=0.000
 			rain_heavy=0.000
@@ -91,8 +91,8 @@ strategic_region={
 		}
 		period={
 			between={ 0.6 30.6 }
-			temperature={ 20.0 35.0 }
-			temperature_day_night={ -35.0 2.0 }
+			temperature={ 28.0 35.0 }
+			temperature_day_night={ 5.0 -10.0 }
 			no_phenomenon=0.600
 			rain_light=0.000
 			rain_heavy=0.000
@@ -105,8 +105,8 @@ strategic_region={
 		}
 		period={
 			between={ 0.7 30.7 }
-			temperature={ 20.0 35.0 }
-			temperature_day_night={ -35.0 2.0 }
+			temperature={ 28.0 36.0 }
+			temperature_day_night={ 5.0 -8.0 }
 			no_phenomenon=0.600
 			rain_light=0.000
 			rain_heavy=0.000
@@ -119,8 +119,8 @@ strategic_region={
 		}
 		period={
 			between={ 0.8 29.8 }
-			temperature={ 20.0 35.0 }
-			temperature_day_night={ -35.0 2.0 }
+			temperature={ 26.0 37.0 }
+			temperature_day_night={ 5.0 -12.0 }
 			no_phenomenon=0.600
 			rain_light=0.000
 			rain_heavy=0.000
@@ -133,8 +133,8 @@ strategic_region={
 		}
 		period={
 			between={ 0.9 30.9 }
-			temperature={ 20.0 35.0 }
-			temperature_day_night={ -35.0 2.0 }
+			temperature={ 22.0 34.0 }
+			temperature_day_night={ 5.0 -11.0 }
 			no_phenomenon=0.600
 			rain_light=0.000
 			rain_heavy=0.000
@@ -147,8 +147,8 @@ strategic_region={
 		}
 		period={
 			between={ 0.10 29.10 }
-			temperature={ 20.0 35.0 }
-			temperature_day_night={ -35.0 2.0 }
+			temperature={ 19.0 31.0 }
+			temperature_day_night={ 5.0 -11.0 }
 			no_phenomenon=0.600
 			rain_light=0.000
 			rain_heavy=0.000
@@ -161,8 +161,8 @@ strategic_region={
 		}
 		period={
 			between={ 0.11 30.11 }
-			temperature={ 20.0 35.0 }
-			temperature_day_night={ -35.0 2.0 }
+			temperature={ 15.0 24.0 }
+			temperature_day_night={ 5.0 -11.0 }
 			no_phenomenon=0.600
 			rain_light=0.000
 			rain_heavy=0.000

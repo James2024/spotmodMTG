@@ -1125,12 +1125,8 @@ focus_tree = {
 				category = air_doctrine
 			}
 			air_experience = 25
-			add_tech_bonus = {
-				name = fighter_command_focus
-				bonus = 1.0
-				uses = 2
-				category = light_fighter
-				category = cat_heavy_fighter
+			set_technology = {
+				fighter2 = 1
 			}
 		}
 	}

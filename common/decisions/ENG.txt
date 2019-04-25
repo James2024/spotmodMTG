@@ -8743,14 +8743,23 @@ operations = {
 		
 		allowed = {
 			tag = ENG
+			has_war_with = GER
 		}
+		
+		visible = {
+			tag = ENG
+		}
+		
+		fire_only_once = yes
 		
 		cost = 50
 		
 		available = {
-			NOT = {	has_country_flag = annexed_crete }
 			divisions_in_state = { state = 182 size > 3 }
-			
+		}
+		
+		complete_effect = {
+			transfer_state  = 182
 		}
 	}
 

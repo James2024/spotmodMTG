@@ -191,19 +191,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 3989;1961;impassable;-1;-1;-1;-1;-1;;Himalayas
 1129;1961;impassable;-1;-1;-1;-1;-1;;Himalayas
 5042;4973;impassable;-1;-1;-1;-1;-1;;Himalayas
-5014;1822;impassable;-1;-1;-1;-1;-1;;Iran-Iraq
-6826;1822;impassable;-1;-1;-1;-1;-1;;Iran-Iraq
-6826;4943;impassable;-1;-1;-1;-1;-1;;Iran-Iraq
-6826;5098;impassable;-1;-1;-1;-1;-1;;Iran-Iraq
-10793;5098;impassable;-1;-1;-1;-1;-1;;Iran-Iraq
-12855;5098;impassable;-1;-1;-1;-1;-1;;Iran-Iraq
-12855;829;impassable;-1;-1;-1;-1;-1;;Iran-Iraq
-78;829;impassable;-1;-1;-1;-1;-1;;Iran-Iraq
-78;10774;impassable;-1;-1;-1;-1;-1;;Iran-Iraq
-78;7953;impassable;-1;-1;-1;-1;-1;;Iran-Iraq
-12726;7953;impassable;-1;-1;-1;-1;-1;;Iran-Iraq
-2089;7953;impassable;-1;-1;-1;-1;-1;;Iran-Iraq
-2089;5005;impassable;-1;-1;-1;-1;-1;;Iran-Iraq
 4558;10826;impassable;-1;-1;-1;-1;-1;;peshawar mountains
 4558;12653;impassable;-1;-1;-1;-1;-1;;peshawar mountains
 4558;7519;impassable;-1;-1;-1;-1;-1;;peshawar mountains

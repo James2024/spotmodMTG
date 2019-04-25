@@ -949,6 +949,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 2
+				uses = 1
+				category = light_fighter
+			}
 			air_experience = 50
 			add_tech_bonus = {
 				name = air_sup_bonus
