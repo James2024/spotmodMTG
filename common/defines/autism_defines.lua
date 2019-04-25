@@ -49,10 +49,8 @@ NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 15
 NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 10
 
 --- Navy
-NDefines.NNavy.ANTI_AIR_TARGETTING_TO_CHANCE = 0.05 --- THIS IS FOR LAND CAS CAUSE PARADOX BUGGGGZ
-NDefines.NNavy.ANTI_AIR_ATTACK_TO_AMOUNT = 0.001 --- THIS IS FOR LAND CAS CAUSE PARADOX BUGGGGZ
-NDefines.NAir.DISRUPTION_FACTOR = 7.0  --- (4 -> 7)
-NDefines.NAir.ESCORT_FACTOR = 3.0 -- (2 -> 3)
+NDefines.NNavy.ANTI_AIR_TARGETTING_TO_CHANCE = 0.2 --- THIS IS FOR LAND CAS CAUSE PARADOX BUGGGGZ
+NDefines.NNavy.ANTI_AIR_ATTACK_TO_AMOUNT = 0.006 --- THIS IS FOR LAND CAS CAUSE PARADOX BUGGGGZ
 NDefines.NNavy.ANTI_AIR_POW_ON_INCOMING_AIR_DAMAGE = 0.8 --- (0.2 -> 0.8)
 NDefines.NNavy.SHIP_TO_FLEET_ANTI_AIR_RATIO = 0.01 --- (0.2 -> 0.01)
 NDefines.NNavy.ANTI_AIR_POW_ON_INCOMING_AIR_DAMAGE = 0.8 --- (0.2 -> 0.8)
@@ -65,7 +63,6 @@ NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- doubled the cooldown of guns to make ba
         2.0,    -- small guns
 }
 
-
 ---Military
 NDefines.NMilitary.RECON_SKILL_IMPACT = 8
 NDefines.NMilitary.FUEL_CAPACITY_DEFAULT_HOURS = 160 ---Vanilla 90 makes tanks store more fuel?
@@ -77,8 +74,6 @@ NDefines.NMilitary.MAX_AIR_EXPERIENCE = 999
 NDefines.NMilitary.TACTIC_SWAP_FREQUENCEY = 4
 NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.2
 NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.3
-NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.40
-NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.30
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_COMBAT_HOUR = 0.00015
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0.0002
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.15
@@ -122,6 +117,13 @@ NDefines.NBuildings.MAX_SHARED_SLOTS = 40 --amount of potential max building slo
 NDefines.NBuildings.INFRA_TO_SUPPLY = 2.5
 NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 100
 
+---Air Balance
+NDefines.NMilitary.ANTI_AIR_ATTACK_TO_AMOUNT = 0.001
+NDefines.NAir.ESCORT_FACTOR = 3.0 -- (2 -> 3)
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.40
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.30
+NDefines.NAir.DISRUPTION_FACTOR = 7.0  --- (4 -> 7)
+
 ---Air
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 1							-- Days to deploy one air wing
 NDefines.NAir.ACE_EARN_CHANCE_BASE = 0.01                        -- Base chance % for ace pilot to be created. Happens only when successfully kill airplane/ship or damage the buildings.
@@ -139,7 +141,6 @@ NDefines.NAir.AIR_COMBAT_FINAL_DAMAGE_SCALE = 0.4 -- 0.015	 % how many max disru
 NDefines.NAir.ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.8 -- .75 Maximum damage reduction factor applied to incoming air attacks against units with AA.
 NDefines.NAir.AIR_MORE_GROUND_CREWS_COST = 500.0 -- Disables ground crews. They're cancerous. --- Definietly are cancerous
 
-
 ---AI
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_BASE = 100
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_TRASHHOLD = 0
@@ -147,6 +148,7 @@ NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_PENALTY = 0
 NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROLLED = 0
 NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROL_DIFF = 0
 NDefines.NAI.MAX_VOLUNTEER_ARMY_FRACTION = 0.0001
+NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_FACTOR = 0.6
 
 ---Graphics
 NDefines_Graphics.NMapIcons.STRATEGIC_AIR_PRIORITY_AIR_MISSION = 290
