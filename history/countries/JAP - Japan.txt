@@ -109,12 +109,6 @@ if = {
 	set_naval_oob = "JAP_1936_naval_legacy"
 }
 
-create_import = {
-		resource = oil
-		factories = 2
-		exporter = USA
-}
-
 1939.1.1 = {
 
 	add_political_power = 1198
