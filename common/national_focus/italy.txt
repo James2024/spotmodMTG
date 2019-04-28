@@ -1494,7 +1494,7 @@ focus_tree = {
 
 	focus =	 {
 		id = ITA_infantry_reduction
-		icon = GFX_goal_generic_army_artillery2
+		icon = GFX_goal_generic_major_war
 		relative_position_id = ITA_antitank
 		prerequisite = { focus = ITA_antitank }
 		x = 0

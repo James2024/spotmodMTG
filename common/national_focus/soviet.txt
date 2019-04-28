@@ -1817,6 +1817,8 @@ focus_tree = {
 		cost = 13
 	
 		completion_reward = {
+			remove_country_flag =  removed_generals1
+			remove_country_flag =  removed_generals2
 			create_corps_commander = {
 				name = "Konstantin Rokossovsky"
 				id = 402

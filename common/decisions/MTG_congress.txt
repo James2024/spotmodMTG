@@ -61,7 +61,7 @@ USA_congress = {
 				factor = 0
 			}
 		}
-		days_remove = 45
+		days_remove = 60
 		modifier = {
 			political_power_gain = -0.6
 		}

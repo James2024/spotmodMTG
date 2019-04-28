@@ -347,7 +347,26 @@ ideas = {
 				communism_drift = -0.05
 			}
 		}
-		
+		FRA_the_fight_goes_on_idea = {
+		    picture = hol_expand_the_colonial_army
+			allowed = {
+			    always = no
+			}
+			modifier = {
+			    army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		FRA_the_liberation = {
+		    allowed = {
+			    always = no
+			}
+			modifier = {
+			    war_support_factor = 0.25
+			    army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
 	}
 
 	# POLITICAL
@@ -934,7 +953,6 @@ ideas = {
 			
 
 			traits = { heavy_tank_manufacturer }
-			cost = 100
 		}
 	
 		FRA_AMX = {
@@ -955,7 +973,6 @@ ideas = {
 			
 
 			traits = { fast_tank_manufacturer }
-			cost = 100
 		}
 	}
 	
@@ -974,7 +991,6 @@ ideas = {
 			}
 			
 			traits = { motorized_equipment_manufacturer }
-			cost = 100
 
 		}
 		
@@ -989,7 +1005,6 @@ ideas = {
 			}
 			
 			traits = { infantry_equipment_manufacturer }
-			cost = 100
 		}
 	
 		schneider = {
@@ -1003,7 +1018,6 @@ ideas = {
 			}
 			
 			traits = { artillery_manufacturer }
-			cost = 100
 		}
 	}
 	
@@ -1022,7 +1036,6 @@ ideas = {
 			}
 			
 			traits = { light_aircraft_manufacturer }
-			cost = 100
 		}
 		
 		bloch = {
@@ -1036,7 +1049,6 @@ ideas = {
 			}
 			
 			traits = { medium_aircraft_manufacturer }
-			cost = 100
 		}
 		
 		amiot = {
@@ -1050,7 +1062,6 @@ ideas = {
 			}
 			
 			traits = { heavy_aircraft_manufacturer }
-			cost = 100
 		}
 		
 		levasseur = {
@@ -1064,7 +1075,6 @@ ideas = {
 			}
 			
 			traits = { naval_aircraft_manufacturer }
-			cost = 100
 		}
 		
 	}
@@ -1083,7 +1093,6 @@ ideas = {
 			}
 			
 			traits = { naval_manufacturer }
-			cost = 100
 		}
 	}
 	
@@ -1138,7 +1147,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				land_doctrine = 0.1
+				land_doctrine = 0.10
 			}
 
 			ai_will_do = {
@@ -1179,7 +1188,7 @@ ideas = {
 			
 			
 			research_bonus = {
-				naval_doctrine = 0.1
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }
@@ -1208,7 +1217,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				air_doctrine = 0.1
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
