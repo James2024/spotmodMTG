@@ -52,3 +52,6 @@
  ITA_infantry_idea:0 "Infantry Equipment Bonus"
  ITA_destroyer_idea:0 "Destroyer Bonus"
  ITA_capital_idea:0 "Capital Ship Bonus"
+ JAP_southeast_expansion:0 "South-East Expansion"
+ JAP_southwest_expansion:0 "South-West Expansion"
+ JAP_weakened_navy:0 "Weakened Navy"

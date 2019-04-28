@@ -473,10 +473,423 @@ focus = {
 			hidden_effect = { news_event = { id = mtg_news.30 days = 1 } }
 		}
 	}
+	focus = {
+		id = JAP_strike_on_the_southern_resource_area
+		icon = GFX_focus_jap_strike_south
+		#prerequisite = { focus = JAP_secure_the_philippines focus = JAP_bypass_the_philippines }
+		x = 1
+		y = 1
+		#relative_position_id = JAP_bypass_the_philippines
+
+		will_lead_to_war_with = ENG
+		will_lead_to_war_with = MAL
+		will_lead_to_war_with = INS
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1940.1.1
+			}
+			modifier = {
+				factor = 0
+				ENG = { has_war = no }
+				HOL = { has_war = no }
+			}
+			modifier = {
+				has_war_with = SOV
+				factor = 0
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			OR = {			
+				has_wargoal_against = INS
+				has_war_with = INS
+			}
+			OR = {
+				has_wargoal_against = MAL
+				has_war_with = MAL
+			}
+			OR = {
+				AND = {
+					671 = {
+						NOT = { is_controlled_by = FRA }
+					}
+					670 = {
+						NOT = { is_controlled_by = FRA }
+					}
+					286 = {
+						NOT = { is_controlled_by = FRA }
+					}
+					741 = {
+						NOT = { is_controlled_by = FRA }
+					}
+				}
+				has_wargoal_against = FRA
+				has_war_with = FRA
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_wargoal_against = INS }
+					NOT = { has_war_with = INS }
+					country_exists = INS
+					if = {
+						limit = {
+							INS = { is_subject_of = HOL }
+						}
+						OR = {
+							has_country_flag = HOL_declare_war_indies_allowed
+							HOL = { NOT = { has_completed_focus = HOL_placate_the_japanese } }
+						}
+					}
+				}
+				create_wargoal = {
+					target = INS
+					type = annex_everything
+				}
+				add_ai_strategy = {
+					type = conquer
+					id = "INS"
+					value = 200
+				}
+			}
+			if = {
+				limit = {
+					INS = { exists = no }
+					335 = {
+						CONTROLLER = {
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+					if = {
+						limit = {
+							335 = {
+								CONTROLLER = {
+									tag = HOL
+								}
+							}
+						}
+						OR = {
+							has_country_flag = HOL_declare_war_indies_allowed
+							HOL = { NOT = { has_completed_focus = HOL_placate_the_japanese } }
+						}
+					}
+				}
+				335 = {
+					OWNER = {
+						ROOT = {
+							create_wargoal = {
+								target = PREV
+								type = take_state_focus
+								generator = { 335 334 672 673 668 667 669 738 }
+							}
+							add_ai_strategy = {
+								type = conquer
+								id = PREV
+								value = 200
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_wargoal_against = MAL }
+					NOT = { has_war_with = MAL }
+					country_exists = MAL
+				}
+				create_wargoal = {
+					target = MAL
+					type = annex_everything
+				}
+				add_ai_strategy = {
+					type = conquer
+					id = "MAL"
+					value = 200
+				}
+			}
+			if = {
+				limit = {
+					MAL = { exists = no }
+					336 = {
+						CONTROLLER = {
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				336 = {
+					OWNER = {
+						ROOT = {
+							create_wargoal = {
+								target = PREV
+								type = take_state_focus
+								generator = { 336 }
+							}
+							add_ai_strategy = {
+								type = conquer
+								id = PREV
+								value = 200
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						671 = {
+							is_controlled_by = FRA
+						}
+						670 = {
+							is_controlled_by = FRA
+						}
+						286 = {
+							is_controlled_by = FRA
+						}
+						741 = {
+							is_controlled_by = FRA
+						}
+					}
+					NOT = { has_wargoal_against = FRA }
+					NOT = { has_war_with = FRA }
+				}
+				#Might be generating on states FRA does not own, but not worth the time to get it exact. Should have no gameplay impact.
+				create_wargoal = {
+					target = FRA
+					type = take_state_focus
+					generator = { 671 670 286 741 }
+				}
+			}
+		}
+	}
+	focus = {
+		id = JAP_bypass_the_philippines
+		icon = GFX_goal_generic_position_armies
+		#prerequisite = { focus = JAP_non_aggression_pact_with_the_soviet_union }
+		#mutually_exclusive = { focus = JAP_secure_the_philippines }
+		x = -1
+		y = 1
+		#relative_position_id = JAP_non_aggression_pact_with_the_soviet_union
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = JAP_bypass_the_philippines
+				bonus = 1.0
+				uses = 1
+				technology = landing_craft
+				technology = tank_landing_craft
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_secure_the_philippines
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		#prerequisite = { focus = JAP_non_aggression_pact_with_the_soviet_union }
+		#mutually_exclusive = { focus = JAP_bypass_the_philippines }
+		x = 1
+		y = 1
+		#relative_position_id = JAP_non_aggression_pact_with_the_soviet_union
+
+		will_lead_to_war_with = PHI
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				"PHI" = {
+					has_war = yes
+					NOT = { has_war_with = JAP }
+				}
+			}
+			modifier = {
+				has_war_with = SOV
+				factor = 0
+			}
+			modifier = {
+				has_War_with = event_target:WTT_current_china_leader
+				event_target:WTT_current_china_leader = {
+					surrender_progress < 0.2
+				}
+				factor = 0
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			OR = {
+				has_war_with = PHI
+				has_wargoal_against = PHI
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		will_lead_to_war_with = PHI
+
+		completion_reward = {
+			create_wargoal = {
+				target = "PHI"
+				type = puppet_wargoal_focus
+				expire = 0
+			}
+			add_ai_strategy = {
+				type = conquer
+				id = "PHI"
+				value = 200
+			}
+		}
+	}
+	focus = {
+		id = JAP_sign_tripartite_pact
+		icon = GFX_goal_anschluss
+	#	prerequisite = { focus = JAP_liaison_conference }
+		x = 1
+		y = 1
+		#relative_position_id = JAP_liaison_conference
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				NOT = { GER = { is_in_faction_with = ITA } }
+			}
+		}
+
+		available = {
+			any_country = {
+				original_tag = GER
+				has_government = fascism
+				NOT = { has_war_with = ROOT }
+			}
+			any_country = {
+				original_tag = ITA
+				has_government = fascism
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = JAP_sign_tripartite_pact_bypass_tt
+				OR = {
+					NOT = {
+						any_country = {
+							original_tag = GER
+							has_government = fascism
+						}
+					}
+					any_country = {
+						original_tag = GER
+						has_government = fascism
+						has_war_with = ROOT
+					}
+					NOT = {
+						any_country = {
+							original_tag = ITA
+							has_government = fascism
+						}
+					}
+					any_country = {
+						original_tag = ITA
+						has_government = fascism
+						has_war_with = ROOT
+					}	
+				}	
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
 
 
+		completion_reward = {
+			random_country = {
+				limit = {
+					original_tag = GER
+					has_government = fascism
+				}
+				country_event = { id = wtt_japan.109 days = 1 }
+			}
+		}
+	}
+	focus = {
+		id = JAP_strengthen_the_divine_wind
+		icon = GFX_goal_generic_secret_weapon
+	#	prerequisite = { focus = JAP_spiritual_mobilization }
+	#	prerequisite = { focus = JAP_warrior_spirit }
+		x = 1
+		y = 1
+	#	relative_position_id = JAP_spiritual_mobilization
 
+		cost = 10
 
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			has_tech = rocket_engines
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = JAP_strengthen_the_divine_wind_effect
+			hidden_effect = { set_technology = { suicide_craft = 1 } }
+		}
+	}
 
 
 

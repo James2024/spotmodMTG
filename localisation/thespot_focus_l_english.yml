@@ -483,3 +483,7 @@
  ITA_doctrine:0 "Doctrine Investment"
  check_army_primacy:0 "Has Completed Army Primacy"
  check_mare_nostrum:0 "Has Complete Mare Nostrum"
+ JAP_national_research_policy2:0 "Capture Chinese Scientists"
+ JAP_motorized:0 "Army Motorization"
+ JAP_northern_expansion_focus:0 "South-West Expansion"
+ JAP_southern_expansion_focus:0 "South-East Expansion"

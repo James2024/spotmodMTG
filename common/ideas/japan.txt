@@ -22,6 +22,79 @@ ideas = {
 				production_speed_dockyard_factor = 0.10
 			}
 		}
+
+		JAP_southwest_expansion = {
+
+			allowed = {
+				always = no
+				}
+			
+	
+			allowed_civil_war = {
+				always = no
+			}
+		
+			removal_cost = -1
+		
+			picture = GFX_goal_generic_army_doctrines
+			
+			modifier = {
+				max_dig_in = 10
+				terrain_penalty_reduction = 0.025
+				army_attack_factor = 0.05
+			}
+		}
+
+		JAP_southeast_expansion = {
+
+			allowed = {
+				always = no
+				}
+			
+	
+			allowed_civil_war = {
+				always = no
+			}
+		
+			removal_cost = -1
+		
+			picture = GFX_goal_generic_navy_doctrines_tactics
+			
+			modifier = {
+				amphibious_invasion = 0.10
+				invasion_preparation = -0.3
+				special_forces_attack_factor = 0.1
+				convoy_escort_efficiency = 0.10
+				navy_submarine_detection_factor = 0.2
+			}
+		}
+
+		JAP_weakened_navy = {
+
+			allowed = {
+				always = no
+				}
+			
+	
+			allowed_civil_war = {
+				always = no
+			}
+		
+			removal_cost = -1
+		
+			picture = GFX_Idea_generic_navy_carrier_bonus
+			
+			modifier = {
+				 	naval_strike_attack_factor = -0.1
+					naval_strike_targetting_factor = -0.1
+					naval_strike_agility_factor = -0.1
+					convoy_escort_efficiency = -0.1
+					naval_retreat_chance = -0.1
+					navy_submarine_detection_factor = -0.1
+					naval_hit_chance = -0.05
+					naval_coordination = -0.01
+			}
+		}
 	
 	
 		state_shintoism = {
@@ -348,8 +421,8 @@ ideas = {
 				war_support_factor = 0.2
 				mobilization_laws_cost_factor = -0.25
 				justify_war_goal_time = -0.2
-				research_speed_factor = -0.05
-				production_speed_industrial_complex_factor = -0.1
+				#research_speed_factor = -0.05
+				#production_speed_industrial_complex_factor = -0.1
 			}
 		}
 
@@ -696,10 +769,10 @@ ideas = {
 
 			picture = jap_supremacy_of_technology
 			
-			research_bonus = {
-				infantry_weapons = 0.05
-				armor = 0.05
+			modifier = {
+				research_speed_factor = 0.1 
 			}
+			
 		}
 
 		JAP_superior_will = {
