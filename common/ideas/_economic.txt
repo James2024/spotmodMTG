@@ -87,7 +87,6 @@ ideas = {
 
 		low_economic_mobilisation = {
 			available = {
-				threat > 0.05
 				OR = {
 					has_government = fascism
 					has_government = communism
@@ -131,7 +130,6 @@ ideas = {
 		partial_economic_mobilisation = {
 
 			available = {
-				threat > 0.05
 				OR = {
 					has_government = fascism
 					has_government = communism
