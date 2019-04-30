@@ -6,7 +6,7 @@ state={
 	state_category = wasteland
 	
 	resources={
-		oil = 80 # was: 116
+		oil = 36 # was: 116
 	}
 	
 	history={

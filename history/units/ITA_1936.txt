@@ -509,14 +509,14 @@ air_wings = {
 		# 2a Divisione Aerea 'Borea'
 		fighter_equipment_1 = { 
 			amount = 100
-			creator = "GER"
+			creator = "ITA"
 			owner = "ITA" 
 		} 
 		# 4a Divisione Aerea 'Drago'
 		# 6a Divisione Aerea 'Falco'
 		tac_bomber_equipment_1 = { 
 			amount = 100
-			creator = "GER"
+			creator = "ITA"
 			owner = "ITA" 
 		} 
 	} 
@@ -526,13 +526,13 @@ air_wings = {
 		# 5a Divisione Aerea 'Eolo'
 		tac_bomber_equipment_1 = { 
 			amount = 100
-			creator = "GER"
+			creator = "ITA"
 			owner = "ITA" 
 		} 
 		# 8a Brigata Aerea 'Astore'
 		fighter_equipment_1 = { 
 			amount = 100
-			creator = "GER"
+			creator = "ITA"
 			owner = "ITA" 
 		} 
 	} 
@@ -542,14 +542,14 @@ air_wings = {
 		# 1a Divisione Aerea 'Aquila'
 		fighter_equipment_1 = { 
 			amount = 100
-			creator = "GER"
+			creator = "ITA"
 			owner = "ITA" 
 		} 
 		# 3a Divisione Aerea 'Centauro'
 		tac_bomber_equipment_1 = { 
 			amount = 50
 			owner = "ITA" 
-			creator = "GER"
+			creator = "ITA"
 		} 
 	} 
 
@@ -577,13 +577,13 @@ air_wings = {
 		# 14a Brigata Aerea 'Rex'
 		fighter_equipment_1 = { 
 			amount = 100
-			creator = "GER" 
+			creator = "ITA" 
 			owner = "ITA" 
 		} 
 		# 13a Divisione Aerea 'Pegaso'
 		tac_bomber_equipment_1 = { 
 			amount = 100
-			creator = "GER"
+			creator = "ITA"
 			owner = "ITA" 
 		} 
 	} 
@@ -592,12 +592,12 @@ air_wings = {
 	550 = { 
 		fighter_equipment_1 = { 
 			amount = 100
-			creator = "GER"
+			creator = "ITA"
 			owner = "ITA" 
 		} 
 		tac_bomber_equipment_1 = { 
 			amount = 100
-			creator = "GER"
+			creator = "ITA"
 			owner = "ITA" 
 		} 
 		CAS_equipment_1 = { 

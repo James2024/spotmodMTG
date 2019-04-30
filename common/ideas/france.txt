@@ -45,6 +45,7 @@ ideas = {
 				political_power_cost = 0.8
 				stability_factor = -0.10
 				surrender_limit = -0.5
+				conversion_cost_civ_to_mil_factor= 0.5 #fuck converting factories
 			}
 		}
 
@@ -84,8 +85,8 @@ ideas = {
 			picture = generic_wall_line
 			
 			modifier = {
-				max_planning = 0.25
-				planning_speed = -0.25
+				max_planning = 0.1
+				planning_speed = -0.1
 			}
 		}
 
