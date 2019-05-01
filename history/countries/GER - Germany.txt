@@ -33,6 +33,9 @@ set_technology = {
 	synth_oil_experiments = 1
 	fuel_silos = 1
 	fuel_refining = 1
+	
+	electronic_mechanical_engineering = 1
+	radio = 1
 }
 
 if = {
@@ -97,6 +100,16 @@ set_convoys = 200
 set_stability = 0.75 
 set_war_support = 0.3
 
+create_equipment_variant = {
+	name = "Bf 109 E"
+	type = fighter_equipment_1
+	upgrades = {
+		plane_gun_upgrade = 1
+		plane_range_upgrade = 3  
+		plane_engine_upgrade = 4
+	}
+}
+	
 1939.1.1 = {
 	add_named_threat = { threat = 40 name = 1939_bookmark_threat }
 	set_war_support = 0.7

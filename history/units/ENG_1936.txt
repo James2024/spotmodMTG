@@ -424,27 +424,31 @@ air_wings = {
 		fighter_equipment_1 = {
 			owner = "ENG" 
 			amount = 200
+			version_name = "Hurricane Mk 2"
 		}
 	}
 	130 = { 
 		### No. 11 Fighter Command, Essex area -- Hawker Demons, Furys, Gloster Gauntlets
 		fighter_equipment_1 = {
 			owner = "ENG" 
-			amount = 150
+			amount = 400
+			version_name = "Hurricane Mk 2"
 		}
 	}	
 	127 = { 
 		### No. 12 Fighter Command, Nottingham area -- Hawker Demons, Furys, Gloster Gauntlets
 		fighter_equipment_1 = {
 			owner = "ENG" 
-			amount = 100
+			amount = 200
+			version_name = "Hurricane Mk 2"
 		}
 	}	
 	131 = { 
 		### No. 13 Fighter Command, Newcastle -- Hawker Demons, Furys, Gloster Gauntlets
 		fighter_equipment_1 = {
 			owner = "ENG" 
-			amount = 100
+			amount = 200
+			version_name = "Hurricane Mk 2"
 		}
 		
 	}
@@ -572,6 +576,7 @@ instant_effect = {
 		equipment = {
 			type = fighter_equipment_1
 			creator = "ENG" 
+			version_name = "Hurricane Mk 2"
 		}
 		requested_factories = 1
 		progress = 0.15

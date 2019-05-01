@@ -449,6 +449,7 @@ air_wings = {
 		fighter_equipment_1 =  {		# He 51
 			owner = "GER" 
 			amount = 100
+			version_name = "Bf 109 E"
 		}
 		name = "Jagdgeschwader 232"
 	}
@@ -459,6 +460,7 @@ air_wings = {
 		fighter_equipment_1 =  {		# Ar 68
 			owner = "GER" 
 			amount = 100
+			version_name = "Bf 109 E"
 		}
 		name = "Jagdgeschwader 132"
 		ace={ # Order is important. Ace will be assigned to the wing above (fighter_equipment_0).
@@ -508,6 +510,7 @@ air_wings = {
 		fighter_equipment_1 =  {		# He 51 # Ar 68
 			owner = "GER" 
 			amount = 100
+			version_name = "Bf 109 E"
 		}
 		name = "Jagdgeschwader 134"
 		# Kampfgeschwader 152 'Hindenburg'	
@@ -530,6 +533,7 @@ air_wings = {
 		fighter_equipment_1 =  {		# He 51
 			owner = "GER" 
 			amount = 100
+			version_name = "Bf 109 E"
 		}
 		name = "Jagdgeschwader 136"
 		# Kampfgeschwader 154	
@@ -612,6 +616,7 @@ instant_effect = {
 		equipment = {
 			type = fighter_equipment_1
 			creator = "GER" 
+			version_name = "Bf 109 E"
 		}
 		requested_factories = 1
 		progress = 0.15

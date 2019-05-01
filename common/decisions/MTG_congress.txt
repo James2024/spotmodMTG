@@ -63,7 +63,7 @@ USA_congress = {
 		}
 		days_remove = 60
 		modifier = {
-			political_power_gain = -0.6
+			political_power_gain = -0.3
 		}
 		remove_effect = {
 			USA_congress_medium_support = yes

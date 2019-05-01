@@ -163,6 +163,15 @@ if = {
 	add_to_tech_sharing_group = commonwealth_research
 }
 
+create_equipment_variant = {
+	name = "Hurricane Mk 2"
+	type = fighter_equipment_1
+	upgrades = {
+		plane_range_upgrade = 1  
+		plane_engine_upgrade = 3
+	}
+}
+
 1939.1.1 = {
 
 	add_political_power = 1198
