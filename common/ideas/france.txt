@@ -146,7 +146,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				non_core_manpower = 0.2
+				non_core_manpower = 0.1
 				conscription = 0.025
 			}
 		}
