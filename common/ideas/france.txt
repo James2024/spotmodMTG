@@ -168,7 +168,6 @@ ideas = {
                 production_speed_synthetic_refinery_factor = 0.05
 			}
 		}
-	}
 
 		FRA_infantry_focus = {
 		
