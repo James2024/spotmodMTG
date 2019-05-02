@@ -1612,27 +1612,7 @@ focus = {
 		x = 1
 		y = 2
 		cost = 0.8
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				NOT = { ENG = { has_war_with = GER } }				
-			}
-			modifier = {
-				factor = 0
-				JAP_or_friend_controls_big_part_of_CHI_or_peace = no
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					any_other_country = {
-						has_war_with = ROOT
-						is_major = yes
-					}
-					has_war_with_amount > 1
-				}
-			}			
-		}
+		
 		historical_ai = {
 			JAP_or_friend_controls_big_part_of_CHI_or_peace = yes
 		}
@@ -1666,27 +1646,7 @@ focus = {
 		x = 0
 		y = 2
 		cost = 0.8
-		ai_will_do = {
-			factor = 2.5
-			modifier = {
-				factor = 0
-				NOT = { SOV = { has_war = yes } }
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					any_other_country = {
-						has_war_with = ROOT
-						is_major = yes
-					}
-					has_war_with_amount > 1
-				}
-			}
-			modifier = {
-				factor = 0
-				JAP_or_friend_controls_big_part_of_CHI_or_peace = no
-			}			
-		}	
+	
 		completion_reward = {
 			add_ideas = JAP_southwest_expansion
 			declare_war_on = { target = RAJ    type = annex_everything }
@@ -2274,7 +2234,6 @@ focus = {
 
 
 		completion_reward = {
-			add_ideas = pfw_special_forces
 			add_tech_bonus = {
 				name = JAP_expand_the_snlf
 				bonus = 1.0

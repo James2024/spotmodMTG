@@ -59,3 +59,7 @@
  FRA_the_liberation:0 "The Liberation"
  removed_generals1:0 "Purged By Stalin"
  removed_generals2:0 "Purged By Stalin"
+ GER_medium_tank_manufacturer:0 "Medium Tank Manufacturer"
+ GER_fast_tank_manufacturer:0 "Fast Tank Manufacturer"
+ GER_heavy_tank_manufacturer:0 "Heavy Tank Manufacturer"
+ messerschmitt_aircraft_manufacturer:0 "Messerschmitt Aircraft Manufacturer"

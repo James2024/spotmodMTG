@@ -245,8 +245,8 @@ political_actions = {
         fire_only_once = yes
 		
 		visible = {
-				NOT = { has_government = fascism }
-				NOT = { has_government = communism }
+			NOT = { has_government = fascism }
+			NOT = { has_government = communism }
 		}		
 
         days_remove = -1
@@ -285,6 +285,7 @@ political_actions = {
 			factor = 1
 		}
     }
+	
     give_refuge_ita = {
 
     	icon = generic_research

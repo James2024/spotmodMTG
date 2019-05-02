@@ -423,7 +423,7 @@ air_wings = {
 		### No. 11 Fighter Command, Middlesex area -- Hawker Demons, Furys, Gloster Gauntlets
 		fighter_equipment_1 = {
 			owner = "ENG" 
-			amount = 200
+			amount = 100
 			version_name = "Hurricane Mk 2"
 		}
 	}
@@ -431,7 +431,7 @@ air_wings = {
 		### No. 11 Fighter Command, Essex area -- Hawker Demons, Furys, Gloster Gauntlets
 		fighter_equipment_1 = {
 			owner = "ENG" 
-			amount = 400
+			amount = 200
 			version_name = "Hurricane Mk 2"
 		}
 	}	
