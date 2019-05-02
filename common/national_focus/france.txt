@@ -1559,6 +1559,10 @@ focus_tree = {
 		cost = 3
 
 		available_if_capitulated = yes
+		
+		available = {
+			has_capitulated = yes
+		}
 
 
 		completion_reward = {
