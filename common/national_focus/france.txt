@@ -1772,11 +1772,11 @@ focus_tree = {
 			
 			hidden_effect = {
 				if = {
-					limit = { 558 = { is_controlled_by = HOL } }
+					limit = { 695 = { is_controlled_by = HOL } }
 					FRA = { transfer_state = 695 }
 				}
 				if = {
-					limit = { 274 = { is_controlled_by = HOL } }
+					limit = { 309 = { is_controlled_by = HOL } }
 					FRA = { transfer_state = 309 }
 				}
             }
