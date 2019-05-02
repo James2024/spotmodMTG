@@ -1694,7 +1694,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_joint_refinery
-		icon = GFX_goal_generic_construction2
+		icon = GFX_DAH_FR_Prod
 		prerequisite = {
 			focus = FRA_rebuild_military_production
 			focus = FRA_revive_civilian_construction
@@ -1708,6 +1708,15 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = FRA_joint_french_and_russian_rubber_refinery_program
+			add_tech_bonus = {
+				name = USA_rubber_reserve_company
+				bonus = 0.25
+				uses = 1
+				technology = rubber_processing
+				technology = improved_rubber_processing
+				technology = advanced_rubber_processing
+				technology = modern_rubber_processing
+			}
 		}
 	}
 	focus = {
@@ -1881,7 +1890,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = FRA_FREE_colonial_manpower
+			add_ideas = FRA_colonial_manpower
 		}
 	}
 
