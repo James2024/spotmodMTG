@@ -2335,6 +2335,21 @@ ENG_mary_sophia_allen = {
 		}
 	}
 	air_chief = {
+	
+		trafford_leigh_mallory = {
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+
+			
+			traits = { air_close_air_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
 
 		cyril_newall = {
 			
@@ -2455,22 +2470,7 @@ ENG_mary_sophia_allen = {
 			
 
 			
-			traits = { air_air_superiority_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		
-		trafford_leigh_mallory = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-
-			
-			traits = { air_close_air_support_2 }
+			traits = { air_air_superiority_3 }
 			
 			ai_will_do = {
 				factor = 1

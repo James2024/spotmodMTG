@@ -22,6 +22,27 @@ ideas = {
 				production_speed_dockyard_factor = 0.10
 			}
 		}
+		
+		JAP_special_forces_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				special_forces_cap = 0.25
+				special_forces_training_time_factor = -0.1
+			}
+
+			picture = eng_special_air_service
+			
+			removal_cost = -1			
+			
+		}
 
 		JAP_southwest_expansion = {
 

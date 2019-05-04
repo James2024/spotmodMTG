@@ -499,7 +499,7 @@ air_wings = {
 		# Sturzkampfgeschwader 162		
 		CAS_equipment_1 =  {			# Hs 123
 			owner = "GER" 
-			amount = 100
+			amount = 400
 		}
 		name = "Sturzkampfgeschwader 162"	
 	}

@@ -1,4 +1,4 @@
-﻿###########################
+﻿tfv_south_africa.1###########################
 # South-African TFV events Events
 ###########################
 
@@ -29,6 +29,8 @@ country_event = {
 				transfer_state = 546
 				transfer_state = 547
 				transfer_state = 548
+				transfer_state = 770
+				transfer_state = 771
 			}
 		}
 		hidden_effect = {
@@ -114,6 +116,9 @@ country_event = {
 			transfer_state = 546
 			transfer_state = 547
 			transfer_state = 548
+			transfer_state = 771
+			transfer_state = 770
+			
 		}
 
 		if = {

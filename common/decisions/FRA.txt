@@ -16,6 +16,7 @@ FRA_vichy_france = {
 		}
 			
 		visible = {
+			original_tag = FRA
 			EFR = { has_full_control_of_state = 459 }
 		}
 		

@@ -108,3 +108,24 @@ country_event = {
 		}
 	}
 }
+
+country_event = { 
+	id = spot.10
+	title = spot.10.t
+	desc = spot.10.d
+	picture = GFX_news_event_generic_rally_3
+	
+	is_triggered_only = yes 
+	
+	fire_only_once = yes 
+	
+	immediate = { 
+		hidden_effect = { 
+			add_manpower = -150000
+		}
+	}
+	
+	option = {
+		name = spot.10.a
+	}
+}
