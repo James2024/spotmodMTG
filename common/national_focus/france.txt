@@ -230,13 +230,7 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-		available = {
-		16 = {
-				is_owned_and_controlled_by = FRA
-				arms_factory > 5
-				industrial_complex > 2
-			}
-		}
+
 		bypass = {
 			custom_trigger_tooltip = {
 				tooltip = FRA_algerie_france_tt
@@ -1556,7 +1550,7 @@ focus_tree = {
 		icon = GFX_NATFRA_flagalone
 		x = 26
 		y = 0
-		cost = 3
+		cost = 2
 
 		available_if_capitulated = yes
 		
@@ -1578,7 +1572,7 @@ focus_tree = {
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		prerequisite = { focus = FRA_france_libre }
 		x = 24
-		y = 1.5
+		y = 1
 		cost = 5
 
 		available = {
@@ -1614,7 +1608,8 @@ focus_tree = {
 				add_building_construction = {
 					type = dockyard
 					level = 2
-					instant_build = yes
+				
+				instant_build = yes
 				}
 			}
 		}
@@ -1693,15 +1688,48 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = FRA_joint_refinery
-		icon = GFX_DAH_FR_Prod
-		prerequisite = {
+		id = FRA_rebuild_roads
+		icon = GFX_goal_generic_construct_infrastructure
+        prerequisite = {
 			focus = FRA_rebuild_military_production
 			focus = FRA_revive_civilian_construction
 			focus = FRA_revive_naval_construction
 		}
 		x = 25
 		y = 3
+		cost = 5
+		
+		available_if_capitulated = yes
+		
+		available = {
+			has_capitulated = yes
+		}
+		completion_reward = {
+			539 = {				
+				add_building_construction = {
+					type = naval_base
+					province = 5139
+						level = 9
+						instant_build = yes
+				}			
+				add_building_construction = {
+					type = infrastructure
+						level = 7
+						instant_build = yes			
+			    }
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_joint_refinery
+		icon = GFX_DAH_FR_Prod
+		prerequisite = {
+			focus = FRA_rebuild_roads
+			focus = FRA_develop_our_resources
+		}
+		x = 24
+		y = 4
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1725,7 +1753,7 @@ focus_tree = {
 		prerequisite = { focus = FRA_france_libre }
 		x = 28
 		y = 1
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
