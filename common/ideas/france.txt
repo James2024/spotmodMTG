@@ -152,6 +152,8 @@ ideas = {
 		}
 		
 		FRA_joint_french_and_russian_rubber_refinery_program = {
+		
+		    picture = generic_morale_bonus
 			
 			allowed = {
 				original_tag = FRA
