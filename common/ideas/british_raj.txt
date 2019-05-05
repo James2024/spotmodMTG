@@ -119,30 +119,6 @@ ideas = {
 			}
 		}
 
-		RAJ_risk_of_famine = {
-
-			picture = raj_risk_of_famine
-
-			allowed = {
-				original_tag = RAJ
-			}
-
-			allowed_civil_war = {
-				NOT = {
-					OR = {
-						has_government = communism
-						has_government = fascism
-					}
-				}
-			}
-
-			removal_cost = -1
-
-			modifier = {
-
-			}
-		}
-
 		RAJ_famine = {
 
 			picture = ENG_the_war_to_end_all_wars

@@ -43,3 +43,6 @@
  take_iraq:0 "Annex Iraq"
  empire_actions:0 "Actions for the Empire"
  take_nzl:0 "Annex New Zealand"
+ secure_dutch_east_indies:0 "Annex Dutch East Indies"
+ ENG_secure_per_oil:0 "Retake Persian Oil Fields"
+ GER_secure_per_oil:0 "Take Persian Oil Fields"

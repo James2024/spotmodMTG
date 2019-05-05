@@ -8737,6 +8737,72 @@ political_actions = {
 
 operations = {
 
+	ENG_secure_per_oil = {
+		
+		icon = generic_operation
+		
+		allowed = {
+			tag = ENG
+		}
+		
+		visible = {
+			tag = ENG
+			has_war_with = GER
+			413 = { has_state_flag = german_oil_control } 
+		}
+		
+		cost = 0
+		
+		available = {
+			OR = {
+				ENG = { controls_state = 291 }
+				any_other_country = {
+					is_in_faction_with = ENG
+					controls_state = 291
+				}
+			}
+		}
+		
+		complete_effect = {
+			413 = { set_state_flag = german_oil_control }
+			PER = {
+				give_resource_rights = { receiver = ENG state = 412 }
+				give_resource_rights = { receiver = ENG state = 413 }
+				give_resource_rights = { receiver = ENG state = 411 }
+			}
+		}
+	}
+
+	secure_dutch_east_indies = {
+		
+		icon = generic_operation
+		
+		allowed = {
+			tag = ENG
+		}
+		
+		visible = {
+			tag = ENG
+			has_war_with = GER
+		}
+		
+		fire_only_once = yes
+		
+		cost = 0
+		
+		available = {
+			HOL = { has_capitulated = yes }
+			date > 1940.6.1
+		}
+		
+		complete_effect = {
+			annex_country = {
+				target = INS
+				transfer_troops = yes
+			}
+		}
+	}
+
 	take_iraq = {
 		
 		icon = generic_operation
@@ -8755,7 +8821,7 @@ operations = {
 		cost = 0
 		
 		available = {
-			NOT = { owns_state = 452 }
+			NOT = { ENG = { has_full_control_of_state = 452 } }
 		}
 		
 		complete_effect = {
@@ -8781,7 +8847,7 @@ operations = {
 		
 		fire_only_once = yes
 		
-		cost = 50
+		cost = 25
 		
 		available = {
 			divisions_in_state = { state = 182 size > 3 }

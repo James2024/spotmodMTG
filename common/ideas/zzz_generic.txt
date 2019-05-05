@@ -285,8 +285,87 @@ ideas = {
 				communism_drift = 0.1
 			}
 		}
+		# from decision
+		socialist_education = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.1
+				research_speed_factor = 0.035
+			}
+		}
+		# from decision
+		paramilitary_training = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				fascism_drift = 0.1
+				experience_gain_army = 0.1
+			}
+		}
+		# from decision
+		nation_building = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				democratic_drift = 0.1
+				stability_factor = 0.1
+			}
+		}
 		
-		
+		military_parade = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				neutrality_drift = 0.1
+				mobilization_speed = 0.15
+			}
+		}
 		# Generic Focus Ideas
 
 		special_forces = {
@@ -662,7 +741,7 @@ ideas = {
 				production_speed_nuclear_reactor_factor = 0.2
 			}
 			research_bonus = {
-				nuclear = 0.10
+				nuclear = 0.15
 			}
 		}
 
@@ -1188,7 +1267,7 @@ ideas = {
 			removal_cost = 10
 			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			traits = { tank_manufacturer }
@@ -1232,7 +1311,7 @@ ideas = {
 			removal_cost = 10
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { naval_manufacturer }
@@ -1276,7 +1355,7 @@ ideas = {
 			removal_cost = 10
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { light_aircraft_manufacturer }
@@ -1315,7 +1394,7 @@ ideas = {
 			removal_cost = 10
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { medium_aircraft_manufacturer }
@@ -1354,7 +1433,7 @@ ideas = {
 			removal_cost = 10
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { heavy_aircraft_manufacturer }
@@ -1389,7 +1468,7 @@ ideas = {
 			removal_cost = 10
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { naval_aircraft_manufacturer }
@@ -1421,11 +1500,11 @@ ideas = {
 				}
 			}
 			
-			cost = 150
+			cost = 100
 			removal_cost = 10
 			
 			research_bonus = {
-				industry = 0.10
+				industry = 0.15
 			}
 			
 			traits = { industrial_concern }
@@ -1457,11 +1536,11 @@ ideas = {
 				}
 			}
 			
-			cost = 150
+			cost = 100
 			removal_cost = 10
 			
 			research_bonus = {
-				electronics = 0.10
+				electronics = 0.15
 			}
 			
 			traits = { electronics_concern }
@@ -1499,7 +1578,7 @@ ideas = {
 			removal_cost = 10
 			
 			research_bonus = {
-				motorized_equipment = 0.10
+				motorized_equipment = 0.15
 			}
 			
 			traits = { motorized_equipment_manufacturer }
@@ -1532,7 +1611,7 @@ ideas = {
 			removal_cost = 10
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.15
 			}
 			
 			traits = { infantry_equipment_manufacturer }
@@ -1565,7 +1644,7 @@ ideas = {
 			removal_cost = 10
 			
 			research_bonus = {
-				artillery = 0.10
+				artillery = 0.15
 			}
 			
 			traits = { artillery_manufacturer }
@@ -1713,7 +1792,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -1726,7 +1805,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }
@@ -1739,7 +1818,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_warfare_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
