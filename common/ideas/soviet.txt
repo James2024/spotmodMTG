@@ -1111,6 +1111,7 @@ ideas = {
 			}
 			available = 
 			{
+				NOT = { has_country_flag = purge_2_group_b }
 				hidden_trigger = {
 					NOT = { 
 						any_other_country = {
@@ -1148,6 +1149,7 @@ ideas = {
 			}
 			available = 
 			{
+				NOT = { has_country_flag = purge_1_group_b }
 				has_completed_focus = SOV_positive_heroism
 			}
 			
