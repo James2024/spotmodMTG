@@ -1080,13 +1080,30 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = GER_operation_winteruebung
+		icon = GFX_focus_generic_treaty
+		x = 18
+		y = 0
+		cost = 8.6
+		ai_will_do = {
+			factor = 12
+			}
+		completion_reward = {	army_experience = 15
+								add_political_power = 20
+			}
+		
+	}
 
 	focus = {
 		id = GER_rhineland
 		icon = GFX_goal_generic_military_sphere
-		x = 18
-		y = 0
-		cost = 10
+		prerequisite = { focus = GER_operation_winteruebung  }
+		x = 0
+		y = 1
+		relative_position_id = GER_operation_winteruebung
+		cost = 1.5
 		available = { is_puppet = no }
 		bypass = {
 			42 = { is_demilitarized_zone = no }
@@ -1099,8 +1116,7 @@ focus_tree = {
 			42 = { set_demilitarized_zone = no }
 			51 = { set_demilitarized_zone = no }
 			custom_effect_tooltip = GER_rhineland_ultimatum
-			add_political_power = 120
-			army_experience = 15
+			add_political_power = 100
 			add_named_threat = { threat = 5 name = GER_rhineland }
 			if = {
 				limit = { FRA = { is_puppet = no } }
