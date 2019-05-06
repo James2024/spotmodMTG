@@ -98,7 +98,15 @@ country_event = {
 		name = usa.4.a
 		custom_effect_tooltip = usa.4.a.tt
 		hidden_effect = {
+			if = {
+				limit = { not = { has_dlc = "Man the Guns" } }
 				ENG = {	load_oob = "ENG_destroyers_for_bases" }
+				CAN = { load_oob = "CAN_destroyers_for_bases" }
+			}
+			else = {
+				ENG = {	load_oob = "ENG_destroyers_for_bases_mtg" }
+				CAN = { load_oob = "CAN_destroyers_for_bases_mtg" }
+			}
 			ENG = {
 				if = { limit = { 696 = { is_controlled_by = ENG } }
 					remove_state_core = 696
@@ -119,7 +127,6 @@ country_event = {
 					remove_state_core = 691
 				}
 			}
-			CAN = { load_oob = "CAN_destroyers_for_bases" }
 		}
 		USA = {
 			if = { limit = { 696 = { is_controlled_by = ENG } }
@@ -244,12 +251,7 @@ country_event = {
 			country_event = usa.32
 		}
 		else = {
-			set_variable = { election_factor = random }
-			add_to_variable = { election_factor = -0.5 }
-			USA_election_senate = yes
-			USA_election_house = yes
-			custom_effect_tooltip = usa_congress_elections_tt_bad
-			country_event = usa.30
+			USA_congress_medium_opposition = yes
 		}
 	}
 
@@ -349,45 +351,8 @@ country_event = {
 			country_event = usa.32
 		}
 		else = {
-			set_variable = { election_factor = random }
-			add_to_variable = { election_factor = -0.5 }
-			USA_election_senate = yes
-			USA_election_house = yes
-			custom_effect_tooltip = usa_congress_elections_tt_bad
-			country_event = usa.30
+			USA_congress_medium_opposition = yes
 		}
-	}
-
-	option = {
-		name = usa.7.b
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}	
-		set_party_name = { ideology = democratic long_name = USA_republican_party name = USA_republican_party }
-		remove_ideas = new_deal
-		add_ideas = wilkies_new_deal
-		set_variable = { election_factor = random }
-		add_to_variable = { election_factor = -0.6 }
-		add_political_power = 120
-		USA_election_senate = yes
-		USA_election_house = yes
-		USA_flip_support = yes
-		custom_effect_tooltip = usa_congress_elections_tt_good
-		create_country_leader = {
-			name = "Wendell Wilkie"
-			desc = "POLITICS_WENDELL_WILKIE_DESC"
-			picture = "Portrait_USA_Wendell_Willkie.dds"
-			expire = "1965.1.1"
-			ideology = liberalism
-			traits = {
-				
-			}
-		}
-		country_event = usa.31 #weighted towards gain of support
 	}
 }
 
@@ -810,7 +775,7 @@ country_event = {
 		}
 		set_political_party = {
 			ideology = democratic
-			popularity = 0.5
+			popularity = 50
 		}
 		remove_ideas = great_depression
 		add_war_support = 0.2
@@ -1106,7 +1071,7 @@ country_event = {
 		}
 		set_political_party = {
 			ideology = democratic
-			popularity = 0.5
+			popularity = 50
 		}
 		remove_ideas = great_depression
 		add_war_support = 0.2
@@ -1493,8 +1458,8 @@ country_event = {
 			} 
 			20 = { 
 				modifier = {
-					congress_high_support_trigger = yes
-					factor = 2
+					check_variable = { var = senators_support value = quorum_high compare = greater_than_or_equals }
+					factor = 3
 				}
 				modifier = {
 					has_idea_with_trait = fascist_demagogue
@@ -1519,8 +1484,8 @@ country_event = {
 			} 
 			15 = { 
 				modifier = {
-					congress_high_support_trigger = yes
-					factor = 2
+					check_variable = { var = senators_support value = quorum_high compare = greater_than_or_equals }
+					factor = 3
 				}
 				modifier = {
 					has_idea_with_trait = fascist_demagogue
@@ -1566,19 +1531,23 @@ country_event = {
 		random_list = {
 			35 = { 
 				modifier = {
-					not = { congress_medium_support_trigger = yes }
-					factor = 1.25
+					check_variable = { representatives_support < 218 }
+					factor = 1.5
 				}
 				modifier = {
-					not = { congress_low_support_trigger = yes }
-					factor = 2
+					check_variable = { representatives_support < 180 }
+					factor = 3
 				}
 				country_event = { id = usa.41 days = 15 random = 6 } #small support
 			} 
 			25 = {
 				modifier = {
-					congress_high_support_trigger = yes
+					check_variable = { representatives_support > 260 }
 					factor = 2
+				}
+				modifier = {
+					check_variable = { representatives_support < 180 }
+					factor = 0.5
 				}
 				modifier = {
 					has_idea_with_trait = fascist_demagogue
@@ -1592,19 +1561,31 @@ country_event = {
 			} 
 			25 = { 
 				modifier = {
-					not = { congress_medium_support_trigger = yes }
-					factor = 1.25
+					check_variable = { representatives_support < 180 }
+					factor = 1.5
 				}
 				modifier = {
-					not = { congress_low_support_trigger = yes }
-					factor = 2
+					check_variable = { representatives_support < 100 }
+					factor = 10
 				}
 				country_event = { id = usa.45 days = 25 random = 10 } #medium support
 			} 
 			15 = { 
 				modifier = {
-					congress_high_support_trigger = yes
+					check_variable = { representatives_support > 260 }
 					factor = 2
+				}
+				modifier = {
+					check_variable = { representatives_support > 400 }
+					factor = 10
+				}
+				modifier = {
+					check_variable = { representatives_support < 180 }
+					factor = 0.5
+				}
+				modifier = {
+					check_variable = { representatives_support < 100 }
+					factor = 0
 				}
 				modifier = {
 					has_idea_with_trait = fascist_demagogue
@@ -1636,7 +1617,10 @@ country_event = {
 
 	immediate = {
 		set_country_flag = USA_congress_investment
-		clear_global_event_target = USA_congress_investment_state
+		if = {
+			limit = { has_event_target = USA_congress_investment_state }
+			clear_global_event_target = USA_congress_investment_state
+		}
 		random_list = {
 			25 = {
 				modifier = {

@@ -237,14 +237,6 @@ country_event = {
 
 	fire_only_once = yes
 	
-#	# FIGHT ON
-#	option = {
-#		name = finland.fighton
-#		ai_chance = {
-#			base = 0
-#		}
-#	}
-	
 	#Surrender and offer territory
 	option = {
 		name = finland.7.a

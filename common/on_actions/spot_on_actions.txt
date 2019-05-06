@@ -7,7 +7,7 @@ on_actions = {
 				is_justifying_wargoal_against = DEN
 				#}
 			NOR = {
-				country_event = spot.6
+				country_event = spot.8
 			}
 		}
 	}

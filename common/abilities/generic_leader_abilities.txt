@@ -155,7 +155,7 @@ ability = {
 			#fort = {
 			#	attack = 0.1
 			#}
-			fortification_damage = 0.5
+			fortification_damage = 0.25
 		}
 		cost = 0.1
 		duration = 168

@@ -8737,6 +8737,31 @@ political_actions = {
 
 operations = {
 
+	ENG_annex_malaya = {
+		
+		icon = generic_operation
+		
+		allowed = {
+			tag = ENG
+		}
+		
+		visible = {
+			tag = ENG
+		}
+		
+		available = {
+		}
+		
+		cost = 50
+		
+		complete_effect = {
+			annex_country = {
+				target = MAL
+				transfer_troops = no
+			}
+		}
+	}
+
 	ENG_secure_per_oil = {
 		
 		icon = generic_operation
@@ -8792,7 +8817,6 @@ operations = {
 		
 		available = {
 			HOL = { has_capitulated = yes }
-			date > 1940.6.1
 		}
 		
 		complete_effect = {

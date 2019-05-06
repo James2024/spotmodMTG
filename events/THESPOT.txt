@@ -88,10 +88,10 @@ country_event = { #poland gives facsim to germany
 }
 
 country_event = {
-	id = spot.6
-	title = generic.2.t
+	id = spot.8
+	title = spot.8.t
 	desc = {
-		text = generic.2.d.a
+		text = spot.8.d
 	}
 	picture = GFX_report_event_generic_read_write
 
@@ -102,11 +102,58 @@ country_event = {
 	option = { #Agree / Both Democratic
 	
 		ENG = { add_to_faction = NOR }
-		ENG = { country_event = { id = generic.3 hours = 6 } }
 		hidden_effect = {
-			news_event = { id = news.289 hours = 12 }
+			news_event = { id = spot.9 hours = 12 }
 		}
 	}
+}
+
+country_event = {
+	id = spot.9
+	title = spot.9.t
+	desc = spot.9.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = spot.9.a
+		trigger = {
+			TAG = GER
+			TAG = ITA
+			TAG = HUN
+			TAG = ROM
+			TAG = SIA
+			TAG = JAP
+			TAG = SPR
+			TAG = BUL
+			TAG = SOV
+		}
+	}
+	
+	option = {
+		name = spot.9.b
+		trigger = {
+			TAG = USA
+			TAG = ENG
+			TAG = RAJ
+			TAG = SAF
+			TAG = AST
+			TAG = NZL
+			TAG = FRA
+			TAG = CAN
+			TAG = IRE
+			TAG = SOV
+		}
+	}
+	
+	option = {
+		name = spot.9.c
+		trigger = {
+			TAG = SOV
+			}
+		}
+		
 }
 
 country_event = { 

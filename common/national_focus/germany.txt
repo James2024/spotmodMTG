@@ -1637,7 +1637,7 @@ focus_tree = {
 		}
 		completion_reward = {
 		
-			NOR = { country_event = { id = spot.6 } }
+			NOR = { country_event = { id = spot.8 } }
 
 			if = {
 				limit = {
