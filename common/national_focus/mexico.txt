@@ -800,8 +800,15 @@ focus_tree = {
 		completion_reward = {
 			USA = {
 				remove_resource_rights = 480
+				remove_resource_rights = 479
 			}
 			480 = {
+				add_resource = {
+					type = oil
+					amount = 4
+				}
+			}
+			479 = {
 				add_resource = {
 					type = oil
 					amount = 4
