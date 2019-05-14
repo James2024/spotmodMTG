@@ -514,14 +514,13 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = SOV_stalin_constitution
 		icon = GFX_goal_support_communism
-		prerequisite = { focus = SOV_industrialisation }
 		x = 5
-		y = 1
-		cost = 7.2
+		y = 0
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -530,23 +529,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 160
-		}
-	}
-
-	focus = {
-		id = SOV_industrialisation
-		icon = GFX_goal_generic_soviet_construction
-		x = 5
-		y = 0
-		cost = 2.9
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = SOV_isolated_economy
 		}
 	}
 
@@ -740,6 +722,13 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 425
+			
+			add_tech_bonus = {
+				name = air_doctrine_bonus
+				bonus = 3
+				uses = 4
+				category = air_doctrine
+			}
 
 			add_tech_bonus = {
 				name = air_bonus
@@ -856,8 +845,8 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				bonus = 1
-				uses = 1
+				bonus = 3
+				uses = 2
 				category = air_doctrine
 			}
 		}
@@ -1646,25 +1635,6 @@ focus_tree = {
 			}
 		}
 	}
-	
-		focus = {
-		id = SOV_General_Frost
-		icon = GFX_goal_support_communism
-		prerequisite = { focus = SOV_lessons_of_war }
-		x = -2
-		y = 1
-		relative_position_id = SOV_lessons_of_war
-		cost = 1.5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-		
-		completion_reward = {
-			add_ideas = SOV_cold_acclimatization_army
-		}
-	}
 
 	focus = {
 		id = SOV_lessons_of_war
@@ -1674,7 +1644,7 @@ focus_tree = {
 				date > 1941.1.1
 		}
 		x = -1
-		y = 2
+		y = 1
 		relative_position_id = SOV_nkvd_divisions
 		cost = 10
 		ai_will_do = {
@@ -1847,6 +1817,8 @@ focus_tree = {
 		cost = 13
 	
 		completion_reward = {
+			clr_country_flag = removed_generals1
+			clr_country_flag = removed_generals2
 			create_corps_commander = {
 				name = "Konstantin Rokossovsky"
 				id = 402
