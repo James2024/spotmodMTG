@@ -2,16 +2,16 @@ on_actions = {
 	on_justifying_wargoal_pulse = {
 		effect = {
 			if = {
-			#OR = {
-				is_justifying_wargoal_against = NOR
-				is_justifying_wargoal_against = DEN
-				#}
+				OR = {
+					is_justifying_wargoal_against = NOR
+					is_justifying_wargoal_against = DEN
+				}
+			}
 			NOR = {
 				country_event = spot.8
 			}
 		}
 	}
-}
 	on_startup = {
 		effect = { 
 
@@ -30,3 +30,4 @@ on_actions = {
 			}
 		}
 	}
+}

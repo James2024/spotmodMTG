@@ -8747,12 +8747,13 @@ operations = {
 		
 		visible = {
 			tag = ENG
+			has_war_with = GER
 		}
 		
 		available = {
 		}
 		
-		cost = 50
+		cost = 300
 		
 		complete_effect = {
 			annex_country = {
@@ -8820,10 +8821,7 @@ operations = {
 		}
 		
 		complete_effect = {
-			annex_country = {
-				target = INS
-				transfer_troops = yes
-			}
+			puppet = INS
 		}
 	}
 

@@ -72,6 +72,8 @@ land_measures = {
 		
 		icon = generic_political_discourse
 		
+		fire_only_once = yes
+		
 		available = {
 			NOT = { ITA = { has_full_control_of_state = 450 } }
 			NOT = { ITA = { has_full_control_of_state = 451 } }

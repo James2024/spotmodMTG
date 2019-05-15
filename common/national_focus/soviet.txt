@@ -36,7 +36,7 @@ focus_tree = {
 			army_experience = 400
 			send_equipment = {
 				equipment = infantry_equipment
-				amount 20000
+				amount = 20000
 				target = CHI
 			}
 		}
@@ -770,7 +770,7 @@ focus_tree = {
 		available_if_capitulated = yes	
 
 		completion_reward = {
-			air_experience = 425
+			air_experience = 525
 			
 			add_tech_bonus = {
 				name = air_sup_bonus

@@ -10,7 +10,6 @@ empire_actions = {
 					
 		visible = {
 			tag = AST
-			has_war_with = GER
 			NZL = { is_ai = yes }
 		}
 		
