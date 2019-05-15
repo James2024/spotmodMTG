@@ -59,6 +59,8 @@ adjacency_rule
 #Bab-el-Mandeb Strait (Djibouti -Yemen) - 21 km
 adjacency_rule
 {
+	name = "YEMEN_STRAIT"
+	
 	contested =
 	{
 		army = no
