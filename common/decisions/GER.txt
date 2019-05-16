@@ -110,9 +110,10 @@ land_measures = {
 				date > 1942.1.1
 				AND = {
 					date > 1941.1.1
-					is_owned_and_controlled_by = EFR
-					arms_factory > 8
-					industrial_complex > 10
+					EFR = {
+						arms_factory > 8
+						industrial_complex > 10
+					}
 				}
 			}
 		}

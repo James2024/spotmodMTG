@@ -1593,7 +1593,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		    add_ideas = free_french_fleet
 			add_equipment_to_stockpile = {
 				type = convoy_1
 				amount = 100

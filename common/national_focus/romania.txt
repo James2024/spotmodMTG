@@ -2416,7 +2416,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_idea = ROM_royal_guards
+			add_ideas = ROM_royal_guards
 		}
 	}
 

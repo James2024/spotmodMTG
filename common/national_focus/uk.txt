@@ -217,7 +217,7 @@ focus_tree = {
 		completion_reward = {
 		custom_effect_tooltip = el_ala_forts_tt
 			hidden_effect = {
-					SAF = {
+				SAF = {
                     division_template = {
                         name = "Guards Armoured Division"
                         priority = 2
@@ -242,6 +242,7 @@ focus_tree = {
                         heavy_armor = { x = 4 y = 0 }
                         heavy_armor = { x = 4 y = 1 }
                         heavy_armor = { x = 4 y = 2 }
+                        heavy_armor = { x = 4 y = 3 }
                         }
                         support = {
                             engineer = { x = 0 y = 0 }
@@ -249,31 +250,16 @@ focus_tree = {
                             signal_company { x = 0 y = 2 }
                         }
                     }
-                    if = {
-                        limit = {
-                            ENG = {
-                                controls_state = 447
-                            }
-                        }
-                        set_state_controller = 447
-                        447 = {
-                            create_unit = {
-                                division = "name = \"Guards Armoured Division\" division_template = \"Guards Armoured Division\" start_experience_factor = 0.5"
-                                owner = SAF
-                                prioritize_location = 1071
-                            }
-                        }
-                        ENG = {
-                            set_state_controller = 447
+				set_state_controller = 447
+                    447 = {
+                        create_unit = {
+                            division = "name = "Guards Armoured Division" division_template = "Guards Armoured Division" start_experience_factor = 0.5"
+                            owner = SAF
+                            prioritize_location = 1071
                         }
                     }
-                    else = {
-                        random_owned_controlled_state = {
-                            create_unit = {
-                                division = "name = \"Guards Armoured Division\" division_template = \"Guards Armoured Division\" start_experience_factor = 0.5"
-                                owner = SAF
-                            }
-                        }
+                    ENG = {
+                        set_state_controller = 447
                     }
                 }
 				
@@ -4223,7 +4209,6 @@ focus_tree = {
 				NOT = { has_dlc = "Man the Guns" }
 			}
 		}
-		relative_position_id = ENG_revisit_colonial_policy
 		cost = 5
 		ai_will_do = {
 			factor = 1

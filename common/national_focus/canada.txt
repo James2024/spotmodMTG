@@ -288,12 +288,6 @@ focus_tree = {
 
 		completion_reward = {
 			473 = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-					}
-				}
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -340,12 +334,6 @@ focus_tree = {
 
 		completion_reward = {
 			276 = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-					}
-				}
 				add_building_construction = {
 					type = infrastructure
 					level = 2

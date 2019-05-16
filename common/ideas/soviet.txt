@@ -1323,23 +1323,6 @@ ideas = {
 		
 		designer = yes
 		
-		KMDB_design_bureau = {
-			
-			
-			allowed = {
-					original_tag = SOV
-			}
-			
-			research_bonus = {
-				armor = 0.15
-			}
-			
-			traits = { quantity_over_quality_manufacturer }
-			
-			modifier = {
-			}
-		}
-		
 		morozov_design_bureau = {
 			
 			
