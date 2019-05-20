@@ -2,6 +2,23 @@ ideas = {
 
 	country = {
 	
+		JAP_infantry_idea = {
+		
+			picture = generic_infantry_bonus
+			
+			allowed = {
+				original_TAG = JAP
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+	
 		JAP_military_expansion = {
 
 			allowed = {

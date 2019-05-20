@@ -1779,6 +1779,7 @@ focus = {
 
 
 		completion_reward = {
+			add_ideas = JAP_infantry_idea
 			army_experience = 50
 		}
 	}
@@ -1791,7 +1792,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_army_expansion_law
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -1832,7 +1833,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_small_arms_modernization
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1869,7 +1870,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_army_expansion_law
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1906,7 +1907,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_army_expansion
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1938,7 +1939,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_army_expansion_law
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1960,7 +1961,7 @@ focus = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_armored_divisions
-				bonus = 1.0
+				bonus = 2.0
 				uses = 2
 				category = armor	
 			}
@@ -1975,7 +1976,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_armored_divisions
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -2017,7 +2018,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_modern_artillery
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1

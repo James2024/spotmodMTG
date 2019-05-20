@@ -24,5 +24,26 @@ ideas = {
                 ai_get_ally_desire_factor = -500
             }
         }
+		idea_EFR_neutrality = {
+			picture = neutrality_idea
+
+			allowed = {
+				original_tag = EFR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				join_faction_tension = 2.00
+				lend_lease_tension = 2
+				send_volunteers_tension = 0.20
+				guarantee_tension = 2.0
+				ai_get_ally_desire_factor = -500
+			}
+		}		
     }
 }
