@@ -1958,7 +1958,14 @@ focus = {
 		available_if_capitulated = no
 
 
-		completion_reward = {
+		completion_reward = {			
+			add_tech_bonus = {
+				name = JAP_armored_divisions
+				bonus = 2.0
+				uses = 1
+				technology = amphibious_tank
+				technology = amphibious_tank_2
+			}
 			add_tech_bonus = {
 				name = JAP_armored_divisions
 				bonus = 2.0
