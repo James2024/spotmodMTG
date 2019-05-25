@@ -62,6 +62,7 @@ NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- doubled the cooldown of guns to make ba
 }
 
 ---Military
+NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.05
 NDefines.NMilitary.RECON_SKILL_IMPACT = 8
 NDefines.NMilitary.FUEL_CAPACITY_DEFAULT_HOURS = 160 ---Vanilla 90 makes tanks store more fuel?
 NDefines.NMilitary.ZERO_ORG_MOVEMENT_MODIFIER = -0.6
