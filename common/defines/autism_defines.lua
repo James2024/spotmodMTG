@@ -62,7 +62,6 @@ NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- doubled the cooldown of guns to make ba
 }
 
 ---Military
-NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.05
 NDefines.NMilitary.RECON_SKILL_IMPACT = 8
 NDefines.NMilitary.FUEL_CAPACITY_DEFAULT_HOURS = 160 ---Vanilla 90 makes tanks store more fuel?
 NDefines.NMilitary.ZERO_ORG_MOVEMENT_MODIFIER = -0.6
@@ -113,11 +112,13 @@ NDefines.NMilitary.XP_GAIN_FOR_SHATTERING = 0.0
 
 ---Building
 NDefines.NBuildings.MAX_SHARED_SLOTS = 40 --amount of potential max building slots in a state
+NDefines.NBuildings.MAX_BUILDING_LEVELS = 20			-- Max levels a building can have.
 NDefines.NBuildings.INFRA_TO_SUPPLY = 2.5
 NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 100
 
 ---AA Balance
-NDefines.NMilitary.ANTI_AIR_ATTACK_TO_AMOUNT = 0.001 -- 0.005
+NDefines.NMilitary.ANTI_AIR_ATTACK_TO_AMOUNT = 0.002 -- 0.005
+NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.025 --0.07
 
 ---Air
 NDefines.NAir.DISRUPTION_FACTOR = 5  --- (4 -> 5)

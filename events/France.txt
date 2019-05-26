@@ -521,6 +521,26 @@ country_event = {
 						target = EFR 
 					}
 				}
+				destroy_ships = {
+                    type = ship_hull_light
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_cruiser
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_heavy
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_carrier 
+                    count = all
+                }
+                destroy_ships = {
+                    type = ship_hull_submarine
+                    count = all
+                }
 			}
 }
 

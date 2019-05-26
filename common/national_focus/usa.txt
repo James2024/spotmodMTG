@@ -2259,7 +2259,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_timed_idea = {
-				days = 400
+				days = 300
 				idea = USA_maritime_commission
 			}
 		}
