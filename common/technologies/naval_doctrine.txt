@@ -105,7 +105,7 @@ fleet_in_being = {
 		
 		folder = {
 			name = naval_doctrine_folder
-			position = { x = 1 y = 3 }
+			position = { x = 1 y = 2 }
 		}
 		
 		ai_will_do = {
@@ -168,12 +168,15 @@ fleet_in_being = {
 		research_cost = 2.4
 		
 		categories = {
-			naval_doctrine 
+			naval_doctrine
+			 
+			 
+			 
 		}
 		
 		folder = {
 			name = naval_doctrine_folder
-			position = { x = 1 y = 5 }
+			position = { x = 1 y = 4 }
 		}
 		
 		ai_will_do = {
@@ -237,12 +240,15 @@ fleet_in_being = {
 		research_cost = 2.4
 		
 		categories = {
-			naval_doctrine 
+			naval_doctrine
+			 
+			 
+			 
 		}
 		
 		folder = {
 			name = naval_doctrine_folder
-			position = { x = 1 y = 7 }
+			position = { x = 1 y = 6 }
 		}
 		
 		ai_will_do = {
@@ -313,12 +319,16 @@ fleet_in_being = {
 		research_cost = 2.4
 		
 		categories = {
-			naval_doctrine 
+			naval_doctrine
+			 
+			 
+			 
 		}
+
 		
 		folder = {
 			name = naval_doctrine_folder
-			position = { x = 1 y = 9 }
+			position = { x = 1 y = 8 }
 		}
 		
 		ai_will_do = {
@@ -385,12 +395,15 @@ fleet_in_being = {
 		research_cost = 2.4
 		
 		categories = {
-			naval_doctrine	 
+			naval_doctrine
+			 
+			 
+			 
 		}
 
 		folder = {
 			name = naval_doctrine_folder
-			position = { x = 1 y = 11 }
+			position = { x = 1 y = 10 }
 		}
 		
 		ai_will_do = {
@@ -474,7 +487,7 @@ fleet_in_being = {
 		
 		folder = {
 			name = naval_doctrine_folder
-			position = { x = -1 y = 3 }
+			position = { x = -1 y = 2 }
 		}
 		
 		ai_will_do = {
@@ -524,12 +537,15 @@ fleet_in_being = {
 		research_cost = 2.4
 		
 		categories = {
-			naval_doctrine 	 
+			naval_doctrine
+			 
+			 
+			 
 		}
 		
 		folder = {
 			name = naval_doctrine_folder
-			position = { x = -1 y = 5 }
+			position = { x = -1 y = 4 }
 		}
 
 		ai_will_do = {
@@ -583,11 +599,14 @@ fleet_in_being = {
 		
 		categories = {
 			naval_doctrine
+			 
+			 
+			 
 		}
 		
 		folder = {
 			name = naval_doctrine_folder
-			position = { x = -1 y = 7 }
+			position = { x = -1 y = 6 }
 		}
 		
 		ai_will_do = {
@@ -647,12 +666,15 @@ fleet_in_being = {
 		research_cost = 3
 		
 		categories = {
-			naval_doctrine	 
+			naval_doctrine
+			 
+			 
+			 
 		}
 		
 		folder = {
 			name = naval_doctrine_folder
-			position = { x = -1 y = 9 }
+			position = { x = -1 y = 8 }
 		}
 		
 		ai_will_do = {
