@@ -24,9 +24,6 @@ NDefines.NDiplomacy.FRONT_IS_DANGEROUS = 0
 NDefines.NPolitics.DEFAULT_OCCUPATION_POLICY = 3
 
 ---Country
-NDefines.NCountry.VP_TO_SUPPLY_BASE = 1.5
-NDefines.NCountry.SUPPLY_PATH_MAX_DISTANCE = 15
-NDefines.NCountry.REINFORCEMENT_MANPOWER_CHUNK = 0.05
 NDefines.NCountry.MIN_MANPOWER_RATIO = 0.25
 NDefines.NCountry.BASE_MAX_COMMAND_POWER = 200.0
 NDefines.NCountry.STARTING_COMMAND_POWER = 50.0
@@ -36,6 +33,14 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 70
 NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.10
 NDefines.NCountry.AIR_SUPPLY_CONVERSION_SCALE = 0.39 -- air supply? 0.05 original but range is lower
 NDefines.NCountry.BASE_MOBILIZATION_SPEED = 0.04
+
+---Speed of equipment and MP delivery
+NDefines.NCountry.VP_TO_SUPPLY_BASE = 1.5
+--- NDefines.NCountry.SUPPLY_PATH_MAX_DISTANCE = 15 is vanilla
+NDefines.NCountry.REINFORCEMENT_MANPOWER_CHUNK = 0.05
+NDefines.NCountry.REINFORCEMENT_EQUIPMENT_DELIVERY_SPEED = 3
+NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 140
+NDefines.NCountry.REINFORCEMENT_MANPOWER_CHUNK = 0.05
 
 -- production and recruitment
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 500000
@@ -99,13 +104,14 @@ NDefines.NMilitary.STRATEGIC_SPEED_BASE = 6.0
 NDefines.NMilitary.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_STRATEGIC_BOMBER = 0.018
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.1
 
+--- Removed cause I buffed CAS
 ---No air Russia balances
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.5 --- -0.35
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.25 --- -0.3
 NDefines.NMilitary.FUEL_CAPACITY_DEFAULT_HOURS = 160   --- 90 This is to make it so tanks have more fuel stored in them
-NDefines.NMilitary.AIR_SUPPORT_BASE = 0.35 --- 0.25 CAS IS GOLD
-NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE = 0.75	       -- more AA attack will approach this amount of help (diminishing returns)
-NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE_STEEPNESS = 112 --- Still vanilla value might want to fiddle around with the number though
+---NDefines.NMilitary.AIR_SUPPORT_BASE = 0.35 --- 0.25 CAS IS GOLD
+---NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE = 0.75	       -- more AA attack will approach this amount of help (diminishing returns)
+---NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE_STEEPNESS = 112 --- Still vanilla value might want to fiddle around with the number though
 
 ---XP for leaders
 NDefines.NMilitary.FIELD_MARSHAL_XP_RATIO = 0
@@ -130,7 +136,7 @@ NDefines.NBuildings.INFRA_TO_SUPPLY = 2.5
 NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 100
 
 ---AA Balance
-NDefines.NMilitary.ANTI_AIR_ATTACK_TO_AMOUNT = 0.002 -- 0.005
+NDefines.NMilitary.ANTI_AIR_ATTACK_TO_AMOUNT = 0.005 -- 0.005 is now vanilla
 NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.025 --0.07
 
 ---Air
