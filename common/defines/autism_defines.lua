@@ -60,6 +60,19 @@ NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- doubled the cooldown of guns to make ba
         8.0,    -- torpedos
         2.0,    -- small guns
 }
+NDefines.NNavy.COMBAT_MIN_DURATION = 24
+NDefines.NNavy.MISSION_SPREADS = {  -- mission spreads in the case a ship join combat, whih defines their starting position
+		0.0, -- HOLD 
+		0.0, -- PATROL		
+		0.0, -- STRIKE FORCE 
+		0.0, -- CONVOY RAIDING
+		0.0, -- CONVOY ESCORT
+		0.0, -- MINES PLANTING	
+		0.0, -- MINES SWEEPING	
+		0.5, -- TRAIN
+		0.0, -- RESERVE_FLEET
+		0.0, -- NAVAL_INVASION_SUPPORT
+}
 
 ---Military
 NDefines.NMilitary.RECON_SKILL_IMPACT = 8
