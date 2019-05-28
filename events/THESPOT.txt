@@ -110,9 +110,6 @@ country_event = {
 
 	option = {
 		name = spot.6.a
-		GER = {
-			transfer_state = 102
-		}
 		if = {
 			limit = { country_exists = HUN }
 			HUN = {
@@ -122,17 +119,6 @@ country_event = {
 		if = {
 			limit = { NOT = { country_exists = HUN } }
 			ITA = { transfer_state = 45 }
-		}
-		if = {
-			limit = { country_exists = BUL }
-
-			BUL = {
-				transfer_state = 106
-			}
-		}
-		if = {
-			limit = { NOT = { country_exists = BUL } }
-			ITA = { transfer_state = 106 }
 		}
 		if = {
 			limit = { country_exists = ROM }
@@ -154,6 +140,8 @@ country_event = {
 			transfer_state = 103
 			transfer_state = 109
 			transfer_state = 108
+			transfer_state = 106
+			transfer_state = 102
 		}
 	}
 	mean_time_to_happen = { days = 30 }
@@ -178,10 +166,6 @@ country_event = {
 
 	option = {
 		name = spot.7.a
-		GER = {
-			transfer_state = 105
-			transfer_state = 102
-		}
 		if = {
 			limit = { country_exists = HUN }
 			HUN = {
@@ -191,17 +175,6 @@ country_event = {
 		if = {
 			limit = { NOT = { country_exists = HUN } }
 			ITA = { transfer_state = 45 }
-		}
-		if = {
-			limit = { country_exists = BUL }
-
-			BUL = {
-				transfer_state = 106
-			}
-		}
-		if = {
-			limit = { NOT = { country_exists = BUL } }
-			ITA = { transfer_state = 106 }
 		}
 		if = {
 			limit = { country_exists = ROM }
@@ -217,11 +190,14 @@ country_event = {
 			}
 		}
 	    ITA = {
+			transfer_state = 105
 			transfer_state = 107
 			transfer_state = 104
 			transfer_state = 103
 			transfer_state = 109
 			transfer_state = 108
+			transfer_state = 106
+			transfer_state = 102
 		}
 	}
 	mean_time_to_happen = { days = 30 }

@@ -48,7 +48,6 @@ land_measures = {
 					
 		visible = {
 			tag = GER
-			has_war_with = ENG
 			BUL = { is_ai = yes }
 		}
 		
@@ -58,12 +57,13 @@ land_measures = {
 		
 		available = {
 			BUL = { is_ai = yes }
+			has_war_with = ENG
 		}
 		
 		complete_effect = {
 			annex_country = {
 				target = BUL
-				transfer_troops = no
+				transfer_troops = yes
 			}
 		}
 	}

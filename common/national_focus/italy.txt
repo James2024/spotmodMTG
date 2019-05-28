@@ -1216,13 +1216,11 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			country_exists = BUL
 			NOT = {
 				has_war_with = BUL
 			}
 		}
 		bypass = {
-			NOT = { country_exists = BUL }
 		}
 		completion_reward = {
 			BUL = {
