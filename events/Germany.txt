@@ -974,8 +974,35 @@ country_event = {
 						is_owned_by = GER
 					}
 				}
+				country_exists = POL
 			}
 			POL = { transfer_state = 72 } # Give Poland Zaolzie
+		}
+		custom_effect_tooltip = end_of_czechoslovakia_mefo_bills_tt
+		add_to_variable = { var = GER_mefo_bill_counter value = -5 }
+		GER_mefo_bills_level_down = yes
+	}
+	option = {
+		name = germany.55.c
+		add_political_power = -50
+		ai_chance = { 
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		if = {
+			limit = { country_exists = CZE }
+			annex_country = { target = CZE }
+			add_war_support = 0.1
+		}
+		if = {
+			limit = { has_global_flag = GER_HUN_CZE_split }
+			HUN = { country_event = DOD_hungary.106 }
+		}
+		hidden_effect = {
+			country_event = { hours = 6 id = news.62 }
 		}
 		custom_effect_tooltip = end_of_czechoslovakia_mefo_bills_tt
 		add_to_variable = { var = GER_mefo_bill_counter value = -5 }

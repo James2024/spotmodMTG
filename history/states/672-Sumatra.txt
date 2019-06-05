@@ -7,7 +7,7 @@ state={
 	
 	resources={
 		rubber=150 # was: 268
-		oil=12 # was: 24
+		oil=32 # was: 24
 		aluminium=28 # was: 50
 	}
 
@@ -26,7 +26,6 @@ state={
 
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
 			air_base = 1
 			4652 = {
 				naval_base = 3

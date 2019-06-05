@@ -2,6 +2,23 @@ ideas = {
 
 	country = {
 	
+		JAP_infantry_idea = {
+		
+			picture = generic_infantry_bonus
+			
+			allowed = {
+				original_TAG = JAP
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+	
 		JAP_military_expansion = {
 
 			allowed = {
@@ -21,6 +38,27 @@ ideas = {
 				production_speed_arms_factory_factor = 0.10
 				production_speed_dockyard_factor = 0.10
 			}
+		}
+		
+		JAP_special_forces_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				special_forces_cap = 0.25
+				special_forces_training_time_factor = -0.1
+			}
+
+			picture = eng_special_air_service
+			
+			removal_cost = -1			
+			
 		}
 
 		JAP_southwest_expansion = {
@@ -422,7 +460,6 @@ ideas = {
 				mobilization_laws_cost_factor = -0.25
 				justify_war_goal_time = -0.2
 				#research_speed_factor = -0.05
-				#production_speed_industrial_complex_factor = -0.1
 			}
 		}
 

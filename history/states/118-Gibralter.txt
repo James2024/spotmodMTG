@@ -11,14 +11,18 @@ state=
 		buildings = {
 			infrastructure = 6
 			air_base = 2
-			4135 = {
-				naval_base = 5
+			13231 = {
+				naval_base = 10
+				coastal_bunker = 2
+			}
+			13232 = {
+				naval_base = 10
 				coastal_bunker = 2
 			}
 		}
 		add_claim_by = SPR
 	}
 	provinces={
-		4135
+		4135 13231 13232
 	}
 }

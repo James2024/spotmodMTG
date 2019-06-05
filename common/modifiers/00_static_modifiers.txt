@@ -76,26 +76,26 @@ weather_mud = { # on Province
 	army_attack_factor = -0.4
 }
 weather_extreme_cold = { # on Province
-	winter_attrition = 0.75
+	winter_attrition = 0.5
 	local_org_regain = -0.2
-	army_attack_factor = -0.4
-	army_speed_factor = -0.4
+	army_attack_factor = -0.3
+	army_speed_factor = -0.3
 }
 weather_very_cold = { # on Province
-	winter_attrition = 0.5
+	winter_attrition = 0.25
 	local_org_regain = -0.1
-	army_attack_factor = -0.2
-	army_speed_factor = -0.25
+	army_attack_factor = -0.15
+	army_speed_factor = -0.2
 }
 weather_very_hot = { # on Province
 	heat_attrition = 0.1
 	local_org_regain = -0.05
 }
 weather_extreme_hot = { # on Province
-	heat_attrition = 0.2
+	heat_attrition = 0.6
 	local_org_regain = -0.1
 	supply_consumption_factor = 0.5
-	army_attack_factor = -0.1
+	army_attack_factor = -0.3
 }
 weather_ground_snow_medium = { # on Province
 	army_speed_factor = -0.1
@@ -151,10 +151,10 @@ occupation_policy_4 = { # Harshest
 
 # The following is multiplied by local resistance strength.
 resistance_effect = {
-	local_supplies = -0.5
-	local_intel_to_enemies = 1
-	local_factory_sabotage = 0.75
-	attrition = 0.25
+	local_supplies = 0
+	local_intel_to_enemies = 0
+	local_factory_sabotage = 0
+	attrition = 0
 }
 
 # On States
@@ -404,6 +404,24 @@ air_wing_experience_malus_min = {
 	air_agility_factor = -0.05
 	air_night_penalty = 0.05
 	#air_weather_penalty = 0.15
+}
+
+ship_experience_bonus_max = {
+    naval_damage_factor = 0.3
+    naval_defense_factor = 0.2
+}
+
+ship_experience_malus_min = {
+    naval_damage_factor = -0.1
+    naval_defense_factor = -0.1
+}
+
+carrier_experience_bonus_max = {
+	fighter_sortie_efficiency = 0.2
+}
+
+carrier_experience_malus_min = {
+	fighter_sortie_efficiency = -0.1
 }
 
 pride_of_the_fleet = {

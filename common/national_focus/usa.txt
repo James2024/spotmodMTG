@@ -499,7 +499,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = 200
 			every_other_country = {
 				limit = {
 					is_major = yes
@@ -535,7 +535,6 @@ focus_tree = {
 				limit = {
 					has_war_support < 0.4
 				}
-				add_stability = -0.2
 			}
 			if = {
 				limit = {
@@ -584,7 +583,7 @@ focus_tree = {
 	focus = {
 		id = USA_military_construction
 		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = USA_war_propaganda }
+		prerequisite = { focus = USA_reestablish_the_gold_standard }
 		
 		available = {
 			threat > 0.10
@@ -595,7 +594,7 @@ focus_tree = {
 
 		x = 0
 		y = 1
-		relative_position_id = USA_war_propaganda
+		relative_position_id = USA_reestablish_the_gold_standard
 		cost = 10
 		#ai_will_do = {
 		#	factor = 1
@@ -810,7 +809,7 @@ focus_tree = {
 	focus = {
 		id = USA_USACE_projects
 		icon = GFX_goal_generic_production
-		prerequisite = { focus = USA_military_construction }
+		prerequisite = { focus = USA_scientist_haven }
 		available = {
 			threat > 0.30
 		}
@@ -820,7 +819,7 @@ focus_tree = {
 		
 		x = 0
 		y = 1
-		relative_position_id = USA_military_construction
+		relative_position_id = USA_scientist_haven
 		cost = 10
 		#ai_will_do = {
 		#	factor = 1
@@ -947,7 +946,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 200
+			add_political_power = 400
 			add_ideas = USA_neutrality_act 
 			add_war_support = -0.05
 			if = {
@@ -1005,10 +1004,10 @@ focus_tree = {
 	focus = {
 		id = USA_scientist_haven
 		icon = GFX_focus_research
-		prerequisite = { focus = USA_reestablish_the_gold_standard }
+		prerequisite = { focus = USA_war_propaganda }
 		x = 0
 		y = 1
-		relative_position_id = USA_reestablish_the_gold_standard
+		relative_position_id = USA_war_propaganda
 		cost = 10
 		#ai_will_do = {
 		#	factor = 1
@@ -1026,14 +1025,14 @@ focus_tree = {
 	focus = {
 		id = USA_the_giant_wakes
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = USA_scientist_haven }
+		prerequisite = { focus = USA_military_construction }
 		available = {
 				date > 1939.1.1 
 		}
 		continue_if_invalid = yes
 		x = 0
 		y = 1
-		relative_position_id = USA_scientist_haven
+		relative_position_id = USA_military_construction
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -2260,7 +2259,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_timed_idea = {
-				days = 400
+				days = 300
 				idea = USA_maritime_commission
 			}
 		}

@@ -2216,7 +2216,7 @@ focus_tree = {
 				name = HUN_mobile_focus
 				bonus = 1
 				uses = 1
-				category = cat_mobile_warfare
+				category = land_doctrine
 			}
 		}
 	}

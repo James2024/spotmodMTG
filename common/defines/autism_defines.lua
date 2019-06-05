@@ -24,9 +24,6 @@ NDefines.NDiplomacy.FRONT_IS_DANGEROUS = 0
 NDefines.NPolitics.DEFAULT_OCCUPATION_POLICY = 3
 
 ---Country
-NDefines.NCountry.VP_TO_SUPPLY_BASE = 1.5
-NDefines.NCountry.SUPPLY_PATH_MAX_DISTANCE = 15
-NDefines.NCountry.REINFORCEMENT_MANPOWER_CHUNK = 0.05
 NDefines.NCountry.MIN_MANPOWER_RATIO = 0.25
 NDefines.NCountry.BASE_MAX_COMMAND_POWER = 200.0
 NDefines.NCountry.STARTING_COMMAND_POWER = 50.0
@@ -36,6 +33,14 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 70
 NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.10
 NDefines.NCountry.AIR_SUPPLY_CONVERSION_SCALE = 0.39 -- air supply? 0.05 original but range is lower
 NDefines.NCountry.BASE_MOBILIZATION_SPEED = 0.04
+
+---Speed of equipment and MP delivery
+NDefines.NCountry.VP_TO_SUPPLY_BASE = 1.5
+--- NDefines.NCountry.SUPPLY_PATH_MAX_DISTANCE = 15 is vanilla
+NDefines.NCountry.REINFORCEMENT_MANPOWER_CHUNK = 0.05
+NDefines.NCountry.REINFORCEMENT_EQUIPMENT_DELIVERY_SPEED = 3
+NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 140
+NDefines.NCountry.REINFORCEMENT_MANPOWER_CHUNK = 0.05
 
 -- production and recruitment
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 500000
@@ -49,8 +54,7 @@ NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 15
 NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 10
 
 --- Navy
-NDefines.NNavy.ANTI_AIR_TARGETTING_TO_CHANCE = 0.2 ---
-NDefines.NNavy.ANTI_AIR_ATTACK_TO_AMOUNT = 0.006 ---
+NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS = 3.0
 NDefines.NNavy.ANTI_AIR_POW_ON_INCOMING_AIR_DAMAGE = 0.8 --- (0.2 -> 0.8)
 NDefines.NNavy.SHIP_TO_FLEET_ANTI_AIR_RATIO = 0.01 --- (0.2 -> 0.01)
 NDefines.NNavy.ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE = 0.07 --- (0.15 -> 0.07)
@@ -60,6 +64,19 @@ NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- doubled the cooldown of guns to make ba
         2.0,    -- big guns
         8.0,    -- torpedos
         2.0,    -- small guns
+}
+NDefines.NNavy.COMBAT_MIN_DURATION = 24
+NDefines.NNavy.MISSION_SPREADS = {  -- mission spreads in the case a ship join combat, whih defines their starting position
+		0.0, -- HOLD 
+		0.0, -- PATROL		
+		0.0, -- STRIKE FORCE 
+		0.0, -- CONVOY RAIDING
+		0.0, -- CONVOY ESCORT
+		0.0, -- MINES PLANTING	
+		0.0, -- MINES SWEEPING	
+		0.5, -- TRAIN
+		0.0, -- RESERVE_FLEET
+		0.0, -- NAVAL_INVASION_SUPPORT
 }
 
 ---Military
@@ -87,13 +104,14 @@ NDefines.NMilitary.STRATEGIC_SPEED_BASE = 6.0
 NDefines.NMilitary.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_STRATEGIC_BOMBER = 0.018
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.1
 
+--- Removed cause I buffed CAS
 ---No air Russia balances
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.5 --- -0.35
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.25 --- -0.3
 NDefines.NMilitary.FUEL_CAPACITY_DEFAULT_HOURS = 160   --- 90 This is to make it so tanks have more fuel stored in them
-NDefines.NMilitary.AIR_SUPPORT_BASE = 0.35 --- 0.25 CAS IS GOLD
-NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE = 0.75	       -- more AA attack will approach this amount of help (diminishing returns)
-NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE_STEEPNESS = 112 --- Still vanilla value might want to fiddle around with the number though
+---NDefines.NMilitary.AIR_SUPPORT_BASE = 0.35 --- 0.25 CAS IS GOLD
+---NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE = 0.75	       -- more AA attack will approach this amount of help (diminishing returns)
+---NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE_STEEPNESS = 112 --- Still vanilla value might want to fiddle around with the number though
 
 ---XP for leaders
 NDefines.NMilitary.FIELD_MARSHAL_XP_RATIO = 0
@@ -113,11 +131,13 @@ NDefines.NMilitary.XP_GAIN_FOR_SHATTERING = 0.0
 
 ---Building
 NDefines.NBuildings.MAX_SHARED_SLOTS = 40 --amount of potential max building slots in a state
+NDefines.NBuildings.MAX_BUILDING_LEVELS = 20			-- Max levels a building can have.
 NDefines.NBuildings.INFRA_TO_SUPPLY = 2.5
 NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 100
 
 ---AA Balance
-NDefines.NMilitary.ANTI_AIR_ATTACK_TO_AMOUNT = 0.001 -- 0.005
+NDefines.NMilitary.ANTI_AIR_ATTACK_TO_AMOUNT = 0.005 -- 0.005 is now vanilla
+NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.025 --0.07
 
 ---Air
 NDefines.NAir.DISRUPTION_FACTOR = 5  --- (4 -> 5)

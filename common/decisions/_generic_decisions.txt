@@ -722,6 +722,7 @@ war_measures = {
         available = {
 			NOT = { has_country_flag = war_bonds_active }
 			NOT = { has_idea = SOV_war_bonds }
+			NOT = { original_tag = GER }
             has_war = yes
             OR = {
                 AND = {

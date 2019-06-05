@@ -89,6 +89,87 @@ ideas = {
 				planning_speed = -0.1
 			}
 		}
+	
+		FRA_gold_reserves = {
+		
+			picture = generic_foreign_capital
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				defensive_war_stability_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		FRA_viva_la_france = {
+		
+			picture = FRA_scw_intervention_republicans_focus
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		FRA_colonial_manpower = {
+		
+			picture = generic_army_war_college
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				non_core_manpower = 0.1
+				conscription = 0.025
+			}
+		}
+		
+		FRA_joint_french_and_russian_rubber_refinery_program = {
+		
+		    picture = generic_morale_bonus
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                production_speed_synthetic_refinery_factor = 0.1
+			}
+		}
 
 		FRA_infantry_focus = {
 		

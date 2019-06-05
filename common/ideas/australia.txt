@@ -667,6 +667,21 @@ ideas = {
 	}
 
 theorist = {
+	
+	AST_basil_liddell_hart = {
+	
+		picture = generic_political_advisor_europe
+			
+		allowed = {
+			original_tag = AST
+		}
+			
+		research_bonus = {
+			land_doctrine = 0.1
+		}
+			
+		traits = { military_theorist }
+	}
 
 	AST_norman_makin = {
 				

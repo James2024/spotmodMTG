@@ -230,13 +230,7 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-		available = {
-		16 = {
-				is_owned_and_controlled_by = FRA
-				arms_factory > 5
-				industrial_complex > 2
-			}
-		}
+
 		bypass = {
 			custom_trigger_tooltip = {
 				tooltip = FRA_algerie_france_tt
@@ -276,13 +270,13 @@ focus_tree = {
 				limit = {
 					NOT = {
 						AND = {
-							459 = {
+							774 = {
 								free_building_slots = {
 									building = infrastructure
 									size > 1
 								}
 							}
-							460 = {
+							660 = {
 								free_building_slots = {
 									building = infrastructure
 									size > 1
@@ -292,14 +286,14 @@ focus_tree = {
 					}
 					AND = {
 						NOT ={
-							459 = {
+							774 = {
 								free_building_slots = {
 									building = infrastructure
 									size > 3
 								}
 							}
 						}
-						460 = {
+						660 = {
 							NOT = {
 								free_building_slots = {
 									building = infrastructure
@@ -319,7 +313,7 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = infrastructure
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 					set_state_flag = FRA_algerie_france_2Inf
@@ -334,7 +328,7 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = infrastructure
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 					set_state_flag = FRA_algerie_france_2Inf
@@ -345,7 +339,7 @@ focus_tree = {
 				limit = {
 					OR = {
 						NOT = {
-							459 = {
+							774 = {
 								free_building_slots = {
 									building = infrastructure
 									size > 1
@@ -353,7 +347,7 @@ focus_tree = {
 							}
 						}
 						NOT = {
-							460 = {
+							660 = {
 								free_building_slots = {
 									building = infrastructure
 									size > 1
@@ -362,13 +356,13 @@ focus_tree = {
 						}
 					}
 					OR = {
-						459 = {
+						774 = {
 							free_building_slots = {
 								building = infrastructure
 								size > 3
 							}
 						}
-						460 = {
+						660 = {
 							free_building_slots = {
 								building = infrastructure
 								size > 3
@@ -384,8 +378,8 @@ focus_tree = {
 							size > 3
 						}
 						OR = {
-							state = 459
-							state = 460
+							state = 774
+							state = 660
 						}
 					}
 					add_building_construction = {
@@ -399,31 +393,31 @@ focus_tree = {
 
 			if = {
 				limit = {
-					459 = {
+					774 = {
 						free_building_slots = {
 							building = infrastructure
 							size > 1
 						}
 					}
-					460 = {
+					660 = {
 						free_building_slots = {
 							building = infrastructure
 							size > 1
 						}
 					}
 				}
-				459 = {
+				774 = {
 					add_building_construction = {
 						type = infrastructure
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 					set_state_flag = FRA_algerie_france_2Inf
 				}
-				460 = {
+				660 = {
 					add_building_construction = {
 						type = infrastructure
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 					set_state_flag = FRA_algerie_france_2Inf
@@ -489,7 +483,7 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						459 = {
+						539 = {
 							free_building_slots = {
 								building = industrial_complex
 								size > 3
@@ -535,7 +529,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					459 = {
+					539 = {
 						free_building_slots = {
 							building = industrial_complex
 							size > 3
@@ -543,7 +537,7 @@ focus_tree = {
 						}
 					}
 				}
-				459 = {
+				539 = {
 					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
@@ -613,7 +607,7 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						459 = {
+						539 = {
 							free_building_slots = {
 								building = arms_factory
 								size > 3
@@ -659,7 +653,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					459 = {
+					539 = {
 						free_building_slots = {
 							building = arms_factory
 							size > 3
@@ -667,7 +661,7 @@ focus_tree = {
 						}
 					}
 				}
-				459 = {
+				539 = {
 					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = arms_factory
@@ -1553,12 +1547,16 @@ focus_tree = {
 
 	focus = {
 		id = FRA_france_libre
-		icon = GFX_focus_france_libre
+		icon = GFX_NATFRA_flagalone
 		x = 26
 		y = 0
-		cost = 3
+		cost = 0.1
 
 		available_if_capitulated = yes
+		
+		available = {
+			has_capitulated = yes
+		}
 
 
 		completion_reward = {
@@ -1566,7 +1564,6 @@ focus_tree = {
 			add_state_core = 539
 			add_political_power = 150
 			set_capital = 539
-			country_event = { days = 1 id = free_france.1 }
 		}
 	}
 	
@@ -1575,13 +1572,13 @@ focus_tree = {
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		prerequisite = { focus = FRA_france_libre }
 		x = 24
-		y = 1.5
+		y = 1
 		cost = 5
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = FRA_FREE_gold_reserves
+			add_ideas = FRA_gold_reserves
 		}
 	}
 	
@@ -1596,7 +1593,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		    add_ideas = free_french_fleet
 			add_equipment_to_stockpile = {
 				type = convoy_1
 				amount = 100
@@ -1607,7 +1603,8 @@ focus_tree = {
 				add_building_construction = {
 					type = dockyard
 					level = 2
-					instant_build = yes
+				
+				instant_build = yes
 				}
 			}
 		}
@@ -1650,7 +1647,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 62
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1665,7 +1662,7 @@ focus_tree = {
 			focus = FRA_revive_civilian_construction
 			focus = FRA_revive_naval_construction
 		}
-		x = 24
+		x = 23
 		y = 3
 		cost = 5
 
@@ -1686,24 +1683,79 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = FRA_rebuild_roads
+		icon = GFX_goal_generic_construct_infrastructure
+        prerequisite = {
+			focus = FRA_rebuild_military_production
+			focus = FRA_revive_civilian_construction
+			focus = FRA_revive_naval_construction
+		}
+		x = 25
+		y = 3
+		cost = 5
+		
+		available_if_capitulated = yes
+		
+		available = {
+			has_capitulated = yes
+		}
+		completion_reward = {
+			539 = {				
+				add_building_construction = {
+					type = naval_base
+					province = 5139
+						level = 9
+						instant_build = yes
+				}			
+				add_building_construction = {
+					type = infrastructure
+						level = 7
+						instant_build = yes			
+			    }
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_joint_refinery
+		icon = GFX_DAH_FR_Prod
+		prerequisite = {
+			focus = FRA_rebuild_roads
+			focus = FRA_develop_our_resources
+		}
+		x = 24
+		y = 4
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = FRA_joint_french_and_russian_rubber_refinery_program
+			add_tech_bonus = {
+				name = USA_rubber_reserve_company
+				bonus = 0.25
+				uses = 1
+				technology = rubber_processing
+				technology = improved_rubber_processing
+				technology = advanced_rubber_processing
+				technology = modern_rubber_processing
+			}
+		}
+	}
+	focus = {
 		id = FRA_request_uk_territory
 		icon = GFX_goal_tfv_saf_secure_interests_in_africa
 		prerequisite = { focus = FRA_france_libre }
 		x = 28
 		y = 1
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
-
-		available = {
-			date > 1940.6.1
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = FRA_request_uk_territory_tt
 
 			hidden_effect = {
-				news_event = { id = pfunews.5 hours = 6 }
 				if = {
 					limit = { 558 = { is_controlled_by = ENG } }
 					FRA = { transfer_state = 558 }
@@ -1717,7 +1769,7 @@ focus_tree = {
 					FRA = { transfer_state = 700 }
 				}
 				if = {
-					limit = { 296 = { is_controlled_by = POR } }
+					limit = { 296 = { is_controlled_by = ENG } }
 					FRA = { transfer_state = 296 }
 				}
 				if = {
@@ -1730,7 +1782,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_defend_dutch_american_colonies
-		icon = GFX_france_two
+		icon = DAH_Fra_Cop
 		prerequisite = { focus = FRA_request_uk_territory }
 		x = 28
 		y = 2
@@ -1739,14 +1791,24 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			country_event = { days = 1 id = free_france.8 }
-			custom_effect_tooltip = organize_the_resistance_tt
+			custom_effect_tooltip = FRA_organize_the_resistance_tt
+			
+			hidden_effect = {
+				if = {
+					limit = { 695 = { is_controlled_by = HOL } }
+					FRA = { transfer_state = 695 }
+				}
+				if = {
+					limit = { 309 = { is_controlled_by = HOL } }
+					FRA = { transfer_state = 309 }
+				}
+            }
 		}
 	}
 	
 	focus = {
-		id = FRA_unleash_the_resistance_2
-		icon = GFX_france_four
+		id = FRA_plan_vert
+		icon = GFX_NATFRA_rightfullborders
 		prerequisite = { focus = FRA_defend_dutch_american_colonies }
 		x = 28
 		y = 3
@@ -1755,15 +1817,39 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			country_event = { days = 1 id = pfu.32 }
-			custom_effect_tooltip = unleash_the_resistance_2_tt
+			custom_effect_tooltip = FRA_unleash_the_resistance_2_tt
+			
+			hidden_effect = {
+		        14 = {
+			        damage_building = { type = air_base damage = 3 }
+			        damage_building = { type = infrastructure damage = 2 }
+		        }
+		        15 = {
+			        damage_building = { type = infrastructure damage = 2 }
+			        damage_building = { type = air_base damage = 3 }
+		        }
+		        29 = {
+			        damage_building = { type = infrastructure damage = 2 }
+			        damage_building = { type = air_base damage = 3 }
+		        }
+                remove_building = {
+			        type = bunker
+			        level = 2
+			        province = 6449
+		        }
+		        remove_building = {
+			        type = bunker
+			        level = 2
+			        province = 3552
+		        }
+		    }
 		}
 	}
 
 	focus = {
 		id = FRA_viva_la_france
-		icon = GFX_france_five
-		prerequisite = { focus = FRA_unleash_the_resistance_2 }
+		icon = GFX_goal_Paris
+		prerequisite = { focus = FRA_plan_vert }
 		x = 28
 		y = 4
 		cost = 5
@@ -1771,13 +1857,13 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = FRA_FREE_viva_la_france
+			add_ideas = FRA_viva_la_france
 		}
 	}
 	
 	focus = {
 		id = FRA_reform_our_doctrine
-		icon = GFX_france_six
+		icon = GFX_NATFRA_francefirst
 		prerequisite = { focus = FRA_france_libre }
 		x = 31
 		y = 1
@@ -1798,7 +1884,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_reequip_our_forces
-		icon = GFX_france_seven
+		icon = GFX_goal_NFA_De_Gaulle_Plan
 		prerequisite = { focus = FRA_reform_our_doctrine }
 		x = 31
 		y = 2
@@ -1810,15 +1896,15 @@ focus_tree = {
 		    add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = FRA }
 		    add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 600 producer = FRA }
 			add_equipment_to_stockpile = { type = support_equipment_1 amount = 300 producer = FRA }
-			add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 300 producer = FRA }
-			add_equipment_to_stockpile = { type = anti_tank_equipment_1  amount = 300 producer = FRA }
+			add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 100 producer = FRA }
+			add_equipment_to_stockpile = { type = anti_tank_equipment_1  amount = 100 producer = FRA }
 			add_equipment_to_stockpile = { type = motorized_equipment amount = 150 producer = FRA }
 	    }
 	}
 	
 	focus = {
 		id = FRA_colonial_recruitment
-		icon = GFX_france_eight
+		icon = GFX_NATFRA_conscription
 		prerequisite = { focus = FRA_reequip_our_forces }
 		x = 31
 		y = 3
@@ -1827,7 +1913,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = FRA_FREE_colonial_manpower
+			add_ideas = FRA_colonial_manpower
 		}
 	}
 
@@ -1847,14 +1933,13 @@ focus_tree = {
 				name = FRA_artillery_focus
 				bonus = 1.00 
 				uses = 1
-				technology = tech_logistics_company3
-				technology = tech_logistics_company4
+				category = infantry_weapons
 			}
 			add_tech_bonus = {
 				name = FRA_artillery_focus
-				bonus = 1.00 
+				bonus = 1
 				uses = 1
-				category = infantry_weapons
+				category = artillery
 			}
 		}
 	}
@@ -1874,7 +1959,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = FRA_armor
 				bonus = 1.00 
-				ahead_reduction = 0.5 
+				ahead_reduction = 1.0
 				uses = 1
 				category = armor
 			}

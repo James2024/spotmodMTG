@@ -20,8 +20,8 @@ land_measures = {
 	
 	visible = {
 		original_tag = GER
-		}
 	}
+}
 
 GER_case_anton_category = {
 	icon = military_operation

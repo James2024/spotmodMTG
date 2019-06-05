@@ -201,13 +201,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ENG_tank_focus
+		id = ENG_defence_of_cairo
 		prerequisite = { focus = limited_rearmament_focus }
 		icon = GFX_goal_generic_army_tanks
 		x = 0
-		y = 1
+		y = 1 
 		relative_position_id = limited_rearmament_focus
-		cost = 10
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}
@@ -215,6 +215,101 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+		custom_effect_tooltip = el_ala_forts_tt
+			hidden_effect = {
+				SAF = {
+                    division_template = {
+                        name = "Guards Armoured Division"
+                        priority = 2
+                        regiments = {
+                        motorized = { x = 0 y = 0 }
+                        motorized = { x = 0 y = 1 }
+                        motorized = { x = 0 y = 2 }
+                        motorized = { x = 0 y = 3 }
+                        motorized = { x = 0 y = 4 }
+                        motorized = { x = 1 y = 0 }
+                        motorized = { x = 1 y = 1 }
+                        heavy_armor = { x = 2 y = 0 }
+                        heavy_armor = { x = 2 y = 1 }
+                        heavy_armor = { x = 2 y = 2 }
+                        heavy_armor = { x = 2 y = 3 }
+                        heavy_armor = { x = 2 y = 4 }
+                        heavy_armor = { x = 3 y = 0 }
+                        heavy_armor = { x = 3 y = 1 }
+                        heavy_armor = { x = 3 y = 2 }
+                        heavy_armor = { x = 3 y = 3 }
+                        heavy_armor = { x = 3 y = 4 }
+                        heavy_armor = { x = 4 y = 0 }
+                        heavy_armor = { x = 4 y = 1 }
+                        heavy_armor = { x = 4 y = 2 }
+                        }
+                        support = {
+                            engineer = { x = 0 y = 0 }
+                            recon = { x = 0 y = 1 }
+                            signal_company { x = 0 y = 2 }
+                        }
+                    }
+				if = {
+                        limit = {
+                            ENG = {
+                                has_full_control_of_state = 447
+                            }
+                        }
+                        set_state_controller = 447
+                        447 = {
+                            create_unit = {
+                                division = "name = \"Guards Armoured Division\" division_template = \"Guards Armoured Division\" start_experience_factor = 0.5"
+                                owner = SAF
+                                prioritize_location = 1071
+                            }
+                        }
+                        ENG = {
+                            set_state_controller = 447
+                        }
+                    }
+                    else = {
+                        random_owned_controlled_state = {
+                            create_unit = {
+                                division = "name = \"Guards Armoured Division\" division_template = \"Guards Armoured Division\" start_experience_factor = 0.5"
+                                owner = SAF
+                            }
+                        }
+                    }
+				
+					447 = {
+						if = {
+							limit = { 
+								is_controlled_by = ROOT
+							}
+							add_building_construction = {
+								type = bunker
+								level = 5
+								province = 1071
+								instant_build = yes
+							}
+							add_building_construction = {
+								type = bunker
+								level = 5
+								province = 4145
+								instant_build = yes
+							}
+						}
+					}
+					446 = {
+						if = {
+							limit = { 
+								is_controlled_by = ROOT
+							}
+							add_building_construction = {
+								type = bunker
+								level = 5
+								province = 992
+								instant_build = yes
+							}
+						}
+					}
+				}
+			}
 			add_tech_bonus = {
 				name = armor_bonus
 				bonus = 1.0
@@ -869,7 +964,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = general_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 3
 		}
@@ -1110,7 +1205,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = air_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 3
 		}
@@ -1137,7 +1232,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = air_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1168,7 +1263,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = air_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1193,7 +1288,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = fighter_command_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 3
 		}
@@ -1516,7 +1611,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = uk_waves_focus
 				bonus = 1.0
-				uses = 3
+				uses = 4
 				category = naval_doctrine
 			}
 		}
@@ -1822,7 +1917,7 @@ focus_tree = {
 		x = 5
 		y = 1
 		relative_position_id = uk_service_focus
-		cost = 5
+		cost = 3
 		completion_reward = {
 			if = {
 				limit = {
@@ -1872,7 +1967,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = uk_mediterranean_focus
-		cost = 10
+		cost = 3
 		completion_reward = {
 			118 = {
 				add_building_construction = {
@@ -1883,8 +1978,14 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = coastal_bunker
-					level = 1
-					province = 4135
+					level = 2
+					province = 13232
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 13231
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -1998,7 +2099,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = uk_mediterranean_focus
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}
@@ -2347,7 +2448,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = uk_mediterranean_focus
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -3112,7 +3213,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = uk_colonial_focus
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -3205,7 +3306,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = uk_commonwealth_focus
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -3391,7 +3492,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = uk_commonwealth_focus
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -3542,7 +3643,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = uk_australia_focus
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -3693,7 +3794,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = uk_commonwealth_focus
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -3843,7 +3944,7 @@ focus_tree = {
 		x = 2
 		y = 3
 		relative_position_id = uk_commonwealth_focus
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 		
@@ -4058,7 +4159,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = uk_new_zealand_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			#modifier = {
@@ -4101,161 +4202,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = ENG_imperial_federation
-		prerequisite = { focus = ENG_imperial_conference }
-		available = {
-			CAN = {
-				is_subject_of = ENG
-				has_autonomy_state = autonomy_integrated_puppet
-			}
-			SAF = {
-				is_subject_of = ENG
-				has_autonomy_state = autonomy_integrated_puppet
-			}
-			if = {
-				limit = {
-					RAJ = { has_country_flag = ENG_accepted_federation }
-				}
-				RAJ = {
-					is_subject_of = ENG
-					has_autonomy_state = autonomy_integrated_puppet
-				}
-			}
-			AST = {
-				is_subject_of = ENG
-				has_autonomy_state = autonomy_integrated_puppet
-			}
-			NZL = {
-				is_subject_of = ENG
-				has_autonomy_state = autonomy_integrated_puppet
-			}
-			has_country_flag = ENG_dominions_accepted_federation
-		}
-
-		icon = GFX_focus_eng_imperial_federation
-
-		x = 0
-		y = 1
-		relative_position_id = ENG_imperial_conference
-		cost = 10
-		ai_will_do = {
-			factor = 1
-			#modifier = {
-			#	factor = 0
-			#}
-		}	
-		completion_reward = {
-			if = {
-				limit = {
-					RAJ = {
-						NOT = { is_subject_of = ENG }
-					}
-				}
-				set_cosmetic_tag = ENG_imperial_federation_unified
-				news_event = { id = mtg_news.8 days = 1 }
-			}
-			if = {
-				limit = {
-					RAJ = {
-						is_subject_of = ENG
-					}
-				}
-				set_cosmetic_tag = ENG_imperial_federation_india_unified
-				news_event = { id = mtg_news.9 days = 1 }
-			}
-			CAN = {
-				every_unit_leader = {
-					set_nationality = ENG
-				}
-			}
-			annex_country = {
-			    target = CAN
-			    transfer_troops = yes
-			}
-			every_state = {
-				limit = {
-					is_core_of = CAN
-				}
-				add_core_of = ENG
-			}
-			SAF = {
-				every_unit_leader = {
-					set_nationality = ENG
-				}
-			}
-			annex_country = {
-			    target = SAF
-			    transfer_troops = yes
-			}
-			if = {
-				limit = {
-					SAF = { has_completed_focus = SAF_police_windhoek }
-				}
-				every_state = {
-					limit = {
-						is_core_of = SAF
-						NOT = { state = 275 }
-					}
-					add_core_of = ENG
-				}
-			}
-			if = {
-				limit = {
-					RAJ = { has_country_flag = ENG_accepted_federation }
-				}
-				RAJ = {
-					every_unit_leader = {
-						set_nationality = ENG
-					}
-				}
-				annex_country = {
-				    target = RAJ
-				    transfer_troops = yes
-				}
-			}
-			AST = {
-				every_unit_leader = {
-					set_nationality = ENG
-				}
-			}
-			annex_country = {
-			    target = AST
-			    transfer_troops = yes
-			}
-			every_state = {
-				limit = {
-					is_core_of = AST
-				}
-				add_core_of = ENG
-			}
-			NZL = {
-				every_unit_leader = {
-					set_nationality = ENG
-				}
-			}
-			annex_country = {
-			    target = NZL
-			    transfer_troops = yes
-			}
-			every_state = {
-				limit = {
-					is_core_of = NZL
-				}
-				add_core_of = ENG
-			}
-			MAL = {
-				every_unit_leader = {
-					set_nationality = ENG
-				}
-			}
-			annex_country = {
-			    target = MAL
-			    transfer_troops = yes
-			}
-		}
-	}
-
 	### DEMOCRATIC BRANCH - STEADY AS SHE GOES ###
 
 	focus = {
@@ -4277,7 +4223,6 @@ focus_tree = {
 				NOT = { has_dlc = "Man the Guns" }
 			}
 		}
-		relative_position_id = ENG_revisit_colonial_policy
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -4707,7 +4652,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = ENG_home_defence
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	

@@ -1,6 +1,24 @@
 ideas = {
 
 	country = {
+		ROM_royal_guards = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = GFX_goal_generic_special_forces
+			
+			modifier = {
+				special_forces_cap = 0.25
+			}
+		}
+
 		ROM_revenge_against_soviet = {
 
 			picture = anti_soviet_pact

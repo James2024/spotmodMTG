@@ -606,18 +606,18 @@ focus_tree = {
 			set_country_flag = check_army_primacy
 			army_experience = 5
 			2 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
 			2 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -638,7 +638,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_modernized_artillery }
 		x = 0
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -715,18 +715,18 @@ focus_tree = {
 			set_country_flag = check_mare_nostrum
 			navy_experience = 55
 			156 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 4
+					level = 2
 					instant_build = yes
 				}
 			}
 			156 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 4
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1015,8 +1015,6 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				technology = convoy_sailing
-				technology = convoy_sailing_ti
-				technology = convoy_sailing_bs
 			}
 		}
 	}
@@ -1047,7 +1045,6 @@ focus_tree = {
 				bonus = 1.0
 				uses = 2
 				technology = convoy_escorts
-				technology = convoy_escorts_bs
 				technology = escort_carriers
 			}
 		}
@@ -1080,8 +1077,6 @@ focus_tree = {
 				bonus = 1.0
 				uses = 2
 				technology = submarine_operations
-				technology = undersea_blockade
-				technology = convoy_interdiction
 				technology = submarine_offensive
 			}
 		}
@@ -1150,7 +1145,7 @@ focus_tree = {
 		relative_position_id = ITA_albania_war_goal
 		prerequisite = { focus = ITA_albania_war_goal }
 		available = {
-			#date > 1939.1.1
+			date > 1939.3.1
 		}
 		x = 2
 		y = 1
@@ -1221,13 +1216,11 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			country_exists = BUL
 			NOT = {
 				has_war_with = BUL
 			}
 		}
 		bypass = {
-			NOT = { country_exists = BUL }
 		}
 		completion_reward = {
 			BUL = {
@@ -1440,7 +1433,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		
-		cost = 5
+		cost = 10
 		
 		relative_position_id = ITA_modernized_army
 		
@@ -1461,7 +1454,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_army_primacy focus = ITA_mare_nostrum }
 		x = 4
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}

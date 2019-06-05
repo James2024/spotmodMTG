@@ -1111,7 +1111,7 @@ ideas = {
 			}
 			available = 
 			{
-				NOT = { has_country_flag = removed_generals1 }
+				NOT = { has_country_flag = purge_2_group_b }
 				hidden_trigger = {
 					NOT = { 
 						any_other_country = {
@@ -1149,7 +1149,7 @@ ideas = {
 			}
 			available = 
 			{
-				NOT = { has_country_flag = removed_generals2 }
+				NOT = { has_country_flag = purge_1_group_b }
 				has_completed_focus = SOV_positive_heroism
 			}
 			
@@ -1322,23 +1322,6 @@ ideas = {
 	tank_manufacturer = {
 		
 		designer = yes
-		
-		KMDB_design_bureau = {
-			
-			
-			allowed = {
-					original_tag = SOV
-			}
-			
-			research_bonus = {
-				armor = 0.15
-			}
-			
-			traits = { quantity_over_quality_manufacturer }
-			
-			modifier = {
-			}
-		}
 		
 		morozov_design_bureau = {
 			

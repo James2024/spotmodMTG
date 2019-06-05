@@ -1,9 +1,78 @@
 #Category only allowed for GER
 land_measures = {
+
+	GER_secure_per_oil = {
+		
+		icon = generic_operation
+		
+		allowed = {
+			tag = GER
+		}
+		
+		visible = {
+			tag = GER
+			has_war_with = ENG
+			413 = { NOT = { has_state_flag = german_oil_control } }
+		}
+		
+		cost = 0
+		
+		available = {
+			OR = {
+				GER = { controls_state = 291 }
+				any_other_country = {
+					is_in_faction_with = GER
+					controls_state = 291
+				}
+			}
+		}
+		
+		complete_effect = {
+			413 = { set_state_flag = german_oil_control }
+			PER = {
+				give_resource_rights = { receiver = GER state = 412 }
+				give_resource_rights = { receiver = GER state = 413 }
+				give_resource_rights = { receiver = GER state = 411 }
+			}
+		}
+	}
+		
+
+	take_bulgaria = {
+		
+		icon = generic_operation
+		
+		allowed = {
+			tag = GER
+		}
+					
+		visible = {
+			tag = GER
+			BUL = { is_ai = yes }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 0
+		
+		available = {
+			BUL = { is_ai = yes }
+			has_war_with = ENG
+		}
+		
+		complete_effect = {
+			annex_country = {
+				target = BUL
+				transfer_troops = yes
+			}
+		}
+	}
 	
 	GER_take_tunisia = {
 		
 		icon = generic_political_discourse
+		
+		fire_only_once = yes
 		
 		available = {
 			NOT = { ITA = { has_full_control_of_state = 450 } }
@@ -37,8 +106,17 @@ land_measures = {
 			has_war = yes
 			}
 		available = {
-			date > 1941.1.1
+			OR = {
+				date > 1942.1.1
+				AND = {
+					date > 1941.1.1
+					EFR = {
+						arms_factory > 8
+						industrial_complex > 10
+					}
+				}
 			}
+		}
 		
 		complete_effect = {
 			annex_country = {
@@ -51,138 +129,7 @@ land_measures = {
 
 war_measures = {
 	
-    GER_war_bonds = {
-
-    	icon = generic_industry
-
-    	allowed = {
-            always = yes
-        }
-
-        available = {
-			NOT = { has_country_flag = war_bonds_active }
-            has_war = yes
-            OR = {
-                AND = {
-                    has_government = democratic
-                    has_war_support > 0.79
-                }
-                AND = {
-                    has_government = communism
-                    has_war_support > 0.79
-                }
-                AND = {
-                    has_government = fascism
-                    OR = {
-                        has_war_support > 0.89
-                        surrender_progress > 0
-                    }
-                }
-                AND = {
-                    has_government = neutrality
-                    has_war_support > 0.84
-                    has_stability > 0.7
-                }
-            }
-        }
-        visible = {
-            has_war = yes
-			original_tag = GER
-        }
-
-        fire_only_once = no
-
-		days_remove = 180
-
-		cost = GER_war_bonds_var?50
-
-		modifier = {
-			consumer_goods_factor = -0.025
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_political_power < 150
-				factor = 0 #use as pp dump
-			}
-		}
-
-		remove_effect = {
-			hidden_effect = {
-			clr_country_flag = war_bonds_active
-			}
-		}
-
-		complete_effect = {
-			hidden_effect = { 
-				set_country_flag = war_bonds_active
-				}
-			if = {
-				limit = {
-					NOT = {
-						check_variable = {
-							var = GER_war_bonds_var
-							value = 100
-							compare = greater_than_or_equals
-						}
-					}
-				}
-				set_variable = {
-					var = GER_war_bonds_var
-					value = 50
-				}
-			}
-			add_to_variable = {
-				var = GER_war_bonds_var
-				value = 25
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = GER_war_bonds_var
-						value = 100
-						compare = greater_than_or_equals
-					}
-					NOT = {
-						check_variable = {
-							var = GER_war_bonds_war_support_var
-							value = 5
-							compare = greater_than_or_equals
-						}
-					}
-				}
-				set_variable = {
-					var = GER_war_bonds_war_support_var
-					value = -5
-				}
-				add_war_support = GER_war_bonds_war_support_var
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = GER_war_bonds_var
-						value = 100
-						compare = greater_than_or_equals
-					}
-					check_variable = {
-						var = GER_war_bonds_war_support_var
-						value = 5
-						compare = greater_than_or_equals
-					}
-				}
-				add_to_variable = {
-					var = GER_war_bonds_war_support_var
-					value = -2.5
-				}
-				add_war_support = GER_war_bonds_war_support_var
-			}
-		}
-    }
 }
-
-
-
 
 GER_mefo_bills_category = {
 
@@ -263,29 +210,6 @@ GER_mefo_bills_category = {
 }
 
 operations = {
-
-	GER_the_SS = {
-		icon = ger_reichskommissariats
-	
-		cost = 0
-		
-		fire_only_once = yes
-	
-		available = {
-			has_manpower > 100000
-			has_war_with = POL
-			}
-		
-		visible = {
-			original_tag = GER
-			has_war = yes
-			}
-		
-		complete_effect = {
-			add_manpower = -100000
-			add_ideas = GER_SS
-			}
-		}
 
 	GER_barbarossa_mission = {
 

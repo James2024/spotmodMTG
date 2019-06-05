@@ -1,0 +1,28 @@
+on_actions = {
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					date < 1939.10.1
+					date > 1939.5.1
+					tag = GER
+					has_country_flag = GER_SPOT
+				}
+				add_timed_idea = { idea = spot_mefo days = 90 }
+			}
+		}
+	}
+	
+	on_justifying_wargoal_pulse = {
+		effect = {
+			if = {
+			#OR = {
+				is_justifying_wargoal_against = NOR
+				is_justifying_wargoal_against = DEN
+				#}
+			NOR = {
+				country_event = spot.6
+			}
+		}
+	}
+}
