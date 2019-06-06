@@ -56,15 +56,10 @@ NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 10
 --- Navy
 NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS = 3.0
 NDefines.NNavy.ANTI_AIR_POW_ON_INCOMING_AIR_DAMAGE = 0.8 --- (0.2 -> 0.8)
-NDefines.NNavy.SHIP_TO_FLEET_ANTI_AIR_RATIO = 0.01 --- (0.2 -> 0.01)
+NDefines.NNavy.SHIP_TO_FLEET_ANTI_AIR_RATIO = 0.02 --- (0.2 -> 0.01)
 NDefines.NNavy.ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE = 0.07 --- (0.15 -> 0.07)
 NDefines.NNavy.MAX_ANTI_AIR_REDUCTION_EFFECT_ON_INCOMING_AIR_DAMAGE = 0.8 --- (0.5 -> 0.8)
 NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR    = 0.5 -- (0.25 -> 0.5)
-NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- doubled the cooldown of guns to make battles last longer and give ships time to escape
-        2.0,    -- big guns
-        8.0,    -- torpedos
-        2.0,    -- small guns
-}
 NDefines.NNavy.COMBAT_MIN_DURATION = 24
 NDefines.NNavy.MISSION_SPREADS = {  -- mission spreads in the case a ship join combat, whih defines their starting position
 		0.0, -- HOLD 
@@ -78,6 +73,7 @@ NDefines.NNavy.MISSION_SPREADS = {  -- mission spreads in the case a ship join c
 		0.0, -- RESERVE_FLEET
 		0.0, -- NAVAL_INVASION_SUPPORT
 }
+NDefines.NNavy.CONVOY_SINKING_SPILLOVER = 0.5 ---Vanilla value may need to change
 
 ---Military
 NDefines.NMilitary.RECON_SKILL_IMPACT = 8
