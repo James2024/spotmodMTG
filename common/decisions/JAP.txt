@@ -660,6 +660,12 @@ foreign_politics = {
 		fire_only_once = yes
 
 		complete_effect = {
+			if = {
+				limit = {
+					country_exists = MEN
+				}
+				annex_country = { target = MEN transfer_troops = yes }
+			}
 			annex_country = { target = MAN transfer_troops = yes }
 		}
 	}

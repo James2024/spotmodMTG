@@ -259,12 +259,6 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = {
-		name = finland.spot8.sovietcontinues
-		ai_chance = {
-			base = 20
-		}
-	}
 	#Accept surrender
 	option = {
 		name = finland.spot8.a
