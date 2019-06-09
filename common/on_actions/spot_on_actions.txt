@@ -14,6 +14,11 @@ on_actions = {
 	}
 	on_startup = {
 		effect = { 
+		
+			GER = {
+				give_resource_rights = { receiver = FRA state = 42 }
+				give_resource_rights = { receiver = FRA state = 51 }
+			}
 
 			PER = {
 				give_resource_rights = { receiver = ENG state = 412 }

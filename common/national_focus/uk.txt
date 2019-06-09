@@ -4074,22 +4074,6 @@ focus_tree = {
 		}
 
 		available = {
-			CAN = {
-				is_subject_of = ENG
-				has_government = ROOT
-			}
-			AST = {
-				is_subject_of = ENG
-				has_government = ROOT
-			}
-			NZL = {
-				is_subject_of = ENG
-				has_government = ROOT
-			}
-			SAF = {
-				is_subject_of = ENG
-				has_government = ROOT
-			}
 		}
 
 		continue_if_invalid = no
@@ -4112,26 +4096,11 @@ focus_tree = {
 				limit = {
 					OR = {
 						tag = ENG
-						AND = {
-							is_subject_of = ENG
-							tag = CAN
-						}
-						AND = {
-							is_subject_of = ENG
-							tag = SAF
-						}
-						AND = {
-							is_subject_of = ENG
-							tag = RAJ
-						}
-						AND = {
-							is_subject_of = ENG
-							tag = AST
-						}
-						AND = {
-							is_subject_of = ENG
-							tag = NZL
-						}
+						tag = CAN
+						tag = SAF
+						tag = RAJ
+						tag = AST
+						tag = NZL
 					}
 				}
 				country_event = { id = mtg_britain.82 hours = 6 }

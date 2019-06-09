@@ -8751,6 +8751,8 @@ operations = {
 		available = {
 		}
 		
+		fire_only_once = yes
+		
 		cost = 300
 		
 		complete_effect = {

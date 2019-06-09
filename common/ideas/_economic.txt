@@ -28,7 +28,7 @@ ideas = {
 
 			allowed_to_remove = {
 				OR = {
-					threat > 0.5
+					threat > 0.8
 					has_war = yes
 				}
 			}
@@ -58,7 +58,7 @@ ideas = {
 			}
 			allowed_to_remove = {
 				OR = {
-					threat > 0.5
+					threat > 0.8
 					has_war = yes
 				}
 			}
