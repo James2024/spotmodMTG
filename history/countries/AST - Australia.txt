@@ -6,6 +6,10 @@ set_war_support = 0.3
 
 set_research_slots = 3
 
+add_ideas = {
+	CHI_ineffective_bureaucracy
+}
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1

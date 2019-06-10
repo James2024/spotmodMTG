@@ -1074,8 +1074,10 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			give_resource_rights = { receiver = GER state = 42 }
-			give_resource_rights = { receiver = GER state = 51 }
+			FRA = {
+				remove_resource_rights = 42
+				remove_resource_rights = 51
+			}
 			42 = { set_demilitarized_zone = no }
 			51 = { set_demilitarized_zone = no }
 			custom_effect_tooltip = GER_rhineland_ultimatum

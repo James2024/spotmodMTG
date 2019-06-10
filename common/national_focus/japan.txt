@@ -138,9 +138,9 @@ focus_tree = {
 	focus = {
 		id = JAP_greater_east_asian_co_prosperity_sphere
 		icon = GFX_goal_generic_alliance
-		#prerequisite = { focus = JAP_liaison_conference }
+		prerequisite = { focus = JAP_purge_the_kodoha_faction }
 		x = 0
-		y = 1
+		y = 2
 		#relative_position_id = JAP_liaison_conference
 
 		cost = 2.9
@@ -1040,7 +1040,7 @@ focus_tree = {
 			}
 		}
 
-		cost = 2.2
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -1086,7 +1086,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_the_manchurian_project
 
-		cost = 2.2
+		cost = 2
 
 		ai_will_do = {
 			factor = 2
@@ -1139,7 +1139,7 @@ focus_tree = {
 			MAN = { has_focus_tree = generic_focus }
 		}
 
-		cost = 2.2
+		cost = 2
 
 		ai_will_do = {
 			factor = 2
@@ -1188,7 +1188,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_the_manchurian_project
 
-		cost = 2.2
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -1277,7 +1277,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_expand_manchurian_railways
 
-		cost = 2.2
+		cost = 2
 
 		ai_will_do = {
 			factor = 2
@@ -1319,7 +1319,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_expand_manchurian_railways
 
-		cost = 2.2
+		cost = 2
 
 		ai_will_do = {
 			factor = 2
@@ -1362,7 +1362,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = JAP_expand_manchurian_railways
 
-		cost = 2.2
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -1401,7 +1401,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_the_manchurian_project 
 
-		cost = 2.2
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -2062,7 +2062,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_supremacy_of_technology
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2340,7 +2340,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_new_naval_estimates
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2379,7 +2379,7 @@ focus = {
 		y = 2
 		relative_position_id = JAP_supremacy_of_the_battlefleet
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2416,7 +2416,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_new_naval_estimates
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2527,7 +2527,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_cruiser_modernization
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -2559,7 +2559,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_long_lance_torpedoes
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2

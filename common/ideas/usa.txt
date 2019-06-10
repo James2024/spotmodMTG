@@ -939,25 +939,6 @@ ideas = {
 				}
 			}
 		}
-
-		escort_effort_focus = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			equipment_bonus = {
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
 		
 		home_of_the_free = {
 			

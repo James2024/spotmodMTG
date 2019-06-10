@@ -2609,8 +2609,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = escort_effort_focus
-			
+			add_tech_bonus = {
+				name = USA_escort_effort_focus
+				bonus = 1.0
+				uses = 2
+				category = dd_tech
+			}
 		}
 	}
 
