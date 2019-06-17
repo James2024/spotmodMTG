@@ -21,7 +21,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 12
 		}
-		available = { }
+		available = { has_completed_focus = GER_rhineland }
 		completion_reward = {
 			add_ideas = hjalmar_schacht
 		}
@@ -586,7 +586,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1 
 		}
-		available = { }
+		available = { has_completed_focus = GER_rhineland }
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -817,7 +817,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available = { }
+		available = { has_completed_focus = GER_rhineland }
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -918,7 +918,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = fighter_bonus
-				bonus = 2
+				bonus = 1
 				uses = 1
 				category = light_fighter
 			}
@@ -2243,7 +2243,7 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-		available = { }
+		available = { has_completed_focus = GER_rhineland }
 
 		bypass = {
 			custom_trigger_tooltip =  {
