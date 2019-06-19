@@ -74,6 +74,9 @@ NDefines.NNavy.MISSION_SPREADS = {  -- mission spreads in the case a ship join c
 		0.0, -- NAVAL_INVASION_SUPPORT
 }
 NDefines.NNavy.CONVOY_SINKING_SPILLOVER = 0.5 ---Vanilla value may need to change
+NDefines.NNavy.ANTI_AIR_ATTACK_TO_AMOUNT = 0.003	-- Balancing value to convert equipment stat anti_air_attack to the random % value of airplanes being hit.
+NDefines.NNavy.SUBMARINE_REVEAL_POW = 5.0		-- A scaling factor that is applied to the reveal chance in order to make large differences in detection vs visibility more pronounced
+	
 
 ---Military
 NDefines.NMilitary.RECON_SKILL_IMPACT = 8
