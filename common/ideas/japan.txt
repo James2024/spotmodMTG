@@ -459,8 +459,8 @@ ideas = {
 				war_support_factor = 0.2
 				mobilization_laws_cost_factor = -0.25
 				justify_war_goal_time = -0.2
-				production_speed_industrial_complex_factor = -0.1
 				#research_speed_factor = -0.05
+				production_speed_industrial_complex_factor = -0.1
 			}
 		}
 
@@ -1520,7 +1520,7 @@ ideas = {
 			
 
 			
-			traits = { army_chief_offensive_1 }
+			traits = { army_chief_offensive_2 }
 			
 			ai_will_do = {
 				factor = 1
@@ -1677,7 +1677,7 @@ ideas = {
 			
 
 			
-			traits = { army_logistics_2 }
+			traits = { army_armored_2 }
 			
 			ai_will_do = {
 				factor = 3
@@ -1763,7 +1763,7 @@ ideas = {
 			
 
 			
-			traits = { air_air_combat_training_3 }
+			traits = { army_commando_2 }
 			
 			ai_will_do = {
 				factor = 0.8
@@ -2126,7 +2126,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				naval_doctrine = 0.1
+				naval_doctrine = 0.15
 			}
 			
 			traits = { naval_theorist }
@@ -2154,7 +2154,7 @@ ideas = {
 			}	
 			
 			research_bonus = {
-				air_doctrine = 0.1
+				air_doctrine = 0.15
 			}
 			
 			traits = { air_warfare_theorist }

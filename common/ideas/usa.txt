@@ -466,7 +466,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = 0.1
+				consumer_goods_factor = 0.05
 				local_resources_factor = 0.05
 				min_export = -0.05
 
@@ -486,9 +486,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = 0.1
-				local_resources_factor = 0.1``
-				min_export = -0.1
+				local_resources_factor = 0.5
+				min_export = -0.5
 				consumer_goods_factor = -0.05
 
 			}
