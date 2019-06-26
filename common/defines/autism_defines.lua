@@ -52,6 +52,8 @@ NDefines.NProduction.ANNEX_FIELD_EQUIPMENT_RATIO = 1.0
 NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 10
 NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 15
 NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 10
+NDefines.NProduction.MIN_NAVAL_EQUIPMENT_CONVERSION_IC_COST_FACTOR = 0.1		-- Minimum fraction of an equipment type's base industry capacity cost to use when converting a naval equipment, such as through ship refitting.
+NDefines.NProduction.MIN_NAVAL_EQUIPMENT_CONVERSION_RESOURCE_COST_FACTOR = 0.1	-- Minimum fraction of an equipment type's base strategic resource cost to use when converting a naval equipment, such as through ship refitting.
 
 --- Navy
 NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS = 3.0
@@ -76,7 +78,16 @@ NDefines.NNavy.MISSION_SPREADS = {  -- mission spreads in the case a ship join c
 NDefines.NNavy.CONVOY_SINKING_SPILLOVER = 0.5 ---Vanilla value may need to change
 NDefines.NNavy.ANTI_AIR_ATTACK_TO_AMOUNT = 0.003	-- Balancing value to convert equipment stat anti_air_attack to the random % value of airplanes being hit.
 NDefines.NNavy.SUBMARINE_REVEAL_POW = 5.0		-- A scaling factor that is applied to the reveal chance in order to make large differences in detection vs visibility more pronounced
-	
+
+NDefines.NNavy.COMBAT_DAMAGE_TO_STR_FACTOR = 0.5	-- casting damage value to ship strength multiplier. Use it ot balance the game difficulty.
+NDefines.NNavy.COMBAT_DAMAGE_TO_ORG_FACTOR = 1.2	-- casting damage value to ship organisation multiplier. Use it to balance the game difficulty.
+NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0	-- org will clamped to this ratio on manual move
+NDefines.NNavy.GUN_HIT_PROFILES = { -- hit profiles for guns, if target ih profile is lower the gun will have lower accuracy
+		75.0,	-- big guns
+		145.0,	-- torpedos
+		40.0,	-- small guns
+	}
+
 
 ---Military
 NDefines.NMilitary.RECON_SKILL_IMPACT = 8

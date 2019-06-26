@@ -1359,7 +1359,6 @@ leader_traits = {
 			destroyer = {
 				naval_damage_factor = 0.1
 				naval_torpedo_hit_chance_factor = 0.1
-				navy_visibility = -0.1
 			}
 		}	
 		ai_will_do = {
@@ -1374,8 +1373,13 @@ leader_traits = {
 	}
 	loading_drill_master = { 
 		type = navy
-		modifier = {
-			naval_torpedo_cooldown_factor = -0.1
+		sub_unit_modifiers = {
+			destroyer = {
+				naval_damage_factor = 0.1
+			}
+			submarine = {
+				naval_damage_factor = 0.1
+			}
 		}
 				
 		ai_will_do = {
