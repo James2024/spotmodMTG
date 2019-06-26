@@ -56,7 +56,7 @@ leader_traits = {
 # Common Traits
 ##################################
 	old_guard = { 
-		type = all
+		type = land
 		trait_type = personality_trait
 		
 		modifier = {
@@ -70,7 +70,7 @@ leader_traits = {
 	
 	
 	brilliant_strategist = { 
-		type = all
+		type = land
 		trait_type = personality_trait
 		
 		attack_skill = 1
@@ -78,15 +78,11 @@ leader_traits = {
 		
 		attack_skill_factor = 1
 		planning_skill_factor = 1
-
-		corps_commander_modifier = {
-			max_commander_army_size = 6
-		}
 	}
 	
 	
 	inflexible_strategist = { 
-		type = all
+		type = land
 		trait_type = personality_trait
 		
 		defense_skill = 1
@@ -126,7 +122,7 @@ leader_traits = {
 	}
 	
 	career_officer = { 
-		type = all
+		type = land
 		trait_type = personality_trait
 		
 		non_shared_modifier = {
@@ -138,7 +134,7 @@ leader_traits = {
 	}
 
 	trait_cautious = { 
-		type = all
+		type = land
 		trait_type = personality_trait
 		
 		modifier = {
@@ -151,7 +147,7 @@ leader_traits = {
 	}
 
 	trait_reckless = { 
-		type = all
+		type = land
 		trait_type = personality_trait
 		
 		modifier = {
@@ -165,7 +161,7 @@ leader_traits = {
 	}
 
 	media_personality = { 
-		type = all
+		type = land
 		trait_type = personality_trait
 		
 		non_shared_modifier = {
@@ -177,7 +173,7 @@ leader_traits = {
 	}
 
 	harsh_leader = { 
-		type = all
+		type = land
 		trait_type = personality_trait
 		
 		attack_skill = 1
@@ -205,7 +201,7 @@ leader_traits = {
 	}
 	
 	infantry_officer = { 
-		type = all
+		type = land
 		trait_type = personality_trait
 		
 		trait_xp_factor = {
@@ -218,7 +214,7 @@ leader_traits = {
 	}
 	
 	cavalry_officer = { 
-		type = all
+		type = land
 		trait_type = personality_trait
 		
 		trait_xp_factor = {
@@ -230,7 +226,7 @@ leader_traits = {
 	}
 	
 	armor_officer = { 
-		type = all
+		type = land
 		trait_type = personality_trait
 		
 		trait_xp_factor = {
@@ -253,7 +249,7 @@ leader_traits = {
 		cost = 1000
 		
 		field_marshal_modifier = {
-			supply_consumption_factor = -0.20
+			supply_consumption_factor = -0.15
 		}
 		enable_ability = extra_suplies
 		ai_will_do = {
@@ -263,24 +259,6 @@ leader_traits = {
 		trait_type = assignable_trait
 		parent = organizer
 	}
-	
-	defensive_doctrine = { 
-		type = field_marshal
-		gain_xp = {
-			always = no # not gainable
-		}
-		cost = 1000
-		field_marshal_modifier = {
-			max_dig_in_factor = 0.20
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-		trait_type = assignable_trait
-		mutually_exclusive = offensive_doctrine
-		gui_row = 6
-	}
 
 	offensive_doctrine = { 
 		type = field_marshal
@@ -289,8 +267,10 @@ leader_traits = {
 		}
 		cost = 1000
 		field_marshal_modifier = {
-			org_loss_when_moving = -0.10
+			org_loss_when_moving = -0.30
 		}
+		
+		attack_skill = 1
 		
 		ai_will_do = {
 			factor = 1
@@ -300,6 +280,24 @@ leader_traits = {
 		gui_row = 5
 
 	}
+
+	defensive_doctrine = { 
+		type = field_marshal
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 1000
+		field_marshal_modifier = {
+			max_dig_in_factor = 0.30
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		trait_type = assignable_trait
+		mutually_exclusive = offensive_doctrine
+		gui_row = 6
+	}
 	
 	fast_planner = { 
 		type = field_marshal
@@ -308,7 +306,7 @@ leader_traits = {
 		}
 		cost = 1000
 		field_marshal_modifier = {
-			planning_speed = 0.10
+			planning_speed = 0.25
 		}
 		
 		ai_will_do = {
@@ -366,7 +364,7 @@ leader_traits = {
 
 	}
 
-	
+
 	aggressive_assaulter = { 
 		type = field_marshal
 		gain_xp = {
@@ -376,7 +374,8 @@ leader_traits = {
 			has_trait = brilliant_strategist
 		}
 		cost = 1000
-		modifier = {
+		field_marshal_modifier = {
+			breakthrough_factor = 0.10
 		}
 		custom_effect_tooltip = INCREASED_ASSAULT_AND_SHOCK_CHANCE
 		ai_will_do = {
@@ -480,9 +479,9 @@ leader_traits = {
 		
 		cost = 1000
 		modifier = {
-			cavalry_attack_factor = 0.15
-			motorized_attack_factor = 0.15
-			mechanized_attack_factor = 0.15
+			cavalry_attack_factor = 0.10
+			motorized_attack_factor = 0.10
+			mechanized_attack_factor = 0.10
 		}
 		
 		ai_will_do = {
@@ -503,7 +502,7 @@ leader_traits = {
 		
 		cost = 1000
 		modifier = {
-			army_infantry_defence_factor = 0.075
+			army_infantry_defence_factor = 0.10
 		}
 		
 		ai_will_do = {
@@ -530,7 +529,7 @@ leader_traits = {
 		}
 		logistics_skill_factor = 2
 		
-		gui_row = 15
+		gui_row = 14
 	}
 	trickster = { 
 		type = corps_commander
@@ -562,7 +561,7 @@ leader_traits = {
 		}
 		cost = 500
 		modifier = {
-			winter_attrition_factor = -0.75
+			winter_attrition_factor = -0.5
 		}
 		
 		ai_will_do = {
@@ -571,7 +570,6 @@ leader_traits = {
 		
 		trait_type = basic_terrain_trait
 		gui_row = 7
-		
 	}
 
 	winter_expert = { 
@@ -582,7 +580,7 @@ leader_traits = {
 		}
 
 		modifier = {
-			acclimatization_cold_climate_gain_factor = 0.2
+			acclimatization_cold_climate_gain_factor = 0.40
 		}
 		
 		ai_will_do = {
@@ -607,7 +605,7 @@ leader_traits = {
 		cost = 700
 		modifier = {
 			river = {
-				attack = 0.1
+				attack = 0.05
 			}
 			fort = {
                 attack = 0.1
@@ -844,7 +842,7 @@ leader_traits = {
 		}
 		cost = 1000
 		modifier = {
-			army_armor_defence_factor = 0.075
+			army_armor_defence_factor = 0.10 
 		}
 		
 		custom_effect_tooltip = INCREASED_BLITZ_AND_ENCIRCLEMENT_CHANCE
@@ -897,8 +895,8 @@ leader_traits = {
 		}
 		cost = 500
 		modifier = {
-			cavalry_attack_factor = 0.05
-			cavalry_defence_factor = 0.075
+			#cavalry_attack_factor = 0.10
+			cavalry_defence_factor = 0.10
 		}
 		
 		ai_will_do = {
@@ -925,7 +923,7 @@ leader_traits = {
 		cost = 700
 		modifier = {
 			fort = {
-				attack = 0.1
+				attack = 0.15
 			}
 		}
 		enable_ability = siege_artillery
@@ -969,7 +967,7 @@ leader_traits = {
 		}
 		cost = 500
 		modifier = {
-			army_infantry_attack_factor = 0.075
+			army_infantry_attack_factor = 0.10
 		}
 		
 		ai_will_do = {
@@ -1090,6 +1088,27 @@ leader_traits = {
 	}
 	
 	
+	camouflage_expert = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			air_superiority_bonus_in_combat = -0.25
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = assignable_trait
+		parent = commando
+		
+		gui_row = 12
+	}
+	
+	
 	guerilla_fighter = { 
 		type = corps_commander
 		gain_xp = {
@@ -1097,7 +1116,7 @@ leader_traits = {
 		}
 		cost = 500
 		modifier = {
-			dig_in_speed_factor = 0.25
+			dig_in_speed_factor = 0.5
 		}
 		
 		ai_will_do = {
@@ -1124,7 +1143,7 @@ leader_traits = {
 		}
 		cost = 700
 		modifier = {
-			navy_submarine_attack_factor = 0.15 # +X% stronger damage for submarines
+			navy_submarine_attack_factor = 0.2 # +X% stronger damage for submarines
 		}
 		custom_gain_xp_trigger_tooltip = SEAWOLF_TRIGGER_TT
 		ai_will_do = {
@@ -1274,7 +1293,7 @@ leader_traits = {
 	silent_hunter = { 
 		type = navy
 		modifier = {
-			naval_torpedo_reveal_chance_factor = -0.05
+			naval_torpedo_reveal_chance_factor = -0.20
 		}
 
 		ai_will_do = {
@@ -1307,7 +1326,7 @@ leader_traits = {
 	lancer = {
 		type = navy
 		modifier = {
-			naval_torpedo_screen_penetration_factor = 0.15
+			naval_torpedo_screen_penetration_factor = 0.25
 		}
 				
 		ai_will_do = {
