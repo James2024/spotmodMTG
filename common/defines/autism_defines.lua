@@ -91,7 +91,19 @@ NDefines.NNavy.GUN_HIT_PROFILES = { -- hit profiles for guns, if target ih profi
 		145.0,	-- torpedos
 		40.0,	-- small guns
 	}
-
+NDefines.NNavy.POSITIONING_PENALTY_HOURLY_DECAY_FOR_NEWLY_JOINED_SHIPS= 0.02	-- the accumulated penalty from new ships will decay hourly by this value
+NDefines.NNavy.ORG_COST_WHILE_MOVING = { -- org cost while the ships are moving
+		0.4, -- HOLD
+		0.2, -- PATROL		
+		0.25, -- STRIKE FORCE 
+		0.2, -- CONVOY RAIDING
+		0.2, -- CONVOY ESCORT
+		0.2, -- MINES PLANTING	
+		0.2, -- MINES SWEEPING	
+		0.2, -- TRAIN
+		0.3, -- RESERVE_FLEET
+		0.2, -- NAVAL_INVASION_SUPPORT
+	}
 
 ---Military
 NDefines.NMilitary.RECON_SKILL_IMPACT = 8
