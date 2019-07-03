@@ -24,6 +24,8 @@ political_actions = {
 				original_tag = RAJ
 				original_tag = IRE
 				original_tag = PHI
+				original_tag = CAN
+				original_tag = ITA
 			}
 		}
 		
@@ -43,6 +45,8 @@ political_actions = {
 				original_tag = RAJ
 				original_tag = IRE
 				original_tag = PHI
+				original_tag = CAN
+				original_tag = ITA
 			}
 		}
 		

@@ -1846,7 +1846,7 @@ country_event = {
 		}
 		add_tech_bonus = {
 			name = GER_soviet_treaty
-			bonus = 1.0
+			bonus = 2.0
 			uses = 2
 			category = armor
 		}

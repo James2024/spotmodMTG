@@ -648,7 +648,7 @@ ideas = {
 			
 
 			
-			traits = { navy_capital_ship_3 }
+			traits = { navy_capital_ship_1 }
 			
 			ai_will_do = {
 				factor = 1

@@ -216,96 +216,36 @@ focus_tree = {
 
 		completion_reward = {
 		custom_effect_tooltip = el_ala_forts_tt
-			hidden_effect = {
-				SAF = {
-                    division_template = {
-                        name = "Guards Armoured Division"
-                        priority = 2
-                        regiments = {
-                        motorized = { x = 0 y = 0 }
-                        motorized = { x = 0 y = 1 }
-                        motorized = { x = 0 y = 2 }
-                        motorized = { x = 0 y = 3 }
-                        motorized = { x = 0 y = 4 }
-                        motorized = { x = 1 y = 0 }
-                        motorized = { x = 1 y = 1 }
-                        heavy_armor = { x = 2 y = 0 }
-                        heavy_armor = { x = 2 y = 1 }
-                        heavy_armor = { x = 2 y = 2 }
-                        heavy_armor = { x = 2 y = 3 }
-                        heavy_armor = { x = 2 y = 4 }
-                        heavy_armor = { x = 3 y = 0 }
-                        heavy_armor = { x = 3 y = 1 }
-                        heavy_armor = { x = 3 y = 2 }
-                        heavy_armor = { x = 3 y = 3 }
-                        heavy_armor = { x = 3 y = 4 }
-                        heavy_armor = { x = 4 y = 0 }
-                        heavy_armor = { x = 4 y = 1 }
-                        heavy_armor = { x = 4 y = 2 }
-                        }
-                        support = {
-                            engineer = { x = 0 y = 0 }
-                            recon = { x = 0 y = 1 }
-                            signal_company { x = 0 y = 2 }
-                        }
-                    }
-				if = {
-                        limit = {
-                            ENG = {
-                                has_full_control_of_state = 447
-                            }
-                        }
-                        set_state_controller = 447
-                        447 = {
-                            create_unit = {
-                                division = "name = \"Guards Armoured Division\" division_template = \"Guards Armoured Division\" start_experience_factor = 0.5"
-                                owner = SAF
-                                prioritize_location = 1071
-                            }
-                        }
-                        ENG = {
-                            set_state_controller = 447
-                        }
-                    }
-                    else = {
-                        random_owned_controlled_state = {
-                            create_unit = {
-                                division = "name = \"Guards Armoured Division\" division_template = \"Guards Armoured Division\" start_experience_factor = 0.5"
-                                owner = SAF
-                            }
-                        }
-                    }
-				
-					447 = {
-						if = {
-							limit = { 
-								is_controlled_by = ROOT
-							}
-							add_building_construction = {
-								type = bunker
-								level = 5
-								province = 1071
-								instant_build = yes
-							}
-							add_building_construction = {
-								type = bunker
-								level = 5
-								province = 4145
-								instant_build = yes
-							}
+			hidden_effect = {				
+				447 = {
+					if = {
+						limit = { 
+						is_controlled_by = ROOT
+					}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 1071
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 4145
+							instant_build = yes
 						}
 					}
-					446 = {
-						if = {
-							limit = { 
-								is_controlled_by = ROOT
-							}
-							add_building_construction = {
-								type = bunker
-								level = 5
-								province = 992
-								instant_build = yes
-							}
+				}
+				446 = {
+					if = {
+						limit = { 
+							is_controlled_by = ROOT
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 992
+							instant_build = yes
 						}
 					}
 				}
@@ -4134,22 +4074,6 @@ focus_tree = {
 		}
 
 		available = {
-			CAN = {
-				is_subject_of = ENG
-				has_government = ROOT
-			}
-			AST = {
-				is_subject_of = ENG
-				has_government = ROOT
-			}
-			NZL = {
-				is_subject_of = ENG
-				has_government = ROOT
-			}
-			SAF = {
-				is_subject_of = ENG
-				has_government = ROOT
-			}
 		}
 
 		continue_if_invalid = no
@@ -4172,26 +4096,11 @@ focus_tree = {
 				limit = {
 					OR = {
 						tag = ENG
-						AND = {
-							is_subject_of = ENG
-							tag = CAN
-						}
-						AND = {
-							is_subject_of = ENG
-							tag = SAF
-						}
-						AND = {
-							is_subject_of = ENG
-							tag = RAJ
-						}
-						AND = {
-							is_subject_of = ENG
-							tag = AST
-						}
-						AND = {
-							is_subject_of = ENG
-							tag = NZL
-						}
+						tag = CAN
+						tag = SAF
+						tag = RAJ
+						tag = AST
+						tag = NZL
 					}
 				}
 				country_event = { id = mtg_britain.82 hours = 6 }

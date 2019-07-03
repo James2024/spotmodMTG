@@ -535,7 +535,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_autobahn
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -902,7 +902,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = GER_strategic_air_effort
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -918,7 +918,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = fighter_bonus
-				bonus = 2
+				bonus = 1
 				uses = 1
 				category = light_fighter
 			}
@@ -1047,7 +1047,7 @@ focus_tree = {
 		icon = GFX_focus_generic_treaty
 		x = 18
 		y = 0
-		cost = 8.6
+		cost = 8
 		ai_will_do = {
 			factor = 12
 			}
@@ -1064,7 +1064,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_operation_winteruebung
-		cost = 1.5
+		cost = 2
 		available = { is_puppet = no }
 		bypass = {
 			42 = { is_demilitarized_zone = no }
@@ -1074,6 +1074,10 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
+			FRA = {
+				remove_resource_rights = 42
+				remove_resource_rights = 51
+			}
 			42 = { set_demilitarized_zone = no }
 			51 = { set_demilitarized_zone = no }
 			custom_effect_tooltip = GER_rhineland_ultimatum
@@ -2035,7 +2039,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_demand_sudetenland
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}

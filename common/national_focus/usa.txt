@@ -554,6 +554,7 @@ focus_tree = {
 		prerequisite = { focus = USA_limited_intervention }
 		available = {
 			has_government = democratic
+			threat > 0.1
 		}
 
 		bypass = {
@@ -583,19 +584,18 @@ focus_tree = {
 	focus = {
 		id = USA_military_construction
 		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = USA_reestablish_the_gold_standard }
+		prerequisite = { focus = USA_USACE_projects focus = USA_the_giant_wakes }
 		
 		available = {
-			threat > 0.10
 		}
 
 		continue_if_invalid = yes
 		available_if_capitulated = yes
 
-		x = 0
+		x = 1
 		y = 1
-		relative_position_id = USA_reestablish_the_gold_standard
-		cost = 10
+		relative_position_id = USA_USACE_projects
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -810,6 +810,7 @@ focus_tree = {
 		id = USA_USACE_projects
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = USA_scientist_haven }
+		prerequisite = { focus = USA_war_propaganda }
 		available = {
 			threat > 0.30
 		}
@@ -817,7 +818,7 @@ focus_tree = {
 
 		continue_if_invalid = yes
 		
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = USA_scientist_haven
 		cost = 10
@@ -983,6 +984,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = democratic
+			threat > .1
 		}
 		
 		bypass = {
@@ -1004,8 +1006,8 @@ focus_tree = {
 	focus = {
 		id = USA_scientist_haven
 		icon = GFX_focus_research
-		prerequisite = { focus = USA_war_propaganda }
-		x = 0
+		prerequisite = { focus = USA_war_propaganda focus = USA_reestablish_the_gold_standard }
+		x = 1
 		y = 1
 		relative_position_id = USA_war_propaganda
 		cost = 10
@@ -1025,14 +1027,15 @@ focus_tree = {
 	focus = {
 		id = USA_the_giant_wakes
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = USA_military_construction }
+		prerequisite = { focus = USA_scientist_haven }
+		prerequisite = { focus = USA_reestablish_the_gold_standard }
 		available = {
 				date > 1939.1.1 
 		}
 		continue_if_invalid = yes
-		x = 0
+		x = 1
 		y = 1
-		relative_position_id = USA_military_construction
+		relative_position_id = USA_scientist_haven
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1052,10 +1055,10 @@ focus_tree = {
 	focus = {
 		id = USA_lend_lease_act
 		icon = GFX_focus_generic_treaty
-		x = 1
-		y = 4
-		prerequisite = { focus = USA_USACE_projects focus = USA_the_giant_wakes }
-		relative_position_id = USA_limited_intervention
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_military_construction }
+		relative_position_id = USA_military_construction
 		cost = 10
 
 		ai_will_do = {
@@ -1316,7 +1319,7 @@ focus_tree = {
 	focus = {
 		id = USA_build_the_pentagon
 		icon = GFX_focus_usa_build_the_pentagon
-		x = 11
+		x = 12
 		y = 0
 
 		cost = 5
@@ -1368,9 +1371,71 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				bonus = 1.0
+				uses = 2
+				technology = landing_craft
+				technology = tank_landing_craft
+			}
 			swap_ideas = {
 				remove_idea = USA_war_department
 				add_idea = USA_department_of_defense
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_destroyers_for_bases
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = USA_department_of_defense }
+		available = {
+			country_exists = GER
+			is_subject = no
+			ENG = {
+				NOT = { is_in_faction_with = GER }
+			}
+			ENG = {
+				has_government = ROOT
+				has_war = yes
+				not = { has_war_with = ROOT }
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+		}
+		bypass = {
+			NOT = { 696 = { is_controlled_by = ENG } }
+			NOT = { 331 = { is_controlled_by = ENG } }
+			NOT = { 308 = { is_controlled_by = ENG } } 
+			NOT = { 693 = { is_controlled_by = ENG } } 
+			NOT = { 689 = { is_controlled_by = ENG } } 
+			NOT = { 691 = { is_controlled_by = ENG } } 
+			ENG = { exists = no }
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = USA_department_of_defense
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		completion_reward = {
+			ENG = {
+				custom_effect_tooltip = needs_approval
+				country_event = { id = usa.4 days = 1 }
+			}
+			
+			effect_tooltip = {
+				custom_effect_tooltip = USA_destroyers_for_bases_tt
+				transfer_state = 696
+				transfer_state = 331
+				transfer_state = 308
+				transfer_state = 693
+				transfer_state = 689
+				transfer_state = 691
+				
 			}
 		}
 	}
@@ -1378,10 +1443,9 @@ focus_tree = {
 	focus = {
 		id = USA_focus_on_europe
 		icon = GFX_focus_usa_focus_on_europe
-		x = -1
+		x = -2
 		y = 1
 		prerequisite = { focus = USA_department_of_defense }
-		mutually_exclusive = { focus = USA_focus_on_asia }
 		relative_position_id = USA_department_of_defense
 		cost = 5
 
@@ -1398,7 +1462,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_war_support = 0.10
+			transfer_state = 697
+			transfer_state = 702
 		}
 	}
 
@@ -1470,21 +1535,38 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			declare_war_on = { target = EFR type = annex_everything }
 			add_timed_idea = {
-			idea = USA_intervention_in_europe
-			days = 60
+				idea = USA_intervention_in_europe
+				days = 60
 			}
 		}
 	}
+	
+	focus = {
+		id = USA_operation_husky
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 0
+		y = 1
+		relative_position_id = USA_war_plan_gray
+		prerequisite = { focus = USA_war_plan_gray }
+		
+		cost = 5
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = USA_intervention_in_europe
+				days = 60
+			}
+		}
+	}
+			
 
 	focus = {
 		id = USA_focus_on_asia
 		icon = GFX_focus_usa_focus_on_asia
-		x = 1
+		x = 2
 		y = 1
 		prerequisite = { focus = USA_department_of_defense }
-		mutually_exclusive = { focus = USA_focus_on_europe }
 		relative_position_id = USA_department_of_defense
 		cost = 5
 
@@ -1562,7 +1644,7 @@ focus_tree = {
 	focus = {
 		id = USA_war_department
 		icon = GFX_goal_generic_army_doctrines
-		x = 21
+		x = 23
 		y = 0
 		offset = {
 			x = -26
@@ -2609,8 +2691,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = escort_effort_focus
-			
+			add_tech_bonus = {
+				name = USA_escort_effort_focus
+				bonus = 1.0
+				uses = 2
+				category = dd_tech
+			}
 		}
 	}
 

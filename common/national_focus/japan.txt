@@ -138,9 +138,9 @@ focus_tree = {
 	focus = {
 		id = JAP_greater_east_asian_co_prosperity_sphere
 		icon = GFX_goal_generic_alliance
-		#prerequisite = { focus = JAP_liaison_conference }
+		prerequisite = { focus = JAP_purge_the_kodoha_faction }
 		x = 0
-		y = 1
+		y = 2
 		#relative_position_id = JAP_liaison_conference
 
 		cost = 2.9
@@ -1040,7 +1040,7 @@ focus_tree = {
 			}
 		}
 
-		cost = 2.2
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -1086,7 +1086,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_the_manchurian_project
 
-		cost = 2.2
+		cost = 2
 
 		ai_will_do = {
 			factor = 2
@@ -1139,7 +1139,7 @@ focus_tree = {
 			MAN = { has_focus_tree = generic_focus }
 		}
 
-		cost = 2.2
+		cost = 2
 
 		ai_will_do = {
 			factor = 2
@@ -1188,7 +1188,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_the_manchurian_project
 
-		cost = 2.2
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -1277,7 +1277,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_expand_manchurian_railways
 
-		cost = 2.2
+		cost = 2
 
 		ai_will_do = {
 			factor = 2
@@ -1319,7 +1319,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_expand_manchurian_railways
 
-		cost = 2.2
+		cost = 2
 
 		ai_will_do = {
 			factor = 2
@@ -1362,7 +1362,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = JAP_expand_manchurian_railways
 
-		cost = 2.2
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -1401,7 +1401,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_the_manchurian_project 
 
-		cost = 2.2
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -1604,7 +1604,7 @@ focus = {
 		    	NOT = { is_in_faction_with = ENG }
 		    	NOT = { is_in_faction_with = HOL }
 		    }
-		    date > 1941.1.1
+		    date > 1940.10.1
 		}
 
 		will_lead_to_war_with = ENG 
@@ -1623,6 +1623,12 @@ focus = {
 			declare_war_on = { target = PHI    type = annex_everything }
 			declare_war_on = { target = MAL    type = annex_everything }
 			declare_war_on = { target = INS    type = annex_everything }
+			JAP = {
+				add_timed_idea = {
+					idea = JAP_pearl_harbor_idea
+					days = 100
+				}
+			}
 			USA = {
 				add_timed_idea = {
 					idea = JAP_weakened_navy
@@ -1640,7 +1646,7 @@ focus = {
 		mutually_exclusive = { focus = JAP_southern_expansion_focus }
 		relative_position_id = JAP_supremacy_of_will
 		available = {
-		 date > 1941.1.1
+		 date > 1940.10.1
 		}
 
 		x = 0
@@ -1650,6 +1656,12 @@ focus = {
 		completion_reward = {
 			add_ideas = JAP_southwest_expansion
 			declare_war_on = { target = RAJ    type = annex_everything }
+			JAP = {
+				add_timed_idea = {
+					idea = JAP_pearl_harbor_idea
+					days = 100
+				}
+			}
 			USA = {
 				add_timed_idea = { 
 					idea = JAP_weakened_navy
@@ -2062,7 +2074,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_supremacy_of_technology
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2340,7 +2352,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_new_naval_estimates
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2379,7 +2391,7 @@ focus = {
 		y = 2
 		relative_position_id = JAP_supremacy_of_the_battlefleet
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2416,7 +2428,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_new_naval_estimates
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2527,7 +2539,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_cruiser_modernization
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -2559,7 +2571,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_long_lance_torpedoes
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
