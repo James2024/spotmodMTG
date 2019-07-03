@@ -1623,6 +1623,12 @@ focus = {
 			declare_war_on = { target = PHI    type = annex_everything }
 			declare_war_on = { target = MAL    type = annex_everything }
 			declare_war_on = { target = INS    type = annex_everything }
+			JAP = {
+				add_timed_idea = {
+					idea = JAP_pearl_harbor_idea
+					days = 100
+				}
+			}
 			USA = {
 				add_timed_idea = {
 					idea = JAP_weakened_navy
@@ -1650,6 +1656,12 @@ focus = {
 		completion_reward = {
 			add_ideas = JAP_southwest_expansion
 			declare_war_on = { target = RAJ    type = annex_everything }
+			JAP = {
+				add_timed_idea = {
+					idea = JAP_pearl_harbor_idea
+					days = 100
+				}
+			}
 			USA = {
 				add_timed_idea = { 
 					idea = JAP_weakened_navy

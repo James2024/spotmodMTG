@@ -51,4 +51,7 @@
  spot.10.t:0 "Supression is no longer an issue"
  spot.10.d:0 "Due to our fear tactics being so efficient and our spies so numerous in the case of new lands being gained we can count on our spy networks to diminish any damage dealt to us by partisans"
  spot.10.a:0 "Good! The Fuhrer will be happy"
+ spot.11.t:0 "Operation Torch Imminent" 
+ spot.11.d:0 "The United States has informed us that Operation Torch, the invasion of North Africa and Vichy France, is about to begin. We need to be ready." 
+ spot.11.a:0 "Heard and understood!" 
  

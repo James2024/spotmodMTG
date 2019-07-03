@@ -107,6 +107,33 @@ ideas = {
 			}
 		}
 
+		JAP_pearl_harbor_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_navy_carrier_bonus
+			
+			modifier = {
+				sortie_efficiency = 0.2
+				naval_strike_attack_factor = 0.12
+				naval_strike_targetting_factor = 0.12
+				naval_strike_agility_factor = 0.12
+				navy_screen_attack_factor = 0.2 
+				navy_submarine_attack_factor = 0.2 
+				navy_capital_ship_attack_factor = 0.2
+				amphibious_invasion = 0.1
+				special_forces_attack_factor = 0.1
+			}
+		}
+
 		JAP_weakened_navy = {
 
 			allowed = {
@@ -123,14 +150,18 @@ ideas = {
 			picture = GFX_Idea_generic_navy_carrier_bonus
 			
 			modifier = {
-				 	naval_strike_attack_factor = -0.1
-					naval_strike_targetting_factor = -0.1
-					naval_strike_agility_factor = -0.1
-					convoy_escort_efficiency = -0.1
-					naval_retreat_chance = -0.1
-					navy_submarine_detection_factor = -0.1
-					naval_hit_chance = -0.05
-					naval_coordination = -0.01
+				navy_anti_air_attack_factor = -0.5 
+				sortie_efficiency = -0.5 
+				naval_hit_chance = -0.5 
+				naval_coordination = -0.5 
+				navy_capital_ship_attack_factor = -0.25 
+				navy_carrier_air_attack_factor = -0.25 
+				navy_submarine_attack_factor = -0.25 
+				navy_screen_attack_factor = -0.25 
+				army_attack_factor = -0.10
+				army_defence_factor = -0.10
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
 			}
 		}
 	

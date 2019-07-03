@@ -138,6 +138,7 @@ give_guarantee = URG
 		volunteer_only
 		great_depression_3
 		new_deal
+		inexperienced_army
 	}
 	remove_ideas = {
 		great_depression
@@ -278,6 +279,7 @@ add_ideas = {
 	disarmed_nation
 	free_trade
 	home_of_the_free
+	inexperienced_army
 }
 
 

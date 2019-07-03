@@ -8818,6 +8818,7 @@ operations = {
 		
 		available = {
 			HOL = { has_capitulated = yes }
+			has_war_with = JAP
 		}
 		
 		complete_effect = {
