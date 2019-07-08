@@ -60,6 +60,7 @@ NDefines.NProduction.EQUIPMENT_MODULE_CONVERT_XP_COST = 0.0		-- XP cost for conv
 NDefines.NProduction.EQUIPMENT_MODULE_REMOVE_XP_COST = 0.0		-- XP cost for removing an equipment module and leaving the slot empty when creating an equipment variant.
 
 --- Navy
+NDefines.NNavy.LEADER_EXPERIENCE_SCALE = 0.5
 NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS = 3.0
 NDefines.NNavy.ANTI_AIR_POW_ON_INCOMING_AIR_DAMAGE = 0.8 --- (0.2 -> 0.8)
 NDefines.NNavy.SHIP_TO_FLEET_ANTI_AIR_RATIO = 0.01 --- (0.2 -> 0.01)
@@ -147,7 +148,7 @@ NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 0
 NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 10.0
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 1
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 72
-NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 400
+NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 0
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0
 NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0
@@ -181,7 +182,7 @@ NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 1.0
 NDefines.NAir.AA_INDUSTRY_AIR_DAMAGE_FACTOR = -0.13 -- -0.12	5x levels = 60% defense from bombing
 NDefines.NAir.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_TACTICAL_BOMBER =	0.1	-- base 0.192 How much efficiency to regain per day. Gain applied hourly.
 NDefines.NAir.AIR_COMBAT_FINAL_DAMAGE_SCALE = 0.3 -- 0.015	 % how many max disrupted only planes are allowed to die in a single combat
-NDefines.NAir.ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.8 -- .75 Maximum damage reduction factor applied to incoming air attacks against units with AA.
+NDefines.NAir.ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.7 -- .75 Maximum damage reduction factor applied to incoming air attacks against units with AA.
 NDefines.NAir.AIR_MORE_GROUND_CREWS_COST = 500.0 -- Disables ground crews. They're cancerous. --- Definietly are cancerous
 NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_FACTOR = 0.6
 

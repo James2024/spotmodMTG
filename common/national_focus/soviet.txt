@@ -11,13 +11,14 @@ focus_tree = {
 	}
 	
 	default = no
-
+			
+	
 	focus = {
 		id = SOV_china_help
 		icon = GFX_goal_anschluss
 		x = 16
 		y = 0
-		cost = 1.5
+		cost = 1
 		
 		cancel = {
 			has_equipment = {
@@ -1913,6 +1914,49 @@ focus_tree = {
 				planning_skill = 3
 				logistics_skill = 2
 			}
+		}
+	}
+	
+	focus = {
+		id = SOV_the_allies
+		
+		x = 0
+		y = 2
+		cost = 5
+		
+		available_if_capitulated = yes
+		icon = GFX_goal_generic_oil_refinery
+		
+		relative_position_id = SOV_anti_fascist_diplomacy
+		prerequisite = { focus = SOV_anti_fascist_diplomacy }
+	
+		available = {
+			JAP = { 
+			has_full_control_of_state = 336
+			has_full_control_of_state = 672
+			has_full_control_of_state = 335
+			has_full_control_of_state = 333
+			}
+		}
+		
+		completion_reward = {
+			set_technology = { synth_oil_experiments = 1 }
+			set_technology = { fuel_silos = 1 }
+			add_tech_bonus = {
+				name = GER_coal_liquidization
+				bonus = 2
+				uses = 2
+				category = synth_resources
+			}
+			582 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_ideas = SOV_allied_failure
 		}
 	}
 }
