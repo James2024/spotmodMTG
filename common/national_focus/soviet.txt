@@ -387,7 +387,7 @@ focus_tree = {
 		prerequisite = { focus = SOV_production_effort }
 		prerequisite = { focus = SOV_collectivist_propaganda }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = SOV_production_effort
 		cost = 10
 		ai_will_do = {
@@ -608,7 +608,6 @@ focus_tree = {
 		id = SOV_militarized_schools
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = SOV_collectivist_propaganda }
-		prerequisite = { focus = SOV_production_effort }
 		x = 0
 		y = 1
 		relative_position_id = SOV_collectivist_propaganda
