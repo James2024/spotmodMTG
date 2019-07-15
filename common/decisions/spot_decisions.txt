@@ -157,7 +157,13 @@ operations = {
 		icon = generic_operation
 		
 		available = {
-			EFR = { exists = no }
+			OR = {
+				USA = { controls_state = 458 }
+				any_other_country = {
+					is_in_faction_with = USA
+					controls_state = 458
+				}
+			}
 			has_completed_focus = USA_operation_husky
 		}
 		

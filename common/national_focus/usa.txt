@@ -947,7 +947,19 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 400
+		add_political_power = 400
+		add_ideas = USA_gold_standard
+			if = {
+				limit = {
+					OR = {
+						has_idea = undisturbed_isolation
+					}
+				}
+				add_ideas = isolation
+			}
+			else = {
+				add_political_power = 150 #refund if already at civilian economy
+			}
 			add_ideas = USA_neutrality_act 
 			add_war_support = -0.05
 			if = {
@@ -998,7 +1010,8 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			add_popularity = { ideology = democratic popularity = 0.05 }
-			add_ideas = USA_gold_standard
+			remove_ideas = USA_gold_standard
+			add_ideas = USA_gold_standard2
 			USA_congress_small_support = yes
 		}
 	}
@@ -1030,7 +1043,8 @@ focus_tree = {
 		prerequisite = { focus = USA_scientist_haven }
 		prerequisite = { focus = USA_reestablish_the_gold_standard }
 		available = {
-				date > 1939.1.1 
+				date > 1939.1.1
+				threat > 0.8
 		}
 		continue_if_invalid = yes
 		x = 1
@@ -1045,8 +1059,8 @@ focus_tree = {
 
 
 		completion_reward = {
-				remove_ideas = USA_gold_standard
-				add_ideas = USA_gold_standard2
+				remove_ideas = USA_gold_standard2
+				add_ideas = USA_gold_standard3
 				set_country_flag = USA_the_giant_wakes_added_civ_eco
 			}
 	}
