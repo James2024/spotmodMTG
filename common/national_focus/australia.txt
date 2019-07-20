@@ -446,7 +446,6 @@ focus_tree = {
 		id = AST_airborne_defence
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = AST_specialize_equipment }
-		prerequisite = { focus = AST_volunteer_air_observers_corps }
 		x = 2
 		y = 4
 		relative_position_id = AST_additional_militia_training

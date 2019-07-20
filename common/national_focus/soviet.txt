@@ -119,13 +119,10 @@ focus_tree = {
 		}
 
 		available = {
-			has_war_with = GER
-			573 = {
-				is_owned_and_controlled_by = SOV
+			OR = {
+				has_war_with = GER
+					GER = { controls_state = 126 }
 			}
-			582 = {
-				is_owned_and_controlled_by = SOV
-			} 
 		}
 
 		bypass = {
@@ -1922,10 +1919,10 @@ focus_tree = {
 	
 		available = {
 			JAP = { 
-			has_full_control_of_state = 336
-			has_full_control_of_state = 672
-			has_full_control_of_state = 335
-			has_full_control_of_state = 333
+			controls_state = 336
+			controls_state = 672
+			controls_state = 335
+			controls_state = 333
 			}
 		}
 		

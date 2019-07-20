@@ -189,7 +189,6 @@ USA_congress = {
 		icon = ger_mefo_bills
 		available = {
 			congress_medium_support_trigger = yes
-			has_completed_focus = USA_limited_intervention
 		}
 		visible = {has_government = democratic }
 		cost = 25

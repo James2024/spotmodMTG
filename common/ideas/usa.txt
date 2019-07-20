@@ -515,8 +515,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				local_resources_factor = 0.5
-				min_export = -0.5
+				local_resources_factor = 0.3
+				min_export = -0.3
 			}
 		}
 		USA_gold_standard3 = {
@@ -533,8 +533,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				local_resources_factor = 0.5
-				min_export = -0.5
+				local_resources_factor = 0.3
+				min_export = -0.3
 				consumer_goods_factor = -0.05
 			}
 		}
@@ -1570,18 +1570,18 @@ ideas = {
 			traits = { smooth_talking_charmer }
 		}
 
-		#USA_henry_morgenthau = {
-		#	picture = generic_political_advisor_europe_6
-		#	
-		#	allowed = {
-		#		original_tag = USA
-		#	}
-		#	available = {
-		#		has_completed_focus = USA_arsenal_of_democracy
-		#	}
-		#	
-		#	traits = { financial_expert }
-		#}
+		USA_henry_morgenthau = {
+			picture = generic_political_advisor_europe_6
+			
+			allowed = {
+				original_tag = USA
+			}
+			available = {
+				has_completed_focus = USA_arsenal_of_democracy
+			}
+			
+			traits = { financial_expert }
+		}
 
 		USA_henry_stimson = {
 			

@@ -260,16 +260,20 @@ country_event = {
 	is_triggered_only = yes
 	
 	#Accept surrender
+	#option = {
+	#	name = finland.spot8.a
+	#	ai_chance = {
+	#		base = 9
+	#	}
+	#	white_peace = FIN
+	#	SOV = {
+	#	transfer_state = 146
+	#	transfer_state = 147
+	#	}
+	#}
+	
 	option = {
-		name = finland.spot8.a
-		ai_chance = {
-			base = 9
-		}
-		white_peace = FIN
-		SOV = {
-		transfer_state = 146
-		transfer_state = 147
-		}
+		name = finland.spot8.b
 	}
 }
 

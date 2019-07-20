@@ -499,7 +499,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 200
+			add_political_power = 100
 			every_other_country = {
 				limit = {
 					is_major = yes
@@ -1003,8 +1003,7 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -1043,8 +1042,10 @@ focus_tree = {
 		prerequisite = { focus = USA_scientist_haven }
 		prerequisite = { focus = USA_reestablish_the_gold_standard }
 		available = {
+			OR = {
 				date > 1939.1.1
 				threat > 0.8
+			}
 		}
 		continue_if_invalid = yes
 		x = 1
