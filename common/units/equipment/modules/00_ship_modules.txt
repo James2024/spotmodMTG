@@ -290,7 +290,7 @@ equipment_modules = {
 			chromium = 1
 		}
 		multiply_stats = {
-			naval_speed = -0.10
+			naval_speed = -0.07
 		}
 		add_average_stats = {
 			hg_armor_piercing = 100
