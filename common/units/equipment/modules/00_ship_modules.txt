@@ -169,7 +169,7 @@ equipment_modules = {
 			naval_speed = -0.05
 		}
 		add_average_stats = {
-			hg_armor_piercing = 31
+			hg_armor_piercing = 62
 		}
 		build_cost_resources = {
 			steel = 1
@@ -192,10 +192,10 @@ equipment_modules = {
 			build_cost_ic = 1350
 		}
 		multiply_stats = {
-			naval_speed = -0.08
+			naval_speed = -0.06
 		}
 		add_average_stats = {
-			hg_armor_piercing = 36
+			hg_armor_piercing = 72
 		}
 		build_cost_resources = {
 			steel = 1
@@ -223,10 +223,10 @@ equipment_modules = {
 			build_cost_ic = 1450
 		}
 		multiply_stats = {
-			naval_speed = -0.09
+			naval_speed = -0.07
 		}
 		add_average_stats = {
-			hg_armor_piercing = 40
+			hg_armor_piercing = 80
 		}
 		build_cost_resources = {
 			steel = 1
@@ -250,16 +250,15 @@ equipment_modules = {
 		add_equipment_type = capital_ship
 		
 		add_stats = {
-			
 			hg_attack = 15
 			build_cost_ic = 1650
 			
 		}
 		multiply_stats = {
-			naval_speed = -0.10
+			naval_speed = -0.08
 		}
 		add_average_stats = {
-			hg_armor_piercing = 43
+			hg_armor_piercing = 86
 		}
 		build_cost_resources = {
 			steel = 1
@@ -294,7 +293,7 @@ equipment_modules = {
 			naval_speed = -0.10
 		}
 		add_average_stats = {
-			hg_armor_piercing = 50
+			hg_armor_piercing = 100
 		}
 		critical_parts = { damaged_heavy_guns }
 	}
@@ -314,14 +313,14 @@ equipment_modules = {
 		add_stats = {
 			hg_attack = 6.75
 			build_cost_ic = 750
-			surface_visibility = 3.5
 		}
 		multiply_stats = {
 			naval_speed = -0.04
 			max_strength = 0.4
 		}
 		add_average_stats = {
-			hg_armor_piercing = 11
+			hg_armor_piercing = 16
+			surface_visibility = 10
 		}
 		can_convert_from = {
 			module_category = ship_light_battery
@@ -342,14 +341,14 @@ equipment_modules = {
 		add_stats = {
 			hg_attack = 7.25
 			build_cost_ic = 800
-			surface_visibility = 3.5
 		}
 		multiply_stats = {
 			naval_speed = -0.06
 			max_strength = 0.4
 		}
 		add_average_stats = {
-			hg_armor_piercing = 12
+			hg_armor_piercing = 18
+			surface_visibility = 10
 		}
 		can_convert_from = {
 			module_category = ship_medium_battery
@@ -370,14 +369,14 @@ equipment_modules = {
 		add_stats = {
 			hg_attack = 7.75
 			build_cost_ic = 825
-			surface_visibility = 3.5
 		}
 		multiply_stats = {
 			naval_speed = -0.07
 			max_strength = 0.4
 		}
 		add_average_stats = {
-			hg_armor_piercing = 13
+			hg_armor_piercing = 19
+			surface_visibility = 10
 		}
 		can_convert_from = {
 			module_category = ship_medium_battery
@@ -398,14 +397,14 @@ equipment_modules = {
 		add_stats = {
 			hg_attack = 9
 			build_cost_ic = 900
-			surface_visibility = 3.5
 		}
 		multiply_stats = {
 			naval_speed = -0.08
 			max_strength = 0.4
 		}
 		add_average_stats = {
-			hg_armor_piercing = 14
+			hg_armor_piercing = 21
+			surface_visibility = 10
 		}
 		can_convert_from = {
 			module_category = ship_medium_battery
@@ -431,7 +430,7 @@ equipment_modules = {
 			naval_speed = -0.03
 		}
 		add_average_stats = {
-			lg_armor_piercing = 5.5
+			lg_armor_piercing = 8
 			max_strength = 20
 		}
 		can_convert_from = {
@@ -454,7 +453,7 @@ equipment_modules = {
 			naval_speed = -0.04
 		}
 		add_average_stats = {
-			lg_armor_piercing = 7.0
+			lg_armor_piercing = 10.5
 			max_strength = 20
 		}
 		can_convert_from = {
@@ -482,7 +481,7 @@ equipment_modules = {
 			naval_speed = -0.04
 		}
 		add_average_stats = {
-			lg_armor_piercing = 8
+			lg_armor_piercing = 12
 			max_strength = 20
 		}
 		can_convert_from = {
@@ -510,7 +509,7 @@ equipment_modules = {
 			naval_speed = -0.05
 		}
 		add_average_stats = {
-			lg_armor_piercing = 9
+			lg_armor_piercing = 13.5
 			max_strength = 20
 		}
 		can_convert_from = {
@@ -547,7 +546,7 @@ equipment_modules = {
 		}
 
 		add_average_stats = {
-			lg_armor_piercing = 5.5
+			lg_armor_piercing = 8
 		}
 		
 		can_convert_from = {
@@ -571,7 +570,7 @@ equipment_modules = {
 		}
 		
 		add_average_stats = {
-			lg_armor_piercing = 7
+			lg_armor_piercing = 10.5
 		}
 		
 		can_convert_from = {
@@ -596,7 +595,7 @@ equipment_modules = {
 		}
 		
 		add_average_stats = {
-			lg_armor_piercing = 8
+			lg_armor_piercing = 12
 		}
 		
 		can_convert_from = {
@@ -1909,15 +1908,15 @@ equipment_modules = {
 		gfx = ship_armor_thick_1
 		
 		multiply_stats = {
-			build_cost_ic = 0.2
-			naval_speed = -0.2
+			build_cost_ic = 0.12
+			naval_speed = -0.15
 			max_strength = 0.05
 		}
 		build_cost_resources = {
 			steel = 1
 		}
 		add_stats = {
-			armor_value = 26
+			armor_value = 52
 			surface_visibility = 10
 		}
 		dismantle_cost_ic = 5500
@@ -1930,11 +1929,14 @@ equipment_modules = {
 		multiply_stats = {
 			build_cost_ic = 0.075
 			naval_speed = -0.1
-			max_strength = 0.05
+			max_strength = 0.0
+		}
+		build_cost_resources = {
+			steel = 1
 		}
 
 		add_stats = {
-			armor_value = 20
+			armor_value = 40
 			surface_visibility = 8
 		}
 		dismantle_cost_ic = 4500
@@ -1945,15 +1947,15 @@ equipment_modules = {
 		gfx = ship_armor_thick_2
 		
 		multiply_stats = {
-			build_cost_ic = 0.2
-			naval_speed = -0.2
+			build_cost_ic = 0.12
+			naval_speed = -0.15
 			max_strength = 0.1
 		}
 		build_cost_resources = {
 			steel = 1
 		}
 		add_stats = {
-			armor_value = 31
+			armor_value = 62
 			surface_visibility = 10
 		}
 		dismantle_cost_ic = 6000
@@ -1966,13 +1968,13 @@ equipment_modules = {
 		multiply_stats = {
 			build_cost_ic = 0.075
 			naval_speed = -0.1
-			max_strength = 0.1
+			max_strength = 0.05
 		}
 		build_cost_resources = {
 			steel = 1
 		}
 		add_stats = {
-			armor_value = 25
+			armor_value = 50
 			surface_visibility = 8
 		}
 		dismantle_cost_ic = 5500
@@ -1982,16 +1984,15 @@ equipment_modules = {
 		gfx = ship_armor_thick_3
 		
 		multiply_stats = {
-			build_cost_ic = 0.2
-			naval_speed = -0.2
+			build_cost_ic = 0.12
+			naval_speed = -0.15
 			max_strength = 0.15
 		}
 		build_cost_resources = {
-			steel = 2
-			chromium = 1
+			steel = 1
 		}
 		add_stats = {
-			armor_value = 40
+			armor_value = 80
 			surface_visibility = 10
 		}
 		dismantle_cost_ic = 7500
@@ -2004,14 +2005,13 @@ equipment_modules = {
 		multiply_stats = {
 			build_cost_ic = 0.075
 			naval_speed = -0.1
-			max_strength = 0.15
+			max_strength = 0.10
 		}
 		build_cost_resources = {
 			steel = 1
-			chromium = 1
 		}
 		add_stats = {
-			armor_value = 30
+			armor_value = 60
 			surface_visibility = 8
 		}
 		dismantle_cost_ic = 6200
@@ -2031,7 +2031,7 @@ equipment_modules = {
 			chromium = 1
 		}
 		add_stats = {
-			armor_value = 55
+			armor_value = 110
 			surface_visibility = 10
 		}
 		dismantle_cost_ic = 8200
@@ -2048,7 +2048,7 @@ equipment_modules = {
 		dismantle_cost_ic = 2500
 		
 		add_stats = {
-			armor_value = 6
+			armor_value = 9
 		}
 	}
 	ship_armor_cruiser_2 = {
@@ -2063,10 +2063,7 @@ equipment_modules = {
 		dismantle_cost_ic = 3000
 		
 		add_stats = {
-			armor_value = 8
-		}
-		build_cost_resources = {
-			steel = 1
+			armor_value = 12
 		}
 	}
 	ship_armor_cruiser_3 = {
@@ -2081,11 +2078,7 @@ equipment_modules = {
 		dismantle_cost_ic = 3500
 		
 		add_stats = {
-			armor_value = 10
-		}
-		build_cost_resources = {
-			steel = 1
-			chromium = 1
+			armor_value = 15
 		}
 	}
 	ship_armor_cruiser_4 = {
@@ -2100,11 +2093,7 @@ equipment_modules = {
 		dismantle_cost_ic = 4000
 		
 		add_stats = {
-			armor_value = 12
-		}
-		build_cost_resources = {
-			steel = 2
-			chromium = 1
+			armor_value = 18
 		}
 	}
 	ship_armor_carrier_deck = {
@@ -2121,7 +2110,7 @@ equipment_modules = {
 			naval_speed = -0.05
 		}
 		add_stats = {
-			armor_value = 5
+			armor_value = 10
 			max_strength = 25
 		}
 		dismantle_cost_ic = 2500
