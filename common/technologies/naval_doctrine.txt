@@ -7,7 +7,7 @@ technologies = {
 		
 		# EFFECT #############
 		battleship = {
-			max_organisation = 10			
+			max_organisation = 20			
 		}
 		battle_cruiser = {
 			max_organisation = 10			
@@ -73,7 +73,7 @@ technologies = {
 	battlefleet_concentration = {
 		# EFFECT #############
 		battleship = {
-			max_organisation = 10
+			max_organisation = 20
 		}
 		battle_cruiser = {
 			max_organisation = 10
@@ -202,7 +202,7 @@ technologies = {
 			sub_detection = 0.1
 		}
 		light_cruiser = {
-			max_organisation = 10
+			max_organisation = 20
 			sub_detection = 0.2
 		}
 
@@ -263,6 +263,9 @@ technologies = {
 		
 		# EFFECT #############
 		battleship = {
+			max_organisation = 20
+		}
+		battle_cruiser = {
 			max_organisation = 20
 		}
 		
@@ -377,7 +380,6 @@ technologies = {
 			max_organisation = 20
 		}
 
-		navy_anti_air_attack_factor = 0.10
 		navy_capital_ship_attack_factor = 0.1
 		mines_planting_by_fleets_factor = 0.1
 		
@@ -554,6 +556,7 @@ technologies = {
 		# EFFECT #############
 		carrier = {
 			sub_detection = 0.25
+			max_organisation = 20
 		}
 		convoy_escort_efficiency = 0.15
 		####
@@ -1300,14 +1303,12 @@ technologies = {
 		# EFFECT ##############		
 		light_cruiser = {
 			max_organisation = 10
-			surface_visibility = -0.10
 			convoy_raiding_coordination = 0.15
 			surface_detection = 0.10
 		}
 
 		heavy_cruiser = {
 			max_organisation = 10
-			surface_visibility = -0.10
 			convoy_raiding_coordination = 0.15
 			surface_detection = 0.10
 		}
@@ -1352,20 +1353,18 @@ technologies = {
 
 		# EFFECT ##############		
 		battle_cruiser = {
-			max_organisation = 20
-			surface_visibility = -0.20
+			max_organisation = 10
 			convoy_raiding_coordination = 0.15
 			surface_detection = 0.15
 		}
 
 		battleship = {
-			max_organisation = 20
-			surface_visibility = -0.25
+			max_organisation = 10
 			convoy_raiding_coordination = 0.5
 			surface_detection = 0.25
 		}
 
-		naval_enemy_fleet_size_ratio_penalty_factor = 0.1
+		naval_enemy_fleet_size_ratio_penalty_factor = 0.2
 		#######
 		
 		path = {
@@ -1423,6 +1422,7 @@ technologies = {
 			max_organisation = 10
 		}		
 		strike_force_movement_org_loss = -0.2
+		naval_speed_factor = 0.1
 		########
 		
 		path = {
@@ -1470,7 +1470,7 @@ technologies = {
 		#same as floating_fortress
 		# EFFECT #############
 		battleship = {
-			max_organisation = 20
+			max_organisation = 10
 		}
 		navy_capital_ship_defence_factor = 0.10
 		########
@@ -1523,6 +1523,7 @@ technologies = {
 			max_organisation = 20
 		}
 		sortie_efficiency = 0.2
+		naval_retreat_speed = 0.2
 		########
 		
 		xp_research_type = navy
@@ -1618,10 +1619,10 @@ technologies = {
 		#same as convoy_sailing
 		# EFFECT #############
 		destroyer = {
-			max_organisation = 10
+			max_organisation = 20
 			sub_detection = 0.05
 		}
-		convoy_escort_efficiency = 0.05
+		convoy_escort_efficiency = 0.15
 		#####
 		
 		path = {
@@ -1663,7 +1664,7 @@ technologies = {
 		#same as subsidiary_carrier_role
 		# EFFECT #############
 		carrier = {
-			max_organisation = 10			
+			max_organisation = 20			
 		}
 		sortie_efficiency = 0.1
 		########
@@ -1752,6 +1753,15 @@ technologies = {
 		xp_research_type = navy
 		
 		# EFFECT ##############
+				heavy_cruiser = {
+			max_organisation = 10
+		}
+		battle_cruiser = {
+			max_organisation = 10
+		}
+		battleship = {
+			max_organisation = 10
+		}
 		carrier = {
 			max_organisation = 20
 		}
@@ -2118,6 +2128,9 @@ technologies = {
 
 		#same as floating_fortress
 		# EFFECT #############
+		battle_cruiser = {
+			max_organisation = 20
+		}
 		battleship = {
 			max_organisation = 20
 		}
@@ -2687,6 +2700,9 @@ technologies = {
 		light_cruiser = {
 			max_organisation = 10
 			sub_detection = 0.15
+		}
+		heavy_cruiser = {
+			max_organisation = 20
 		}
 		carrier = {
 			sub_detection = 0.25

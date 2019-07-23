@@ -1459,7 +1459,7 @@ leader_traits = {
 	lone_wolf = { 
 		type = navy
 		modifier = {
-			naval_enemy_fleet_size_ratio_penalty_factor = 0.1
+			naval_enemy_fleet_size_ratio_penalty_factor = 0.33
 		}
 				
 		ai_will_do = {
