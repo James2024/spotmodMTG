@@ -78,8 +78,8 @@ NDefines.NNavy.SPEED_TO_ESCAPE_SPEED = 0.7  -- ratio to converstion from ship sp
 NDefines.NNavy.COMBAT_ARMOR_PIERCING_CRITICAL_BONUS = 1.5 -- Bonus to critical chance when shooter armor piercing is higher then target armor.
 NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 0 -- cost to unassign/replace pride of the fleet
 
-NDefines.NNavy.CARRIER_STACK_PENALTY = 6 -- The most efficient is 4 carriers in combat. 5+ brings the penalty to the amount of wings in battle.
-NDefines.NNavy.CARRIER_STACK_PENALTY_EFFECT = 0.143 -- Each carrier above the optimal amount decreases the amount of airplanes being able to takeoff by such %.
+NDefines.NNavy.CARRIER_STACK_PENALTY = 5 -- The most efficient is 4 carriers in combat. 5+ brings the penalty to the amount of wings in battle.
+NDefines.NNavy.CARRIER_STACK_PENALTY_EFFECT = 0.167 -- Each carrier above the optimal amount decreases the amount of airplanes being able to takeoff by such %.
 
 
 NDefines.NNavy.COMBAT_MIN_DURATION = 12
